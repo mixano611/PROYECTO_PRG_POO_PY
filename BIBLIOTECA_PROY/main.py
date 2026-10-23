@@ -2,13 +2,13 @@ import sys
 
 from PyQt5.QtWidgets import QApplication
 
-from BIBLIOTECA_PY import bibliotecapy
+from bibliotecapy import login
 
 
 def main():
     app = QApplication(sys.argv)
 
-    ventana = bibliotecapy()
+    ventana = login()
     ventana.show()
 
     sys.exit(app.exec_())
@@ -16,3 +16,6 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+
+    
