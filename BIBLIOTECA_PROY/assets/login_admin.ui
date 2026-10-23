@@ -14,7 +14,7 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QPushButton" name="pushButton">
+   <widget class="QPushButton" name="btnIniciar">
     <property name="geometry">
      <rect>
       <x>320</x>
@@ -45,7 +45,7 @@
      <string>LIBRERIA_PY</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit">
+   <widget class="QLineEdit" name="txtNombre">
     <property name="geometry">
      <rect>
       <x>260</x>
@@ -86,7 +86,7 @@
      <string>USUARIO</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit_2">
+   <widget class="QLineEdit" name="txtContrasena">
     <property name="geometry">
      <rect>
       <x>260</x>
@@ -124,7 +124,7 @@
      <x>0</x>
      <y>0</y>
      <width>709</width>
-     <height>26</height>
+     <height>21</height>
     </rect>
    </property>
   </widget>

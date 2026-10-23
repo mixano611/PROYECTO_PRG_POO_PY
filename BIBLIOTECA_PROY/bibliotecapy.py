@@ -40,6 +40,33 @@ class loginUsuario(QMainWindow):
             self.main_consulta_window.show()
             self.close()
 
+class loginAdmin(QMainWindow):
+    def __init__(self):
+        super().__init__()
+        ruta_ui = Path(__file__).resolve().parent / "assets" / "login_admin.ui"
+        uic.loadUi(str(ruta_ui),self)
+
+        self.btnIniciar.clicked.connect(self.ini_sesion)
+        
+    def ini_sesion(self):
+        nombre = self.txtNombre.text().strip()
+        contrasena = self.txtContrasena.text().strip()
+            
+        if not nombre or not contrasena:
+            QMessageBox.warning(
+                self,
+                "Errorrrrrrrr",
+                "Complete todo los campos"
+            )
+            return
+            
+        else:
+            self.main_consulta_window = MainConsulta()
+            self.main_consulta_window.show()
+            self.close()
+
+
+
 class login(QMainWindow):
     def __init__(self):
         super().__init__()
