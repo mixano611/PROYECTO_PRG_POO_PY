@@ -17,6 +17,7 @@ class FormularioLibro(QMainWindow):
         # Configurar el título de la ventana.
         self.setWindowTitle("Sistema de Biblioteca - Registro de Libros")
 
+        
         # Lista para almacenar los libros durante la ejecución.
         self.libros = []
 
