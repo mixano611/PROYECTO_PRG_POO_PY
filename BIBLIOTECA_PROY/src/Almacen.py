@@ -46,3 +46,12 @@ def agregar_producto_g(nombre, stock):
         datos[nombre] = stock
     guardar_datos(datos)
     print(f"Producto '{nombre}' agregado/actualizado con cantidad {stock}.")
+
+def eliminar_producto_g(nombre):
+    datos = cargar_datos()
+    if nombre in datos:
+        del datos[nombre]
+        guardar_datos(datos)
+        print(f"Producto '{nombre}' eliminado del almacén.")
+    else:
+        print(f"El producto '{nombre}' no se encuentra en el almacén.")
