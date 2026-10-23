@@ -1,8 +1,7 @@
 
 from pathlib import Path
-
 from PyQt5 import uic
-from PyQt5.QtWidgets import QDialog, QMainWindow
+from PyQt5.QtWidgets import QMessageBox, QMainWindow
 
 
 class loginAdmin(QMainWindow):
@@ -11,6 +10,11 @@ class loginAdmin(QMainWindow):
         ruta_ui = Path(__file__).resolve().parent / "assets" / "login_admin.ui"
         uic.loadUi(str(ruta_ui), self)
 
+class MainConsulta(QMainWindow):
+    def __init__(self):
+        super().__init__()
+        ruta_ui = Path(__file__).resolve().parent / "assets" / "main_consulta.ui"
+        uic.loadUi(str(ruta_ui), self)
 
 class loginUsuario(QMainWindow):
     def __init__(self):
@@ -18,6 +22,23 @@ class loginUsuario(QMainWindow):
         ruta_ui = Path(__file__).resolve().parent / "assets" / "login_usuario.ui"
         uic.loadUi(str(ruta_ui), self)
 
+        self.btnIniciar.clicked.connect(self.ini_sesion)
+
+    def ini_sesion(self):
+        nombre = self.txtNombre.text().strip()
+
+        if not nombre:
+            QMessageBox.warning(
+                self,
+                "Errorrrrrrrr",
+                "Ingrese nombre de usuario"
+            )
+            return
+
+        else:
+            self.main_consulta_window = MainConsulta()
+            self.main_consulta_window.show()
+            self.close()
 
 class login(QMainWindow):
     def __init__(self):
@@ -43,4 +64,6 @@ class login(QMainWindow):
         self.login_admin_window = loginAdmin()
         self.login_admin_window.show()
         self.close()
+
+    
 

@@ -14,7 +14,7 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QPushButton" name="pushButton">
+   <widget class="QPushButton" name="btnIniciar">
     <property name="geometry">
      <rect>
       <x>320</x>
@@ -45,7 +45,7 @@
      <string>LIBRERIA_PY</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit">
+   <widget class="QLineEdit" name="txtNombre">
     <property name="geometry">
      <rect>
       <x>230</x>
