@@ -71,7 +71,6 @@ class ListaConsulta(VentanaBase):
         super().__init__(anterior=anterior)
 
     def preparar(self):
-        # En este diseño el botón BACK se llama pushButton.
         self.pushButton.clicked.connect(self.volver)
 
         if self.criterios:

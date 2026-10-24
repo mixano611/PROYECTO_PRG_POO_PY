@@ -2,7 +2,7 @@ import json
 from json import JSONDecodeError
 from pathlib import Path
 
-# data/ está un nivel arriba de src/
+
 RUTA_USUARIOS = Path(__file__).resolve().parent.parent / "data" / "usuarios_data.json"
 
 

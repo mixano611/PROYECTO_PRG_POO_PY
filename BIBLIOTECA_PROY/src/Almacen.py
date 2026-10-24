@@ -2,7 +2,6 @@ import json
 from json import JSONDecodeError
 from pathlib import Path
 
-# data/ está un nivel arriba de src/
 RUTA_ALMACEN = Path(__file__).resolve().parent.parent / "data" / "Almacen.json"
 
 
