@@ -32,11 +32,11 @@
      <string>CONSULTA:</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton">
+   <widget class="QPushButton" name="btnBuscar">
     <property name="geometry">
      <rect>
       <x>300</x>
-      <y>290</y>
+      <y>305</y>
       <width>75</width>
       <height>23</height>
      </rect>
@@ -45,7 +45,7 @@
      <string>BUSCAR</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit">
+   <widget class="QLineEdit" name="txtProducto">
     <property name="geometry">
      <rect>
       <x>210</x>
@@ -60,7 +60,7 @@
      <rect>
       <x>90</x>
       <y>140</y>
-      <width>71</width>
+      <width>101</width>
       <height>21</height>
      </rect>
     </property>
@@ -70,10 +70,10 @@
      </font>
     </property>
     <property name="text">
-     <string>LIBRO:</string>
+     <string>PRODUCTO:</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit_2">
+   <widget class="QLineEdit" name="txtNombre">
     <property name="geometry">
      <rect>
       <x>210</x>
@@ -83,11 +83,39 @@
      </rect>
     </property>
    </widget>
-   <widget class="QLabel" name="label_3">
+   <widget class="QLabel" name="label_5">
     <property name="geometry">
      <rect>
       <x>90</x>
       <y>180</y>
+      <width>101</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>NOMBRE:</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="txtAutor">
+    <property name="geometry">
+     <rect>
+      <x>210</x>
+      <y>220</y>
+      <width>351</width>
+      <height>20</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>220</y>
       <width>71</width>
       <height>21</height>
      </rect>
@@ -101,15 +129,20 @@
      <string>AUTOR:</string>
     </property>
    </widget>
-   <widget class="QComboBox" name="comboBox">
+   <widget class="QComboBox" name="cmbEstado">
     <property name="geometry">
      <rect>
       <x>210</x>
-      <y>220</y>
+      <y>260</y>
       <width>351</width>
       <height>22</height>
      </rect>
     </property>
+    <item>
+     <property name="text">
+      <string>TODOS</string>
+     </property>
+    </item>
     <item>
      <property name="text">
       <string>ALMACEN</string>
@@ -130,7 +163,7 @@
     <property name="geometry">
      <rect>
       <x>90</x>
-      <y>220</y>
+      <y>260</y>
       <width>101</width>
       <height>21</height>
      </rect>
@@ -142,6 +175,19 @@
     </property>
     <property name="text">
      <string>ESTADO:</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnVolver">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>BACK</string>
     </property>
    </widget>
   </widget>

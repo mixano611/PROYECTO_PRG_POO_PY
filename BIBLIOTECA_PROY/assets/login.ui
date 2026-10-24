@@ -75,7 +75,7 @@
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap resource="../src/img.qrc">:/prefijoNuevo/logo.jpg</pixmap>
+     <pixmap>images/logo.jpg</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -100,8 +100,6 @@
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
- <resources>
-  <include location="../src/img.qrc"/>
- </resources>
+ <resources/>
  <connections/>
 </ui>

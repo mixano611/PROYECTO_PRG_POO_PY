@@ -73,19 +73,6 @@
      <string>NOMBRE:</string>
     </property>
    </widget>
-   <widget class="QCheckBox" name="checkBox">
-    <property name="geometry">
-     <rect>
-      <x>620</x>
-      <y>440</y>
-      <width>70</width>
-      <height>17</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>USUARIO</string>
-    </property>
-   </widget>
    <widget class="QLineEdit" name="txtContrasena">
     <property name="geometry">
      <rect>
@@ -115,6 +102,19 @@
     </property>
     <property name="text">
      <string>CONTRASEÑA:</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnVolver">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>BACK</string>
     </property>
    </widget>
   </widget>
