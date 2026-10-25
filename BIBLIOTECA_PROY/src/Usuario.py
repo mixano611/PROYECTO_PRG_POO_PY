@@ -11,15 +11,22 @@ def cargar_usuarios():
         with open(RUTA_USUARIOS, "r", encoding="utf-8") as archivo:
             datos = json.load(archivo)
     except FileNotFoundError:
+        guardar_usuarios({})
         return {}
     except JSONDecodeError:
-        print(f"{RUTA_USUARIOS.name} tiene un error de formato. Se empieza vacío.")
+        print(f"{RUTA_USUARIOS.name} tiene un error de formato. Se crea de nuevo.")
+        guardar_usuarios({})
         return {}
 
-    return datos if isinstance(datos, dict) else {}
+    if not isinstance(datos, dict):
+        guardar_usuarios({})
+        return {}
+
+    return datos
 
 
 def guardar_usuarios(usuarios):
+    RUTA_USUARIOS.parent.mkdir(parents=True, exist_ok=True)
     with open(RUTA_USUARIOS, "w", encoding="utf-8") as archivo:
         json.dump(usuarios, archivo, indent=4, ensure_ascii=False)
 
