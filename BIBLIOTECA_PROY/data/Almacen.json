@@ -15,7 +15,7 @@
             "autor": "Antoine de Saint-Exupéry",
             "tipo": "Cuento",
             "estado": "ALMACEN",
-            "stock": 5,
+            "stock": 10,
             "precio": 30.0
         },
         {
