@@ -13,7 +13,7 @@
             "id": 2,
             "nombre": "El principito",
             "autor": "Antoine de Saint-Exupéry",
-            "tipo": "Libro",
+            "tipo": "Cuento",
             "estado": "ALMACEN",
             "stock": 5,
             "precio": 30.0
@@ -116,6 +116,69 @@
             "estado": "VENDIDOS",
             "stock": 0,
             "precio": 26.0
+        },
+        {
+            "id": 14,
+            "nombre": "Dragon Ball",
+            "autor": "Akira Toriyama",
+            "tipo": "Manga",
+            "estado": "ALMACEN",
+            "stock": 5,
+            "precio": 25.0
+        },
+        {
+            "id": 15,
+            "nombre": "Naruto",
+            "autor": "Masashi Kishimoto",
+            "tipo": "Manga",
+            "estado": "VENDIDOS",
+            "stock": 0,
+            "precio": 25.0
+        },
+        {
+            "id": 16,
+            "nombre": "One Piece",
+            "autor": "Eiichirō Oda",
+            "tipo": "Manga",
+            "estado": "ALQUILADOS",
+            "stock": 3,
+            "precio": 25.0
+        },
+        {
+            "id": 17,
+            "nombre": "Jojo's Bizarre adventure",
+            "autor": "Hirohiko Araki",
+            "tipo": "Manga",
+            "estado": "ALMACEN",
+            "stock": 5,
+            "precio": 25.0
+        },
+        {
+            "id": 18,
+            "nombre": "Re-Zero",
+            "autor": "Tappei Nagatsuki",
+            "tipo": "Manga",
+            "estado": "ALMACEN",
+            "stock": 2,
+            "precio": 25.0
+        },
+        {
+            "id": 19,
+            "nombre": "My Hero Academia",
+            "autor": "Kohei Horikoshi",
+            "tipo": "Manga",
+            "estado": "VENDIDOS",
+            "stock": 0,
+            "precio": 25.0
+        },
+        {
+            "id": 20,
+            "nombre": "Blue lock",
+            "autor": "Muneyuki Kaneshiro",
+            "tipo": "Manga",
+            "estado": "ALQUILADOS",
+            "stock": 7,
+            "precio": 25.0
         }
     ]
 }

@@ -46,7 +46,7 @@ class MainConsultaUsuario(MainConsulta):
 
 
 class MainConsultaAdmin(MainConsulta):
-    archivo_ui = "main_consulta_adm.ui"
+    archivo_ui = "aver.ui"
 
     def preparar(self):
         self.btnBuscar.clicked.connect(self.buscar)
@@ -124,7 +124,10 @@ class loginUsuario(VentanaBase):
             )
             return
 
-        self.ir_a(MainConsultaUsuario)
+        self.ir_a(libros)
+
+class libros(VentanaBase):
+    archivo_ui = "aver.ui"
 
 
 class loginAdmin(VentanaBase):
