@@ -157,8 +157,13 @@ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
             <rect>
              <x>10</x>
              <y>960</y>
+<<<<<<< HEAD
              <width>111</width>
              <height>41</height>
+=======
+             <width>241</width>
+             <height>31</height>
+>>>>>>> 44a2b21750491e536403f019d7887a206428afa8
             </rect>
            </property>
            <property name="font">
@@ -177,7 +182,11 @@ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
             <rect>
              <x>10</x>
              <y>330</y>
+<<<<<<< HEAD
              <width>131</width>
+=======
+             <width>201</width>
+>>>>>>> 44a2b21750491e536403f019d7887a206428afa8
              <height>25</height>
             </rect>
            </property>
@@ -307,7 +316,11 @@ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
             <rect>
              <x>10</x>
              <y>650</y>
+<<<<<<< HEAD
              <width>111</width>
+=======
+             <width>281</width>
+>>>>>>> 44a2b21750491e536403f019d7887a206428afa8
              <height>25</height>
             </rect>
            </property>
@@ -1034,7 +1047,11 @@ background-color:rgb(184, 163, 44)</string>
     <rect>
      <x>0</x>
      <y>0</y>
+<<<<<<< HEAD
      <width>915</width>
+=======
+     <width>756</width>
+>>>>>>> 44a2b21750491e536403f019d7887a206428afa8
      <height>26</height>
     </rect>
    </property>
