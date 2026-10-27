@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>915</width>
-    <height>743</height>
+    <height>592</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,7 +17,7 @@
    <string notr="true">/* SCROLL VERTICAL */
 QScrollBar:vertical {
     border: none;
-    background-color: rgb(147, 125, 191);
+    background-color: #896cc4;
     width: 14px;
     margin: 0px 0px 0px 0px; /* Sin margen para que ocupe todo el espacio */
     border-radius: 0px;
@@ -25,17 +25,17 @@ QScrollBar:vertical {
 
 /* MANEJADOR / BARRA */
 QScrollBar::handle:vertical {
-    background-color: rgb(165, 105, 255);
+    background-color: #794bbd;
     min-height: 30px;
     border-radius: 7px;
 } 
 
 QScrollBar::handle:vertical:hover {
-    background-color: rgb(85, 0, 255);
+    background-color:#7738f5;
 }
 
 QScrollBar::handle:vertical:pressed {
-    background-color: rgb(64, 0, 193);
+    background-color: #5e2dc2;
 }
 
 /* OCULTAR BOTÓN SUPERIOR (FLECHA ARRIBA) */
@@ -74,7 +74,7 @@ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
     <item>
      <widget class="QScrollArea" name="scrollArea">
       <property name="styleSheet">
-       <string notr="true">background-color:rgb(251, 255, 165);
+       <string notr="true">background-color:#BBAFDB;
 
 </string>
       </property>
@@ -91,9 +91,9 @@ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
        <property name="geometry">
         <rect>
          <x>0</x>
-         <y>0</y>
+         <y>-1156</y>
          <width>883</width>
-         <height>3103</height>
+         <height>3088</height>
         </rect>
        </property>
        <layout class="QVBoxLayout" name="verticalLayout_2">
@@ -142,7 +142,7 @@ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
            <bool>false</bool>
           </property>
           <property name="styleSheet">
-           <string notr="true">background-color:rgb(251, 255, 165);
+           <string notr="true">background-color:#BBAFDB;
 
 </string>
           </property>
@@ -584,7 +584,7 @@ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
             <number>0</number>
            </property>
           </widget>
-          <widget class="QPushButton" name="pushButton">
+          <widget class="QPushButton" name="Btn1">
            <property name="geometry">
             <rect>
              <x>40</x>
@@ -603,13 +603,13 @@ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
            <property name="styleSheet">
             <string notr="true">border: 1px solid black;
 border-radius: 5px;
-background-color:rgb(184, 163, 44)</string>
+background-color:rgb(117, 95, 153)</string>
            </property>
            <property name="text">
             <string>Adquirir</string>
            </property>
           </widget>
-          <widget class="QPushButton" name="pushButton_2">
+          <widget class="QPushButton" name="Btn4">
            <property name="geometry">
             <rect>
              <x>550</x>
@@ -628,13 +628,13 @@ background-color:rgb(184, 163, 44)</string>
            <property name="styleSheet">
             <string notr="true">border: 1px solid black;
 border-radius: 5px;
-background-color:rgb(184, 163, 44)</string>
+background-color:rgb(117, 95, 153)</string>
            </property>
            <property name="text">
             <string>Adquirir</string>
            </property>
           </widget>
-          <widget class="QPushButton" name="pushButton_3">
+          <widget class="QPushButton" name="Btn2">
            <property name="geometry">
             <rect>
              <x>210</x>
@@ -653,13 +653,13 @@ background-color:rgb(184, 163, 44)</string>
            <property name="styleSheet">
             <string notr="true">border: 1px solid black;
 border-radius: 5px;
-background-color:rgb(184, 163, 44)</string>
+background-color:rgb(117, 95, 153)</string>
            </property>
            <property name="text">
             <string>Adquirir</string>
            </property>
           </widget>
-          <widget class="QPushButton" name="pushButton_4">
+          <widget class="QPushButton" name="Btn3">
            <property name="geometry">
             <rect>
              <x>380</x>
@@ -678,13 +678,13 @@ background-color:rgb(184, 163, 44)</string>
            <property name="styleSheet">
             <string notr="true">border: 1px solid black;
 border-radius: 5px;
-background-color:rgb(184, 163, 44)</string>
+background-color:rgb(117, 95, 153)</string>
            </property>
            <property name="text">
             <string>Adquirir</string>
            </property>
           </widget>
-          <widget class="QPushButton" name="pushButton_9">
+          <widget class="QPushButton" name="Btn5">
            <property name="geometry">
             <rect>
              <x>40</x>
@@ -703,13 +703,13 @@ background-color:rgb(184, 163, 44)</string>
            <property name="styleSheet">
             <string notr="true">border: 1px solid black;
 border-radius: 5px;
-background-color:rgb(184, 163, 44)</string>
+background-color:rgb(117, 95, 153)</string>
            </property>
            <property name="text">
             <string>Adquirir</string>
            </property>
           </widget>
-          <widget class="QPushButton" name="pushButton_11">
+          <widget class="QPushButton" name="Btn6">
            <property name="geometry">
             <rect>
              <x>210</x>
@@ -728,13 +728,13 @@ background-color:rgb(184, 163, 44)</string>
            <property name="styleSheet">
             <string notr="true">border: 1px solid black;
 border-radius: 5px;
-background-color:rgb(184, 163, 44)</string>
+background-color:rgb(117, 95, 153)</string>
            </property>
            <property name="text">
             <string>Adquirir</string>
            </property>
           </widget>
-          <widget class="QPushButton" name="pushButton_12">
+          <widget class="QPushButton" name="Btn7">
            <property name="geometry">
             <rect>
              <x>380</x>
@@ -753,13 +753,13 @@ background-color:rgb(184, 163, 44)</string>
            <property name="styleSheet">
             <string notr="true">border: 1px solid black;
 border-radius: 5px;
-background-color:rgb(184, 163, 44)</string>
+background-color:rgb(117, 95, 153)</string>
            </property>
            <property name="text">
             <string>Adquirir</string>
            </property>
           </widget>
-          <widget class="QPushButton" name="pushButton_10">
+          <widget class="QPushButton" name="Btn8">
            <property name="geometry">
             <rect>
              <x>40</x>
@@ -778,13 +778,14 @@ background-color:rgb(184, 163, 44)</string>
            <property name="styleSheet">
             <string notr="true">border: 1px solid black;
 border-radius: 5px;
-background-color:rgb(184, 163, 44)</string>
+background-color:rgb(117, 95, 153)
+</string>
            </property>
            <property name="text">
             <string>Adquirir</string>
            </property>
           </widget>
-          <widget class="QPushButton" name="pushButton_13">
+          <widget class="QPushButton" name="Btn9">
            <property name="geometry">
             <rect>
              <x>210</x>
@@ -803,13 +804,13 @@ background-color:rgb(184, 163, 44)</string>
            <property name="styleSheet">
             <string notr="true">border: 1px solid black;
 border-radius: 5px;
-background-color:rgb(184, 163, 44)</string>
+background-color:rgb(117, 95, 153);</string>
            </property>
            <property name="text">
             <string>Adquirir</string>
            </property>
           </widget>
-          <widget class="QPushButton" name="pushButton_14">
+          <widget class="QPushButton" name="Btn10">
            <property name="geometry">
             <rect>
              <x>30</x>
@@ -828,13 +829,13 @@ background-color:rgb(184, 163, 44)</string>
            <property name="styleSheet">
             <string notr="true">border: 1px solid black;
 border-radius: 5px;
-background-color:rgb(184, 163, 44)</string>
+background-color:rgb(117, 95, 153)</string>
            </property>
            <property name="text">
             <string>Adquirir</string>
            </property>
           </widget>
-          <widget class="QPushButton" name="pushButton_15">
+          <widget class="QPushButton" name="Btn13">
            <property name="geometry">
             <rect>
              <x>540</x>
@@ -853,13 +854,13 @@ background-color:rgb(184, 163, 44)</string>
            <property name="styleSheet">
             <string notr="true">border: 1px solid black;
 border-radius: 5px;
-background-color:rgb(184, 163, 44)</string>
+background-color:rgb(117, 95, 153)</string>
            </property>
            <property name="text">
             <string>Adquirir</string>
            </property>
           </widget>
-          <widget class="QPushButton" name="pushButton_16">
+          <widget class="QPushButton" name="Btn11">
            <property name="geometry">
             <rect>
              <x>200</x>
@@ -878,13 +879,13 @@ background-color:rgb(184, 163, 44)</string>
            <property name="styleSheet">
             <string notr="true">border: 1px solid black;
 border-radius: 5px;
-background-color:rgb(184, 163, 44)</string>
+background-color:rgb(117, 95, 153)</string>
            </property>
            <property name="text">
             <string>Adquirir</string>
            </property>
           </widget>
-          <widget class="QPushButton" name="pushButton_17">
+          <widget class="QPushButton" name="Btn12">
            <property name="geometry">
             <rect>
              <x>370</x>
@@ -903,13 +904,13 @@ background-color:rgb(184, 163, 44)</string>
            <property name="styleSheet">
             <string notr="true">border: 1px solid black;
 border-radius: 5px;
-background-color:rgb(184, 163, 44)</string>
+background-color:rgb(117, 95, 153)</string>
            </property>
            <property name="text">
             <string>Adquirir</string>
            </property>
           </widget>
-          <widget class="QPushButton" name="pushButton_32">
+          <widget class="QPushButton" name="Btn15">
            <property name="geometry">
             <rect>
              <x>30</x>
@@ -928,13 +929,13 @@ background-color:rgb(184, 163, 44)</string>
            <property name="styleSheet">
             <string notr="true">border: 1px solid black;
 border-radius: 5px;
-background-color:rgb(184, 163, 44)</string>
+background-color:rgb(117, 95, 153)</string>
            </property>
            <property name="text">
             <string>Adquirir</string>
            </property>
           </widget>
-          <widget class="QPushButton" name="pushButton_33">
+          <widget class="QPushButton" name="Btn16">
            <property name="geometry">
             <rect>
              <x>200</x>
@@ -953,13 +954,13 @@ background-color:rgb(184, 163, 44)</string>
            <property name="styleSheet">
             <string notr="true">border: 1px solid black;
 border-radius: 5px;
-background-color:rgb(184, 163, 44)</string>
+background-color:rgb(117, 95, 153)</string>
            </property>
            <property name="text">
             <string>Adquirir</string>
            </property>
           </widget>
-          <widget class="QPushButton" name="pushButton_31">
+          <widget class="QPushButton" name="Btn14">
            <property name="geometry">
             <rect>
              <x>710</x>
@@ -978,7 +979,7 @@ background-color:rgb(184, 163, 44)</string>
            <property name="styleSheet">
             <string notr="true">border: 1px solid black;
 border-radius: 5px;
-background-color:rgb(184, 163, 44)</string>
+background-color:rgb(117, 95, 153)</string>
            </property>
            <property name="text">
             <string>Adquirir</string>
@@ -1004,23 +1005,22 @@ background-color:rgb(184, 163, 44)</string>
           <zorder>label_2</zorder>
           <zorder>label_3</zorder>
           <zorder>label_4</zorder>
-          <zorder>pushButton</zorder>
-          <zorder>pushButton_2</zorder>
-          <zorder>pushButton_3</zorder>
-          <zorder>pushButton_4</zorder>
-          <zorder>pushButton_9</zorder>
-          <zorder>pushButton_11</zorder>
-          <zorder>pushButton_12</zorder>
-          <zorder>pushButton_10</zorder>
-          <zorder>pushButton_13</zorder>
-          <zorder>pushButton_14</zorder>
-          <zorder>pushButton_15</zorder>
-          <zorder>pushButton_16</zorder>
-          <zorder>pushButton_17</zorder>
-          <zorder>pushButton_32</zorder>
-          <zorder>pushButton_33</zorder>
-          <zorder>horizontalSpacer</zorder>
-          <zorder>pushButton_31</zorder>
+          <zorder>Btn1</zorder>
+          <zorder>Btn4</zorder>
+          <zorder>Btn2</zorder>
+          <zorder>Btn3</zorder>
+          <zorder>Btn5</zorder>
+          <zorder>Btn6</zorder>
+          <zorder>Btn7</zorder>
+          <zorder>Btn8</zorder>
+          <zorder>Btn9</zorder>
+          <zorder>Btn10</zorder>
+          <zorder>Btn13</zorder>
+          <zorder>Btn11</zorder>
+          <zorder>Btn12</zorder>
+          <zorder>Btn15</zorder>
+          <zorder>Btn16</zorder>
+          <zorder>Btn14</zorder>
          </widget>
         </item>
        </layout>
@@ -1035,7 +1035,7 @@ background-color:rgb(184, 163, 44)</string>
      <x>0</x>
      <y>0</y>
      <width>915</width>
-     <height>26</height>
+     <height>21</height>
     </rect>
    </property>
   </widget>

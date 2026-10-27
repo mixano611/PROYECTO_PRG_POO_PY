@@ -1,5 +1,6 @@
+import json
 from PyQt5.QtCore import Qt
-from PyQt5.QtWidgets import QMessageBox, QTableWidgetItem
+from PyQt5.QtWidgets import QMessageBox, QTableWidgetItem, QPushButton
 
 from navegacion import VentanaBase
 from src.Admin import validar_admin
@@ -235,8 +236,68 @@ class libros(VentanaBase):
     
     def preparar(self):
         self.btnVolver.clicked.connect(self.volver)
+        
+        # CREAMOS LA INSTANCIA AQUÍ MISMO con un nombre claro
+        self.ventana_catalogo = catalogo() 
+        
+        botones = [
+            self.Btn1, self.Btn2, self.Btn3, self.Btn4, self.Btn5, self.Btn6, self.Btn7, self.Btn8,
+            self.Btn9, self.Btn10, self.Btn11, self.Btn12, self.Btn13, self.Btn14, self.Btn15, self.Btn16
+        ]
 
+        for boton in botones:
+            # Le pasamos la instancia que acabamos de crear (self.ventana_catalogo)
+            boton.clicked.connect(lambda checked=False, b=boton: self.ir_a(self.ventana_catalogo, b))
 
+    def ir_a(self, ventana_destino, boton_origen):
+        # Ahora ventana_destino recibirá correctamente el objeto instanciado
+        ventana_destino.configurar_contenido(boton_origen)
+        ventana_destino.show()
+        
+class catalogo(VentanaBase):
+    archivo_ui = "menu_com-res.ui"
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        
+        # Cargamos el archivo JSON de forma segura al inicializar la ventana
+        try:
+            with open("data/Almacen.json", "r", encoding="utf-8") as archivo:
+                self.INFO_LIBROS = json.load(archivo)
+        except FileNotFoundError:
+            print("Error: No se encontró el archivo 'data/Almacen.json'. Verifica la ruta.")
+            self.INFO_LIBROS = {}
+
+    def configurar_contenido(self, boton):
+        id_boton = boton.objectName()  # Ej: "Btn1" o "Btn16"
+        
+        # Primero verificamos que el JSON se haya cargado bien y contenga la clave "libros"
+        if "libros" in self.INFO_LIBROS:
+            lista_de_libros = self.INFO_LIBROS["libros"]
+            
+            # Recorremos cada diccionario dentro de la lista de libros
+            for libro_dict in lista_de_libros:
+                # Buscamos si el ID del botón presionado está en este diccionario
+                if id_boton in libro_dict:
+                    datos = libro_dict[id_boton]
+                    
+                    # Asignamos los datos reales de tu JSON a las etiquetas de tu interfaz
+                    self.LblTitulo.setText(datos["titulo"])
+                    
+                    # Construimos un texto ordenado para la descripción con autor, tipo y precio
+                    texto_detalles = (
+                        f"Autor: {datos['autor']}\n"
+                        f"Tipo: {datos['tipo']}\n"
+                        f"Estado: {datos['estado']}\n"
+                        f"Stock: {datos['stock']}\n"
+                        f"Precio: S/. {datos['precio']}"
+                    )
+                    self.LblDescripcion.setText(texto_detalles)
+                    return  # Encontrado con éxito, salimos de la función
+                    
+        # Si no lo encuentra o el JSON está vacío, dejamos un mensaje por defecto
+        self.LblTitulo.setText("No disponible")
+        self.LblDescripcion.setText("No se encontraron detalles para este libro.")
 
 
 class loginAdmin(VentanaBase):

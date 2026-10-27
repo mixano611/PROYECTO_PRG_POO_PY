@@ -1,184 +1,223 @@
 {
     "libros": [
-        {
+        {   "Btn1": {
             "id": 1,
-            "nombre": "Cien años de soledad",
+            "titulo": "Cien años de soledad",
             "autor": "Gabriel García Márquez",
             "tipo": "Novela",
             "estado": "ALMACEN",
             "stock": 3,
             "precio": 45.0
+            }
         },
         {
-            "id": 2,
-            "nombre": "El principito",
+            "Btn7": {
+            "id": 7,
+            "titulo": "El principito",
             "autor": "Antoine de Saint-Exupéry",
             "tipo": "Cuento",
             "estado": "ALMACEN",
             "stock": 10,
             "precio": 30.0
+            }
         },
         {
-            "id": 3,
-            "nombre": "La ciudad y los perros",
+            "Btn2": {
+            "id": 2,
+            "titulo": "La ciudad y los perros",
             "autor": "Mario Vargas Llosa",
             "tipo": "Novela",
             "estado": "VENDIDOS",
             "stock": 0,
             "precio": 50.0
+            }
         },
         {
-            "id": 4,
-            "nombre": "Rayuela",
+            "Btn3": {
+            "id": 3,
+            "titulo": "Rayuela",
             "autor": "Julio Cortázar",
             "tipo": "Novela",
             "estado": "ALQUILADOS",
             "stock": 1,
             "precio": 40.0
+            }
         },
         {
+            "Btn5":{
             "id": 5,
-            "nombre": "El Aleph",
+            "titulo": "El Aleph",
             "autor": "Jorge Luis Borges",
             "tipo": "Cuento",
             "estado": "ALMACEN",
             "stock": 2,
             "precio": 35.0
+            }
         },
         {
+            "Btn6": {
             "id": 6,
-            "nombre": "Cuentos de la selva",
+            "titulo": "Cuentos de la selva",
             "autor": "Horacio Quiroga",
             "tipo": "Cuento",
             "estado": "ALMACEN",
             "stock": 6,
             "precio": 25.0
+            }
         },
         {
-            "id": 7,
-            "nombre": "Veinte poemas de amor",
+            "Btn9": {
+            "id": 9,
+            "titulo": "Veinte poemas de amor",
             "autor": "Pablo Neruda",
             "tipo": "Poesía",
             "estado": "ALQUILADOS",
             "stock": 1,
             "precio": 28.0
+            }
         },
         {
+            "Btn8": {
             "id": 8,
-            "nombre": "Martín Fierro",
+            "titulo": "Martín Fierro",
             "autor": "José Hernández",
             "tipo": "Poesía",
             "estado": "VENDIDOS",
             "stock": 0,
             "precio": 22.0
+            }
         },
         {
-            "id": 9,
-            "nombre": "El túnel",
+            "Btn4": {
+            "id": 4,
+            "titulo": "El túnel",
             "autor": "Ernesto Sabato",
             "tipo": "Novela",
             "estado": "ALMACEN",
             "stock": 4,
             "precio": 32.0
+            }
         },
         {
+            "Btn": {
             "id": 10,
-            "nombre": "El arte de la guerra",
+            "titulo": "El arte de la guerra",
             "autor": "Sun Tzu",
             "tipo": "Ensayo",
             "estado": "ALMACEN",
             "stock": 2,
             "precio": 27.0
+            }
         },
         {
+            "Btn": {
             "id": 11,
-            "nombre": "Mafalda",
+            "titulo": "Mafalda",
             "autor": "Quino",
             "tipo": "Cómic",
             "estado": "ALQUILADOS",
             "stock": 3,
             "precio": 18.0
+            }
         },
         {
+            "Btn": {
             "id": 12,
-            "nombre": "La Odisea",
+            "titulo": "La Odisea",
             "autor": "Homero",
             "tipo": "Clásico",
             "estado": "ALMACEN",
             "stock": 1,
             "precio": 38.0
+            }
         },
         {
+            "Btn": {
             "id": 13,
-            "nombre": "Hamlet",
+            "titulo": "Hamlet",
             "autor": "William Shakespeare",
             "tipo": "Teatro",
             "estado": "VENDIDOS",
             "stock": 0,
             "precio": 26.0
+            }
         },
         {
-            "id": 14,
-            "nombre": "Dragon Ball",
+            "Btn10": {
+            "id": 10,
+            "titulo": "Dragon Ball",
             "autor": "Akira Toriyama",
             "tipo": "Manga",
             "estado": "ALMACEN",
             "stock": 5,
             "precio": 25.0
+            }
         },
         {
-            "id": 15,
-            "nombre": "Naruto",
+            "Btn11": {
+            "id": 11,
+            "titulo": "Naruto",
             "autor": "Masashi Kishimoto",
             "tipo": "Manga",
             "estado": "VENDIDOS",
             "stock": 0,
             "precio": 25.0
+            }
         },
         {
-            "id": 16,
-            "nombre": "One Piece",
+            "Btn12": {
+            "id": 12,
+            "titulo": "One Piece",
             "autor": "Eiichirō Oda",
             "tipo": "Manga",
             "estado": "ALQUILADOS",
             "stock": 3,
             "precio": 25.0
+            }
         },
         {
-            "id": 17,
-            "nombre": "Jojo's Bizarre adventure",
+            "Btn13":{
+            "id": 13,
+            "titulo": "Jojo's Bizarre adventure",
             "autor": "Hirohiko Araki",
             "tipo": "Manga",
             "estado": "ALMACEN",
             "stock": 5,
             "precio": 25.0
+            }
         },
         {
-            "id": 18,
-            "nombre": "Re-Zero",
+            "Btn14": {
+            "id": 14,
+            "titulo": "Re-Zero",
             "autor": "Tappei Nagatsuki",
             "tipo": "Manga",
             "estado": "ALMACEN",
             "stock": 2,
             "precio": 25.0
+            }
         },
         {
-            "id": 19,
-            "nombre": "My Hero Academia",
+            "Btn15": {
+            "id": 15,
+            "titulo": "My Hero Academia",
             "autor": "Kohei Horikoshi",
             "tipo": "Manga",
             "estado": "VENDIDOS",
             "stock": 0,
             "precio": 25.0
+            }
         },
         {
-            "id": 20,
-            "nombre": "Blue lock",
+            "Btn16": {
+            "id": 16,
+            "titulo": "Blue lock",
             "autor": "Muneyuki Kaneshiro",
             "tipo": "Manga",
             "estado": "ALQUILADOS",
             "stock": 7,
             "precio": 25.0
+            }
         }
     ]
 }
