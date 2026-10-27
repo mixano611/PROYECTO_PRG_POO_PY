@@ -234,7 +234,7 @@ class libros(VentanaBase):
     archivo_ui = "aver.ui"
     
     def preparar(self):
-        self.BntVolver.clicked.connect(self.volver)
+        self.btnVolver.clicked.connect(self.volver)
 
 
 
