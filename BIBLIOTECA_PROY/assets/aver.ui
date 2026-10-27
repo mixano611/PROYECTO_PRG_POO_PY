@@ -118,9 +118,9 @@ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
            <property name="geometry">
             <rect>
              <x>10</x>
-             <y>970</y>
-             <width>83</width>
-             <height>25</height>
+             <y>960</y>
+             <width>241</width>
+             <height>31</height>
             </rect>
            </property>
            <property name="font">
@@ -139,7 +139,7 @@ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
             <rect>
              <x>10</x>
              <y>330</y>
-             <width>83</width>
+             <width>201</width>
              <height>25</height>
             </rect>
            </property>
@@ -269,7 +269,7 @@ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
             <rect>
              <x>10</x>
              <y>650</y>
-             <width>83</width>
+             <width>281</width>
              <height>25</height>
             </rect>
            </property>
@@ -443,7 +443,7 @@ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
             <rect>
              <x>10</x>
              <y>10</y>
-             <width>83</width>
+             <width>151</width>
              <height>25</height>
             </rect>
            </property>
@@ -580,11 +580,12 @@ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
      <x>0</x>
      <y>0</y>
      <width>756</width>
-     <height>21</height>
+     <height>26</height>
     </rect>
    </property>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
+ <resources/>
  <connections/>
 </ui>
