@@ -17,10 +17,10 @@
    <widget class="QPushButton" name="btnIniciar">
     <property name="geometry">
      <rect>
-      <x>320</x>
-      <y>290</y>
-      <width>75</width>
-      <height>23</height>
+      <x>290</x>
+      <y>320</y>
+      <width>101</width>
+      <height>41</height>
      </rect>
     </property>
     <property name="text">
@@ -30,26 +30,32 @@
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>210</x>
-      <y>40</y>
-      <width>355</width>
+      <x>40</x>
+      <y>70</y>
+      <width>631</width>
       <height>72</height>
      </rect>
     </property>
     <property name="font">
      <font>
+      <family>Gill Sans Ultra Bold Condensed</family>
       <pointsize>36</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
      </font>
     </property>
     <property name="text">
-     <string>LIBRERIA_PY</string>
+     <string>LUNA LETRAS</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
     </property>
    </widget>
    <widget class="QLineEdit" name="txtNombre">
     <property name="geometry">
      <rect>
-      <x>260</x>
-      <y>190</y>
+      <x>270</x>
+      <y>210</y>
       <width>281</width>
       <height>21</height>
      </rect>
@@ -58,8 +64,8 @@
    <widget class="QLabel" name="label_2">
     <property name="geometry">
      <rect>
-      <x>140</x>
-      <y>190</y>
+      <x>130</x>
+      <y>210</y>
       <width>131</width>
       <height>21</height>
      </rect>
@@ -76,8 +82,8 @@
    <widget class="QLineEdit" name="txtContrasena">
     <property name="geometry">
      <rect>
-      <x>260</x>
-      <y>230</y>
+      <x>270</x>
+      <y>250</y>
       <width>281</width>
       <height>21</height>
      </rect>
@@ -89,8 +95,8 @@
    <widget class="QLabel" name="label_3">
     <property name="geometry">
      <rect>
-      <x>120</x>
-      <y>230</y>
+      <x>130</x>
+      <y>250</y>
       <width>131</width>
       <height>21</height>
      </rect>
@@ -124,7 +130,7 @@
      <x>0</x>
      <y>0</y>
      <width>709</width>
-     <height>21</height>
+     <height>26</height>
     </rect>
    </property>
   </widget>
