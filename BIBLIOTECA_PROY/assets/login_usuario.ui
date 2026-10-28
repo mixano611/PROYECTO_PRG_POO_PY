@@ -13,15 +13,34 @@
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: #BBAFDB</string>
+  </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QPushButton" name="btnIniciar">
     <property name="geometry">
      <rect>
-      <x>310</x>
-      <y>290</y>
+      <x>330</x>
+      <y>320</y>
       <width>101</width>
       <height>41</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+	border: 2px solid #000000;
+	border-radius: 8px;
+	background-color: #BBAFDB;
+	color: black;
+	font-size: 16px;
+	cursor: pointer;
+  	transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+QPushButton:hover {
+  	transform: scale(1.1);
+ 	background-color: #8E7CC3;
+}</string>
     </property>
     <property name="text">
      <string>INICIAR</string>
@@ -30,19 +49,36 @@
    <widget class="QLineEdit" name="txtNombre">
     <property name="geometry">
      <rect>
-      <x>230</x>
-      <y>190</y>
+      <x>250</x>
+      <y>220</y>
       <width>281</width>
       <height>21</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit{
+	border: 2px solid #000000;
+	border-radius: 5px;
+	background-color: #BBAFDB;
+	color: black;
+	font-size: 10px;
+	cursor: pointer;
+  	transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+QLineEdit:hover {
+  	transform: scale(1.1);
+ 	background-color: #8E7CC3;
+	transform: translateY(-2px);
+}</string>
     </property>
    </widget>
    <widget class="QLabel" name="label_2">
     <property name="geometry">
      <rect>
-      <x>140</x>
-      <y>190</y>
-      <width>131</width>
+      <x>160</x>
+      <y>220</y>
+      <width>71</width>
       <height>21</height>
      </rect>
     </property>
@@ -58,19 +94,36 @@
    <widget class="QLineEdit" name="txtDni">
     <property name="geometry">
      <rect>
-      <x>230</x>
-      <y>230</y>
+      <x>250</x>
+      <y>260</y>
       <width>281</width>
       <height>21</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit{
+	border: 2px solid #000000;
+	border-radius: 5px;
+	background-color: #BBAFDB;
+	color: black;
+	font-size: 10px;
+	cursor: pointer;
+  	transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+QLineEdit:hover {
+  	transform: scale(1.1);
+ 	background-color: #8E7CC3;
+	transform: translateY(-2px);
+}</string>
     </property>
    </widget>
    <widget class="QLabel" name="label_4">
     <property name="geometry">
      <rect>
-      <x>140</x>
-      <y>230</y>
-      <width>131</width>
+      <x>160</x>
+      <y>260</y>
+      <width>51</width>
       <height>21</height>
      </rect>
     </property>
@@ -92,6 +145,23 @@
       <height>23</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+	border: 1px solid #000000;
+	border-radius: 8px;
+	background-color: #BBAFDB;
+	color: black;
+	font-size: 10px;
+	cursor: pointer;
+  	transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+QPushButton:hover {
+  	transform: scale(1.1);
+ 	background-color: #8E7CC3;
+	transform: translateY(-2px);
+}</string>
+    </property>
     <property name="text">
      <string>BACK</string>
     </property>
@@ -107,14 +177,15 @@
     </property>
     <property name="font">
      <font>
-      <family>Gill Sans Ultra Bold Condensed</family>
+      <family>Segoe UI Black</family>
       <pointsize>36</pointsize>
-      <weight>50</weight>
-      <bold>false</bold>
+      <weight>75</weight>
+      <italic>true</italic>
+      <bold>true</bold>
      </font>
     </property>
     <property name="text">
-     <string>LUNA LETRAS</string>
+     <string>LETRAS Y MUNDOS</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
@@ -127,7 +198,7 @@
      <x>0</x>
      <y>0</y>
      <width>709</width>
-     <height>26</height>
+     <height>21</height>
     </rect>
    </property>
   </widget>

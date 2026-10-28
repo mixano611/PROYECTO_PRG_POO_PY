@@ -13,33 +13,35 @@
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: #BBAFDB</string>
+  </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QLabel" name="label">
-    <property name="geometry">
-     <rect>
-      <x>260</x>
-      <y>50</y>
-      <width>161</width>
-      <height>41</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>20</pointsize>
-     </font>
-    </property>
-    <property name="text">
-     <string>CONSULTA:</string>
-    </property>
-   </widget>
    <widget class="QPushButton" name="btnBuscar">
     <property name="geometry">
      <rect>
-      <x>300</x>
-      <y>305</y>
-      <width>75</width>
+      <x>240</x>
+      <y>280</y>
+      <width>201</width>
       <height>23</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+	border: 2px solid #000000;
+	border-radius: 10px;
+	background-color: #BBAFDB;
+	color: black;
+	font-size: 12px;
+	cursor: pointer;
+  	transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+QPushButton:hover {
+  	transform: scale(1.1);
+ 	background-color: #8E7CC3;
+	transform: translateY(-2px);
+}</string>
     </property>
     <property name="text">
      <string>BUSCAR</string>
@@ -48,18 +50,35 @@
    <widget class="QLineEdit" name="txtProducto">
     <property name="geometry">
      <rect>
-      <x>210</x>
-      <y>140</y>
+      <x>240</x>
+      <y>120</y>
       <width>351</width>
       <height>20</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit{
+	border: 2px solid #000000;
+	border-radius: 5px;
+	background-color: #BBAFDB;
+	color: black;
+	font-size: 8px;
+	cursor: pointer;
+  	transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+QLineEdit:hover {
+  	transform: scale(1.1);
+ 	background-color: #8E7CC3;
+	transform: translateY(-2px);
+}</string>
     </property>
    </widget>
    <widget class="QLabel" name="label_2">
     <property name="geometry">
      <rect>
-      <x>60</x>
-      <y>140</y>
+      <x>90</x>
+      <y>120</y>
       <width>131</width>
       <height>21</height>
      </rect>
@@ -76,18 +95,35 @@
    <widget class="QLineEdit" name="txtNombre">
     <property name="geometry">
      <rect>
-      <x>210</x>
-      <y>180</y>
+      <x>240</x>
+      <y>160</y>
       <width>351</width>
       <height>20</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit{
+	border: 2px solid #000000;
+	border-radius: 5px;
+	background-color: #BBAFDB;
+	color: black;
+	font-size: 8px;
+	cursor: pointer;
+  	transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+QLineEdit:hover {
+  	transform: scale(1.1);
+ 	background-color: #8E7CC3;
+	transform: translateY(-2px);
+}</string>
     </property>
    </widget>
    <widget class="QLabel" name="label_5">
     <property name="geometry">
      <rect>
-      <x>60</x>
-      <y>180</y>
+      <x>90</x>
+      <y>160</y>
       <width>131</width>
       <height>21</height>
      </rect>
@@ -104,18 +140,35 @@
    <widget class="QLineEdit" name="txtAutor">
     <property name="geometry">
      <rect>
-      <x>210</x>
-      <y>220</y>
+      <x>240</x>
+      <y>200</y>
       <width>351</width>
       <height>20</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit{
+	border: 2px solid #000000;
+	border-radius: 5px;
+	background-color: #BBAFDB;
+	color: black;
+	font-size: 8px;
+	cursor: pointer;
+  	transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+QLineEdit:hover {
+  	transform: scale(1.1);
+ 	background-color: #8E7CC3;
+	transform: translateY(-2px);
+}</string>
     </property>
    </widget>
    <widget class="QLabel" name="label_3">
     <property name="geometry">
      <rect>
-      <x>60</x>
-      <y>220</y>
+      <x>90</x>
+      <y>200</y>
       <width>101</width>
       <height>21</height>
      </rect>
@@ -132,11 +185,28 @@
    <widget class="QComboBox" name="cmbEstado">
     <property name="geometry">
      <rect>
-      <x>210</x>
-      <y>260</y>
+      <x>240</x>
+      <y>240</y>
       <width>351</width>
       <height>22</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QComboBox{
+	border: 2px solid #000000;
+	border-radius: 5px;
+	background-color: #BBAFDB;
+	color: black;
+	font-size: 12px;
+	cursor: pointer;
+  	transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+QComboBox:hover {
+  	transform: scale(1.1);
+ 	background-color: #8E7CC3;
+	transform: translateY(-2px);
+}</string>
     </property>
     <item>
      <property name="text">
@@ -162,8 +232,8 @@
    <widget class="QLabel" name="label_4">
     <property name="geometry">
      <rect>
-      <x>60</x>
-      <y>260</y>
+      <x>90</x>
+      <y>240</y>
       <width>131</width>
       <height>21</height>
      </rect>
@@ -186,8 +256,63 @@
       <height>23</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+	border: 1px solid #000000;
+	border-radius: 8px;
+	background-color: #BBAFDB;
+	color: black;
+	font-size: 10px;
+	cursor: pointer;
+  	transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+QPushButton:hover {
+  	transform: scale(1.1);
+ 	background-color: #8E7CC3;
+	transform: translateY(-2px);
+}</string>
+    </property>
     <property name="text">
      <string>BACK</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_6">
+    <property name="geometry">
+     <rect>
+      <x>160</x>
+      <y>320</y>
+      <width>381</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>⚠️¡&quot;BUSCAR&quot; sin completar los espacios, mostrara el almacen completo!⚠️</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_7">
+    <property name="geometry">
+     <rect>
+      <x>240</x>
+      <y>30</y>
+      <width>201</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Segoe UI Black</family>
+      <pointsize>25</pointsize>
+      <weight>75</weight>
+      <italic>true</italic>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>CONSULTA:</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
     </property>
    </widget>
   </widget>
@@ -197,35 +322,35 @@
      <x>0</x>
      <y>0</y>
      <width>686</width>
-     <height>26</height>
+     <height>21</height>
     </rect>
    </property>
-   <widget class="QMenu" name="menuCONSULTA">
-    <property name="title">
-     <string>CONSULTA</string>
-    </property>
-   </widget>
-   <widget class="QMenu" name="menuALMACEN">
+   <widget class="QMenu" name="menuPEDIDOS">
     <property name="title">
      <string>ALMACEN</string>
     </property>
    </widget>
-   <widget class="QMenu" name="menuPEDIDOS">
+   <widget class="QMenu" name="menuHISTORIAL">
     <property name="title">
-     <string>PEDIDOS</string>
+     <string>HISTORIAL</string>
     </property>
+    <addaction name="actionCOMPRAS"/>
+    <addaction name="actionRENTADAS"/>
    </widget>
-   <widget class="QMenu" name="menuRESERVADOS">
-    <property name="title">
-     <string>ALQUILADOS</string>
-    </property>
-   </widget>
-   <addaction name="menuCONSULTA"/>
-   <addaction name="menuALMACEN"/>
    <addaction name="menuPEDIDOS"/>
-   <addaction name="menuRESERVADOS"/>
+   <addaction name="menuHISTORIAL"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionCOMPRAS">
+   <property name="text">
+    <string>COMPRADAS</string>
+   </property>
+  </action>
+  <action name="actionRENTADAS">
+   <property name="text">
+    <string>RENTADAS</string>
+   </property>
+  </action>
  </widget>
  <resources/>
  <connections/>

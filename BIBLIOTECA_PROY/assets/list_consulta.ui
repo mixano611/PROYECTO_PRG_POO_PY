@@ -13,23 +13,33 @@
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: #BBAFDB</string>
+  </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>280</x>
+      <x>260</x>
       <y>20</y>
-      <width>171</width>
+      <width>211</width>
       <height>41</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <pointsize>20</pointsize>
+      <family>Cascadia Code</family>
+      <pointsize>25</pointsize>
+      <weight>75</weight>
+      <italic>true</italic>
+      <bold>true</bold>
      </font>
     </property>
     <property name="text">
-     <string>CONSULTA:</string>
+     <string>ALMACEN:</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
     </property>
    </widget>
    <widget class="QScrollBar" name="verticalScrollBar">
@@ -56,6 +66,23 @@
       <width>671</width>
       <height>301</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QTableWidget{
+	border: 2px solid #000000;
+	border-radius: 20px;
+	background-color: #BBAFDB;
+	color: black;
+	font-size: 22px;
+	cursor: pointer;
+  	transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+QTableWidget:hover {
+  	transform: scale(1.1);
+ 	background-color: #8E7CC3;
+	transform: translateY(-2px);
+}</string>
     </property>
     <column>
      <property name="text">
@@ -133,6 +160,23 @@
       <height>23</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+	border: 1px solid #000000;
+	border-radius: 8px;
+	background-color: #BBAFDB;
+	color: black;
+	font-size: 10px;
+	cursor: pointer;
+  	transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+QPushButton:hover {
+  	transform: scale(1.1);
+ 	background-color: #8E7CC3;
+	transform: translateY(-2px);
+}</string>
+    </property>
     <property name="text">
      <string>BACK</string>
     </property>
@@ -148,9 +192,27 @@
     </property>
     <property name="font">
      <font>
+      <pointsize>-1</pointsize>
       <weight>75</weight>
       <bold>true</bold>
      </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+	border: 2px solid #000000;
+	border-radius: 8px;
+	background-color: #BBAFDB;
+	color: black;
+	font-size: 15px;
+	cursor: pointer;
+  	transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+QPushButton:hover {
+  	transform: scale(1.1);
+ 	background-color: #8E7CC3;
+	transform: translateY(-2px);
+}</string>
     </property>
     <property name="text">
      <string>GUARDAR</string>
@@ -164,34 +226,34 @@
      <x>0</x>
      <y>0</y>
      <width>721</width>
-     <height>26</height>
+     <height>21</height>
     </rect>
    </property>
-   <widget class="QMenu" name="menuCONSULTA">
-    <property name="title">
-     <string>CONSULTA</string>
-    </property>
-   </widget>
    <widget class="QMenu" name="menuALMACEN">
     <property name="title">
      <string>ALMACEN</string>
     </property>
    </widget>
-   <widget class="QMenu" name="menuPEDIDOS">
+   <widget class="QMenu" name="menuHISTORIAL">
     <property name="title">
-     <string>PEDIDOS</string>
+     <string>HISTORIAL</string>
     </property>
+    <addaction name="actionCOMPRADAS"/>
+    <addaction name="actionALQUILADAS"/>
    </widget>
-   <widget class="QMenu" name="menuRESERVADOS">
-    <property name="title">
-     <string>ALQUILADOS</string>
-    </property>
-   </widget>
-   <addaction name="menuCONSULTA"/>
    <addaction name="menuALMACEN"/>
-   <addaction name="menuPEDIDOS"/>
-   <addaction name="menuRESERVADOS"/>
+   <addaction name="menuHISTORIAL"/>
   </widget>
+  <action name="actionCOMPRADAS">
+   <property name="text">
+    <string>COMPRADAS</string>
+   </property>
+  </action>
+  <action name="actionALQUILADAS">
+   <property name="text">
+    <string>ALQUILADAS</string>
+   </property>
+  </action>
  </widget>
  <resources/>
  <connections/>

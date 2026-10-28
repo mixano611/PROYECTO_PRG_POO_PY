@@ -101,8 +101,14 @@
     </disabled>
    </palette>
   </property>
+  <property name="cursor">
+   <cursorShape>ArrowCursor</cursorShape>
+  </property>
   <property name="windowTitle">
    <string>MainWindow</string>
+  </property>
+  <property name="windowOpacity">
+   <double>1.000000000000000</double>
   </property>
   <property name="styleSheet">
    <string notr="true">background-color: #BBAFDB</string>
@@ -111,7 +117,7 @@
    <widget class="QPushButton" name="btnUsuario">
     <property name="geometry">
      <rect>
-      <x>40</x>
+      <x>100</x>
       <y>430</y>
       <width>241</width>
       <height>51</height>
@@ -119,13 +125,24 @@
     </property>
     <property name="font">
      <font>
-      <pointsize>14</pointsize>
+      <pointsize>-1</pointsize>
      </font>
     </property>
     <property name="styleSheet">
      <string notr="true">QPushButton{
 	border: 2px solid #000000;
-	border-radius: 8px;
+	border-radius: 10px;
+	background-color: #BBAFDB;
+	color: black;
+	font-size: 20px;
+	cursor: pointer;
+  	transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+QPushButton:hover {
+  	transform: scale(1.1);
+ 	background-color: #8E7CC3;
+	transform: translateY(-2px);
 }</string>
     </property>
     <property name="text">
@@ -135,7 +152,7 @@
    <widget class="QPushButton" name="btnAdmin">
     <property name="geometry">
      <rect>
-      <x>520</x>
+      <x>460</x>
       <y>430</y>
       <width>241</width>
       <height>51</height>
@@ -143,13 +160,24 @@
     </property>
     <property name="font">
      <font>
-      <pointsize>14</pointsize>
+      <pointsize>-1</pointsize>
      </font>
     </property>
     <property name="styleSheet">
      <string notr="true">QPushButton{
 	border: 2px solid #000000;
-	border-radius: 8px;
+	border-radius: 10px;
+	background-color: #BBAFDB;
+	color: black;
+	font-size: 20px;
+	cursor: pointer;
+  	transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+QPushButton:hover {
+  	transform: scale(1.1);
+ 	background-color: #8E7CC3;
+	transform: translateY(-2px);
 }</string>
     </property>
     <property name="text">
@@ -160,10 +188,27 @@
     <property name="geometry">
      <rect>
       <x>200</x>
-      <y>10</y>
+      <y>30</y>
       <width>381</width>
       <height>341</height>
      </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>OpenHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel{
+	border-radius: 130px;
+	background-color: #BBAFDB;
+	cursor: pointer;
+  	transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+QLabel:hover {
+  	transform: scale(1.1);
+ 	background-color: #8E7CC3;
+	transform: translateY(-2px);
+}</string>
     </property>
     <property name="text">
      <string/>

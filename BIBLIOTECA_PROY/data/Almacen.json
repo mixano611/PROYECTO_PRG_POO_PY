@@ -1,223 +1,245 @@
 {
     "libros": [
-        {   "Btn1": {
+        {
             "id": 1,
-            "titulo": "Cien años de soledad",
+            "nombre": "Cien años de soledad",
             "autor": "Gabriel García Márquez",
             "tipo": "Novela",
             "estado": "ALMACEN",
             "stock": 3,
-            "precio": 45.0
-            }
+            "precio": 45.0,
+            "descripcion": "La historia de la familia Buendía a lo largo de siete generaciones en el pueblo de Macondo. Obra cumbre del realismo mágico.",
+            "imagen": "cien.jpg",
+            "portada": "Cover1"
         },
         {
-            "Btn7": {
-            "id": 7,
-            "titulo": "El principito",
+            "id": 2,
+            "nombre": "El principito",
             "autor": "Antoine de Saint-Exupéry",
             "tipo": "Cuento",
             "estado": "ALMACEN",
             "stock": 10,
-            "precio": 30.0
-            }
+            "precio": 30.0,
+            "descripcion": "Un piloto perdido en el desierto conoce a un pequeño príncipe que viene de otro planeta. Un relato poético sobre la amistad y lo esencial.",
+            "imagen": "principito.jpg",
+            "portada": "Cover7"
         },
         {
-            "Btn2": {
-            "id": 2,
-            "titulo": "La ciudad y los perros",
+            "id": 3,
+            "nombre": "La ciudad y los perros",
             "autor": "Mario Vargas Llosa",
             "tipo": "Novela",
             "estado": "VENDIDOS",
             "stock": 0,
-            "precio": 50.0
-            }
+            "precio": 50.0,
+            "descripcion": "Novela ambientada en el Colegio Militar Leoncio Prado, donde un grupo de cadetes enfrenta la violencia y el honor.",
+            "imagen": "perros.jpg",
+            "portada": "Cover2"
         },
         {
-            "Btn3": {
-            "id": 3,
-            "titulo": "Rayuela",
+            "id": 4,
+            "nombre": "Rayuela",
             "autor": "Julio Cortázar",
             "tipo": "Novela",
             "estado": "ALQUILADOS",
             "stock": 1,
-            "precio": 40.0
-            }
+            "precio": 40.0,
+            "descripcion": "Una novela que puede leerse en varios órdenes. La historia de Horacio Oliveira y su búsqueda existencial entre París y Buenos Aires.",
+            "imagen": "rayuela.jpg",
+            "portada": "Cover3"
         },
         {
-            "Btn5":{
             "id": 5,
-            "titulo": "El Aleph",
+            "nombre": "El Aleph",
             "autor": "Jorge Luis Borges",
             "tipo": "Cuento",
             "estado": "ALMACEN",
             "stock": 2,
-            "precio": 35.0
-            }
+            "precio": 35.0,
+            "descripcion": "Colección de cuentos de Borges donde lo infinito, los laberintos y la memoria se cruzan en relatos breves.",
+            "imagen": "aleph.jpg",
+            "portada": "Cover5"
         },
         {
-            "Btn6": {
             "id": 6,
-            "titulo": "Cuentos de la selva",
+            "nombre": "Cuentos de la selva",
             "autor": "Horacio Quiroga",
             "tipo": "Cuento",
             "estado": "ALMACEN",
             "stock": 6,
-            "precio": 25.0
-            }
+            "precio": 25.0,
+            "descripcion": "Relatos ambientados en la selva misionera, con animales que hablan y aventuras llenas de enseñanzas.",
+            "imagen": "selva.jpg",
+            "portada": "Cover6"
         },
         {
-            "Btn9": {
-            "id": 9,
-            "titulo": "Veinte poemas de amor",
+            "id": 7,
+            "nombre": "Veinte poemas de amor",
             "autor": "Pablo Neruda",
             "tipo": "Poesía",
             "estado": "ALQUILADOS",
             "stock": 1,
-            "precio": 28.0
-            }
+            "precio": 28.0,
+            "descripcion": "Poemario de Pablo Neruda dedicado al amor y al deseo, uno de los libros de poesía más leídos en español.",
+            "imagen": "veinte.jpg",
+            "portada": "Cover9"
         },
         {
-            "Btn8": {
             "id": 8,
-            "titulo": "Martín Fierro",
+            "nombre": "Martín Fierro",
             "autor": "José Hernández",
             "tipo": "Poesía",
             "estado": "VENDIDOS",
             "stock": 0,
-            "precio": 22.0
-            }
+            "precio": 22.0,
+            "descripcion": "Poema gauchesco que narra la vida de un gaucho en la pampa argentina y su lucha por la libertad.",
+            "imagen": "fierro.jpg",
+            "portada": "Cover8"
         },
         {
-            "Btn4": {
-            "id": 4,
-            "titulo": "El túnel",
+            "id": 9,
+            "nombre": "El túnel",
             "autor": "Ernesto Sabato",
             "tipo": "Novela",
             "estado": "ALMACEN",
             "stock": 4,
-            "precio": 32.0
-            }
+            "precio": 32.0,
+            "descripcion": "Un pintor obsesionado con una mujer relata desde la cárcel el crimen que cometió. Novela psicológica de Sabato.",
+            "imagen": "tunel.jpg",
+            "portada": "Cover4"
         },
         {
-            "Btn": {
             "id": 10,
-            "titulo": "El arte de la guerra",
+            "nombre": "El arte de la guerra",
             "autor": "Sun Tzu",
             "tipo": "Ensayo",
             "estado": "ALMACEN",
             "stock": 2,
-            "precio": 27.0
-            }
+            "precio": 27.0,
+            "descripcion": "Tratado militar atribuido a Sun Tzu sobre estrategia, liderazgo y conflicto, aplicable más allá de la guerra.",
+            "imagen": "guerra.jpg",
+            "portada": null
         },
         {
-            "Btn": {
             "id": 11,
-            "titulo": "Mafalda",
+            "nombre": "Mafalda",
             "autor": "Quino",
             "tipo": "Cómic",
             "estado": "ALQUILADOS",
             "stock": 3,
-            "precio": 18.0
-            }
+            "precio": 18.0,
+            "descripcion": "Tira cómica protagonizada por una niña curiosa que cuestiona el mundo de los adultos con humor e ironía.",
+            "imagen": "malfalda.jpg",
+            "portada": null
         },
         {
-            "Btn": {
             "id": 12,
-            "titulo": "La Odisea",
+            "nombre": "La Odisea",
             "autor": "Homero",
             "tipo": "Clásico",
             "estado": "ALMACEN",
             "stock": 1,
-            "precio": 38.0
-            }
+            "precio": 38.0,
+            "descripcion": "Poema épico de Homero que narra el largo y accidentado regreso de Ulises a su hogar en Ítaca.",
+            "imagen": "odisea.jpg",
+            "portada": null
         },
         {
-            "Btn": {
             "id": 13,
-            "titulo": "Hamlet",
+            "nombre": "Hamlet",
             "autor": "William Shakespeare",
             "tipo": "Teatro",
             "estado": "VENDIDOS",
             "stock": 0,
-            "precio": 26.0
-            }
+            "precio": 26.0,
+            "descripcion": "Tragedia de Shakespeare sobre el príncipe de Dinamarca, la venganza y la duda existencial.",
+            "imagen": "hamlet.jpg",
+            "portada": null
         },
         {
-            "Btn10": {
-            "id": 10,
-            "titulo": "Dragon Ball",
+            "id": 14,
+            "nombre": "Dragon Ball",
             "autor": "Akira Toriyama",
             "tipo": "Manga",
             "estado": "ALMACEN",
             "stock": 5,
-            "precio": 25.0
-            }
+            "precio": 25.0,
+            "descripcion": "Las aventuras de Son Goku y sus amigos en busca de las esferas del dragón, con artes marciales y humor.",
+            "imagen": "0e20d9a65a7d3933fd23e1c7a9c0c850.jpg",
+            "portada": "Cover10"
         },
         {
-            "Btn11": {
-            "id": 11,
-            "titulo": "Naruto",
+            "id": 15,
+            "nombre": "Naruto",
             "autor": "Masashi Kishimoto",
             "tipo": "Manga",
             "estado": "VENDIDOS",
             "stock": 0,
-            "precio": 25.0
-            }
+            "precio": 25.0,
+            "descripcion": "Un joven ninja hiperactivo sueña con convertirse en Hokage y ser reconocido por todos.",
+            "imagen": "naruto.jpg",
+            "portada": "Cover11"
         },
         {
-            "Btn12": {
-            "id": 12,
-            "titulo": "One Piece",
+            "id": 16,
+            "nombre": "One Piece",
             "autor": "Eiichirō Oda",
             "tipo": "Manga",
             "estado": "ALQUILADOS",
             "stock": 3,
-            "precio": 25.0
-            }
+            "precio": 25.0,
+            "descripcion": "Luffy y su tripulación recorren los mares en busca del tesoro legendario One Piece.",
+            "imagen": "Volumen_1.jpg",
+            "portada": "Cover12"
         },
         {
-            "Btn13":{
-            "id": 13,
-            "titulo": "Jojo's Bizarre adventure",
+            "id": 17,
+            "nombre": "Jojo's Bizarre adventure",
             "autor": "Hirohiko Araki",
             "tipo": "Manga",
             "estado": "ALMACEN",
             "stock": 5,
-            "precio": 25.0
-            }
+            "precio": 25.0,
+            "descripcion": "La saga de la familia Joestar y sus combates contra enemigos sobrenaturales a lo largo de varias generaciones.",
+            "imagen": "7593ac66d58c5992b38cf66ad0af1757.jpg",
+            "portada": "Cover13"
         },
         {
-            "Btn14": {
-            "id": 14,
-            "titulo": "Re-Zero",
+            "id": 18,
+            "nombre": "Re-Zero",
             "autor": "Tappei Nagatsuki",
             "tipo": "Manga",
             "estado": "ALMACEN",
-            "stock": 2,
-            "precio": 25.0
-            }
+            "stock": 14,
+            "precio": 25.0,
+            "descripcion": "Subaru Natsuki llega a un mundo fantástico donde muere y revive una y otra vez, obligado a cambiar el destino.",
+            "imagen": "77b17c0f8d67b778775f1d5fa76fcfde.jpg",
+            "portada": "Cover14"
         },
         {
-            "Btn15": {
-            "id": 15,
-            "titulo": "My Hero Academia",
+            "id": 19,
+            "nombre": "My Hero Academia",
             "autor": "Kohei Horikoshi",
             "tipo": "Manga",
             "estado": "VENDIDOS",
             "stock": 0,
-            "precio": 25.0
-            }
+            "precio": 25.0,
+            "descripcion": "En un mundo donde casi todos tienen superpoderes, Izuku Midoriya sueña con ser un héroe profesional.",
+            "imagen": "My-Hero-Academia-manga-volumen-37.jpg",
+            "portada": "Cover15"
         },
         {
-            "Btn16": {
-            "id": 16,
-            "titulo": "Blue lock",
+            "id": 20,
+            "nombre": "Blue lock",
             "autor": "Muneyuki Kaneshiro",
             "tipo": "Manga",
             "estado": "ALQUILADOS",
             "stock": 7,
-            "precio": 25.0
-            }
+            "precio": 25.0,
+            "descripcion": "Un proyecto busca crear al mejor delantero de Japón mediante un entrenamiento extremo y competitivo.",
+            "imagen": "JP_Volume_19.jpg",
+            "portada": "Cover16"
         }
-    ]
+    ],
+    "pedidos": []
 }

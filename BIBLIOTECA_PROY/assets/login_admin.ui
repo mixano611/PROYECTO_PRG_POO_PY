@@ -13,15 +13,34 @@
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: #BBAFDB</string>
+  </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QPushButton" name="btnIniciar">
     <property name="geometry">
      <rect>
-      <x>290</x>
+      <x>310</x>
       <y>320</y>
       <width>101</width>
       <height>41</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+	border: 2px solid #000000;
+	border-radius: 8px;
+	background-color: #BBAFDB;
+	color: black;
+	font-size: 16px;
+	cursor: pointer;
+  	transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+QPushButton:hover {
+  	transform: scale(1.1);
+ 	background-color: #8E7CC3;
+}</string>
     </property>
     <property name="text">
      <string>INICIAR</string>
@@ -38,14 +57,15 @@
     </property>
     <property name="font">
      <font>
-      <family>Gill Sans Ultra Bold Condensed</family>
+      <family>Segoe UI Black</family>
       <pointsize>36</pointsize>
-      <weight>50</weight>
-      <bold>false</bold>
+      <weight>75</weight>
+      <italic>true</italic>
+      <bold>true</bold>
      </font>
     </property>
     <property name="text">
-     <string>LUNA LETRAS</string>
+     <string>LETRAS Y MUNDOS</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
@@ -54,17 +74,34 @@
    <widget class="QLineEdit" name="txtNombre">
     <property name="geometry">
      <rect>
-      <x>270</x>
+      <x>290</x>
       <y>210</y>
       <width>281</width>
       <height>21</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit{
+	border: 2px solid #000000;
+	border-radius: 5px;
+	background-color: #BBAFDB;
+	color: black;
+	font-size: 10px;
+	cursor: pointer;
+  	transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+QLineEdit:hover {
+  	transform: scale(1.1);
+ 	background-color: #8E7CC3;
+	transform: translateY(-2px);
+}</string>
+    </property>
    </widget>
    <widget class="QLabel" name="label_2">
     <property name="geometry">
      <rect>
-      <x>130</x>
+      <x>150</x>
       <y>210</y>
       <width>131</width>
       <height>21</height>
@@ -82,11 +119,28 @@
    <widget class="QLineEdit" name="txtContrasena">
     <property name="geometry">
      <rect>
-      <x>270</x>
+      <x>290</x>
       <y>250</y>
       <width>281</width>
       <height>21</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit{
+	border: 2px solid #000000;
+	border-radius: 5px;
+	background-color: #BBAFDB;
+	color: black;
+	font-size: 10px;
+	cursor: pointer;
+  	transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+QLineEdit:hover {
+  	transform: scale(1.1);
+ 	background-color: #8E7CC3;
+	transform: translateY(-2px);
+}</string>
     </property>
     <property name="text">
      <string/>
@@ -95,7 +149,7 @@
    <widget class="QLabel" name="label_3">
     <property name="geometry">
      <rect>
-      <x>130</x>
+      <x>150</x>
       <y>250</y>
       <width>131</width>
       <height>21</height>
@@ -119,8 +173,51 @@
       <height>23</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+	border: 1px solid #000000;
+	border-radius: 8px;
+	background-color: #BBAFDB;
+	color: black;
+	font-size: 10px;
+	cursor: pointer;
+  	transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+QPushButton:hover {
+  	transform: scale(1.1);
+ 	background-color: #8E7CC3;
+	transform: translateY(-2px);
+}</string>
+    </property>
     <property name="text">
      <string>BACK</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>280</x>
+      <y>50</y>
+      <width>151</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Segoe UI Black</family>
+      <pointsize>11</pointsize>
+      <weight>75</weight>
+      <italic>true</italic>
+      <bold>true</bold>
+      <underline>true</underline>
+     </font>
+    </property>
+    <property name="text">
+     <string>ADMINISTRADOR</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
     </property>
    </widget>
   </widget>
@@ -130,7 +227,7 @@
      <x>0</x>
      <y>0</y>
      <width>709</width>
-     <height>26</height>
+     <height>21</height>
     </rect>
    </property>
   </widget>

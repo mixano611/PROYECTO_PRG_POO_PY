@@ -91,7 +91,7 @@ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
        <property name="geometry">
         <rect>
          <x>0</x>
-         <y>-1156</y>
+         <y>0</y>
          <width>883</width>
          <height>3088</height>
         </rect>
@@ -192,7 +192,7 @@ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
             <string>Cuento</string>
            </property>
           </widget>
-          <widget class="QLabel" name="label_20">
+          <widget class="QPushButton" name="Cover16">
            <property name="geometry">
             <rect>
              <x>170</x>
@@ -201,20 +201,17 @@ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
              <height>221</height>
             </rect>
            </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
            <property name="text">
             <string/>
            </property>
-           <property name="pixmap">
-            <pixmap>images/JP_Volume_19.jpg</pixmap>
-           </property>
-           <property name="scaledContents">
+           <property name="flat">
             <bool>true</bool>
            </property>
-           <property name="indent">
-            <number>0</number>
-           </property>
           </widget>
-          <widget class="QLabel" name="label_18">
+          <widget class="QPushButton" name="Cover14">
            <property name="geometry">
             <rect>
              <x>680</x>
@@ -223,20 +220,17 @@ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
              <height>221</height>
             </rect>
            </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
            <property name="text">
             <string/>
            </property>
-           <property name="pixmap">
-            <pixmap>images/77b17c0f8d67b778775f1d5fa76fcfde.jpg</pixmap>
-           </property>
-           <property name="scaledContents">
+           <property name="flat">
             <bool>true</bool>
            </property>
-           <property name="indent">
-            <number>0</number>
-           </property>
           </widget>
-          <widget class="QLabel" name="label_12">
+          <widget class="QPushButton" name="Cover8">
            <property name="geometry">
             <rect>
              <x>10</x>
@@ -245,20 +239,17 @@ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
              <height>221</height>
             </rect>
            </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
            <property name="text">
             <string/>
            </property>
-           <property name="pixmap">
-            <pixmap>images/fierro.jpg</pixmap>
-           </property>
-           <property name="scaledContents">
+           <property name="flat">
             <bool>true</bool>
            </property>
-           <property name="indent">
-            <number>0</number>
-           </property>
           </widget>
-          <widget class="QLabel" name="label_2">
+          <widget class="QPushButton" name="Cover1">
            <property name="geometry">
             <rect>
              <x>10</x>
@@ -267,20 +258,17 @@ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
              <height>221</height>
             </rect>
            </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
            <property name="text">
             <string/>
            </property>
-           <property name="pixmap">
-            <pixmap>images/cien.jpg</pixmap>
-           </property>
-           <property name="scaledContents">
+           <property name="flat">
             <bool>true</bool>
            </property>
-           <property name="indent">
-            <number>0</number>
-           </property>
           </widget>
-          <widget class="QLabel" name="label_15">
+          <widget class="QPushButton" name="Cover11">
            <property name="geometry">
             <rect>
              <x>170</x>
@@ -289,17 +277,14 @@ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
              <height>221</height>
             </rect>
            </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
            <property name="text">
             <string/>
            </property>
-           <property name="pixmap">
-            <pixmap>images/naruto.jpg</pixmap>
-           </property>
-           <property name="scaledContents">
+           <property name="flat">
             <bool>true</bool>
-           </property>
-           <property name="indent">
-            <number>0</number>
            </property>
           </widget>
           <widget class="QLabel" name="label_11">
@@ -322,7 +307,7 @@ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
             <string>Poesia</string>
            </property>
           </widget>
-          <widget class="QLabel" name="label_13">
+          <widget class="QPushButton" name="Cover10">
            <property name="geometry">
             <rect>
              <x>0</x>
@@ -331,20 +316,17 @@ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
              <height>221</height>
             </rect>
            </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
            <property name="text">
             <string/>
            </property>
-           <property name="pixmap">
-            <pixmap>images/0e20d9a65a7d3933fd23e1c7a9c0c850.jpg</pixmap>
-           </property>
-           <property name="scaledContents">
+           <property name="flat">
             <bool>true</bool>
            </property>
-           <property name="indent">
-            <number>0</number>
-           </property>
           </widget>
-          <widget class="QLabel" name="label_5">
+          <widget class="QPushButton" name="Cover3">
            <property name="geometry">
             <rect>
              <x>350</x>
@@ -353,20 +335,17 @@ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
              <height>221</height>
             </rect>
            </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
            <property name="text">
             <string/>
            </property>
-           <property name="pixmap">
-            <pixmap>images/rayuela.jpg</pixmap>
-           </property>
-           <property name="scaledContents">
+           <property name="flat">
             <bool>true</bool>
            </property>
-           <property name="indent">
-            <number>0</number>
-           </property>
           </widget>
-          <widget class="QLabel" name="label_10">
+          <widget class="QPushButton" name="Cover5">
            <property name="geometry">
             <rect>
              <x>10</x>
@@ -375,20 +354,17 @@ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
              <height>221</height>
             </rect>
            </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
            <property name="text">
             <string/>
            </property>
-           <property name="pixmap">
-            <pixmap>images/aleph.jpg</pixmap>
-           </property>
-           <property name="scaledContents">
+           <property name="flat">
             <bool>true</bool>
            </property>
-           <property name="indent">
-            <number>0</number>
-           </property>
           </widget>
-          <widget class="QLabel" name="label_8">
+          <widget class="QPushButton" name="Cover6">
            <property name="geometry">
             <rect>
              <x>180</x>
@@ -397,20 +373,17 @@ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
              <height>221</height>
             </rect>
            </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
            <property name="text">
             <string/>
            </property>
-           <property name="pixmap">
-            <pixmap>images/selva.jpg</pixmap>
-           </property>
-           <property name="scaledContents">
+           <property name="flat">
             <bool>true</bool>
            </property>
-           <property name="indent">
-            <number>0</number>
-           </property>
           </widget>
-          <widget class="QLabel" name="label_9">
+          <widget class="QPushButton" name="Cover9">
            <property name="geometry">
             <rect>
              <x>180</x>
@@ -419,20 +392,17 @@ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
              <height>221</height>
             </rect>
            </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
            <property name="text">
             <string/>
            </property>
-           <property name="pixmap">
-            <pixmap>images/veinte.jpg</pixmap>
-           </property>
-           <property name="scaledContents">
+           <property name="flat">
             <bool>true</bool>
            </property>
-           <property name="indent">
-            <number>0</number>
-           </property>
           </widget>
-          <widget class="QLabel" name="label_7">
+          <widget class="QPushButton" name="Cover7">
            <property name="geometry">
             <rect>
              <x>350</x>
@@ -441,20 +411,17 @@ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
              <height>221</height>
             </rect>
            </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
            <property name="text">
             <string/>
            </property>
-           <property name="pixmap">
-            <pixmap>images/principito.jpg</pixmap>
-           </property>
-           <property name="scaledContents">
+           <property name="flat">
             <bool>true</bool>
            </property>
-           <property name="indent">
-            <number>0</number>
-           </property>
           </widget>
-          <widget class="QLabel" name="label_3">
+          <widget class="QPushButton" name="Cover2">
            <property name="geometry">
             <rect>
              <x>180</x>
@@ -463,17 +430,14 @@ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
              <height>221</height>
             </rect>
            </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
            <property name="text">
             <string/>
            </property>
-           <property name="pixmap">
-            <pixmap>images/perros.jpg</pixmap>
-           </property>
-           <property name="scaledContents">
+           <property name="flat">
             <bool>true</bool>
-           </property>
-           <property name="indent">
-            <number>0</number>
            </property>
           </widget>
           <widget class="QLabel" name="label">
@@ -496,7 +460,7 @@ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
             <string>Novelas</string>
            </property>
           </widget>
-          <widget class="QLabel" name="label_16">
+          <widget class="QPushButton" name="Cover12">
            <property name="geometry">
             <rect>
              <x>340</x>
@@ -505,20 +469,17 @@ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
              <height>221</height>
             </rect>
            </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
            <property name="text">
             <string/>
            </property>
-           <property name="pixmap">
-            <pixmap>images/Volumen_1.jpg</pixmap>
-           </property>
-           <property name="scaledContents">
+           <property name="flat">
             <bool>true</bool>
            </property>
-           <property name="indent">
-            <number>0</number>
-           </property>
           </widget>
-          <widget class="QLabel" name="label_19">
+          <widget class="QPushButton" name="Cover15">
            <property name="geometry">
             <rect>
              <x>0</x>
@@ -527,20 +488,17 @@ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
              <height>221</height>
             </rect>
            </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
            <property name="text">
             <string/>
            </property>
-           <property name="pixmap">
-            <pixmap>images/My-Hero-Academia-manga-volumen-37.jpg</pixmap>
-           </property>
-           <property name="scaledContents">
+           <property name="flat">
             <bool>true</bool>
            </property>
-           <property name="indent">
-            <number>0</number>
-           </property>
           </widget>
-          <widget class="QLabel" name="label_4">
+          <widget class="QPushButton" name="Cover4">
            <property name="geometry">
             <rect>
              <x>520</x>
@@ -549,20 +507,17 @@ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
              <height>221</height>
             </rect>
            </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
            <property name="text">
             <string/>
            </property>
-           <property name="pixmap">
-            <pixmap>images/tunel.jpg</pixmap>
-           </property>
-           <property name="scaledContents">
+           <property name="flat">
             <bool>true</bool>
            </property>
-           <property name="indent">
-            <number>0</number>
-           </property>
           </widget>
-          <widget class="QLabel" name="label_17">
+          <widget class="QPushButton" name="Cover13">
            <property name="geometry">
             <rect>
              <x>510</x>
@@ -571,456 +526,36 @@ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
              <height>221</height>
             </rect>
            </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
            <property name="text">
             <string/>
            </property>
-           <property name="pixmap">
-            <pixmap>images/7593ac66d58c5992b38cf66ad0af1757.jpg</pixmap>
-           </property>
-           <property name="scaledContents">
+           <property name="flat">
             <bool>true</bool>
            </property>
-           <property name="indent">
-            <number>0</number>
-           </property>
           </widget>
-          <widget class="QPushButton" name="Btn1">
-           <property name="geometry">
-            <rect>
-             <x>40</x>
-             <y>270</y>
-             <width>93</width>
-             <height>28</height>
-            </rect>
-           </property>
-           <property name="font">
-            <font>
-             <pointsize>9</pointsize>
-             <weight>75</weight>
-             <bold>true</bold>
-            </font>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">border: 1px solid black;
-border-radius: 5px;
-background-color:rgb(117, 95, 153)</string>
-           </property>
-           <property name="text">
-            <string>Adquirir</string>
-           </property>
-          </widget>
-          <widget class="QPushButton" name="Btn4">
-           <property name="geometry">
-            <rect>
-             <x>550</x>
-             <y>270</y>
-             <width>93</width>
-             <height>28</height>
-            </rect>
-           </property>
-           <property name="font">
-            <font>
-             <pointsize>9</pointsize>
-             <weight>75</weight>
-             <bold>true</bold>
-            </font>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">border: 1px solid black;
-border-radius: 5px;
-background-color:rgb(117, 95, 153)</string>
-           </property>
-           <property name="text">
-            <string>Adquirir</string>
-           </property>
-          </widget>
-          <widget class="QPushButton" name="Btn2">
-           <property name="geometry">
-            <rect>
-             <x>210</x>
-             <y>270</y>
-             <width>93</width>
-             <height>28</height>
-            </rect>
-           </property>
-           <property name="font">
-            <font>
-             <pointsize>9</pointsize>
-             <weight>75</weight>
-             <bold>true</bold>
-            </font>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">border: 1px solid black;
-border-radius: 5px;
-background-color:rgb(117, 95, 153)</string>
-           </property>
-           <property name="text">
-            <string>Adquirir</string>
-           </property>
-          </widget>
-          <widget class="QPushButton" name="Btn3">
-           <property name="geometry">
-            <rect>
-             <x>380</x>
-             <y>270</y>
-             <width>93</width>
-             <height>28</height>
-            </rect>
-           </property>
-           <property name="font">
-            <font>
-             <pointsize>9</pointsize>
-             <weight>75</weight>
-             <bold>true</bold>
-            </font>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">border: 1px solid black;
-border-radius: 5px;
-background-color:rgb(117, 95, 153)</string>
-           </property>
-           <property name="text">
-            <string>Adquirir</string>
-           </property>
-          </widget>
-          <widget class="QPushButton" name="Btn5">
-           <property name="geometry">
-            <rect>
-             <x>40</x>
-             <y>590</y>
-             <width>93</width>
-             <height>28</height>
-            </rect>
-           </property>
-           <property name="font">
-            <font>
-             <pointsize>9</pointsize>
-             <weight>75</weight>
-             <bold>true</bold>
-            </font>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">border: 1px solid black;
-border-radius: 5px;
-background-color:rgb(117, 95, 153)</string>
-           </property>
-           <property name="text">
-            <string>Adquirir</string>
-           </property>
-          </widget>
-          <widget class="QPushButton" name="Btn6">
-           <property name="geometry">
-            <rect>
-             <x>210</x>
-             <y>590</y>
-             <width>93</width>
-             <height>28</height>
-            </rect>
-           </property>
-           <property name="font">
-            <font>
-             <pointsize>9</pointsize>
-             <weight>75</weight>
-             <bold>true</bold>
-            </font>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">border: 1px solid black;
-border-radius: 5px;
-background-color:rgb(117, 95, 153)</string>
-           </property>
-           <property name="text">
-            <string>Adquirir</string>
-           </property>
-          </widget>
-          <widget class="QPushButton" name="Btn7">
-           <property name="geometry">
-            <rect>
-             <x>380</x>
-             <y>590</y>
-             <width>93</width>
-             <height>28</height>
-            </rect>
-           </property>
-           <property name="font">
-            <font>
-             <pointsize>9</pointsize>
-             <weight>75</weight>
-             <bold>true</bold>
-            </font>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">border: 1px solid black;
-border-radius: 5px;
-background-color:rgb(117, 95, 153)</string>
-           </property>
-           <property name="text">
-            <string>Adquirir</string>
-           </property>
-          </widget>
-          <widget class="QPushButton" name="Btn8">
-           <property name="geometry">
-            <rect>
-             <x>40</x>
-             <y>910</y>
-             <width>93</width>
-             <height>28</height>
-            </rect>
-           </property>
-           <property name="font">
-            <font>
-             <pointsize>9</pointsize>
-             <weight>75</weight>
-             <bold>true</bold>
-            </font>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">border: 1px solid black;
-border-radius: 5px;
-background-color:rgb(117, 95, 153)
-</string>
-           </property>
-           <property name="text">
-            <string>Adquirir</string>
-           </property>
-          </widget>
-          <widget class="QPushButton" name="Btn9">
-           <property name="geometry">
-            <rect>
-             <x>210</x>
-             <y>910</y>
-             <width>93</width>
-             <height>28</height>
-            </rect>
-           </property>
-           <property name="font">
-            <font>
-             <pointsize>9</pointsize>
-             <weight>75</weight>
-             <bold>true</bold>
-            </font>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">border: 1px solid black;
-border-radius: 5px;
-background-color:rgb(117, 95, 153);</string>
-           </property>
-           <property name="text">
-            <string>Adquirir</string>
-           </property>
-          </widget>
-          <widget class="QPushButton" name="Btn10">
-           <property name="geometry">
-            <rect>
-             <x>30</x>
-             <y>1230</y>
-             <width>93</width>
-             <height>28</height>
-            </rect>
-           </property>
-           <property name="font">
-            <font>
-             <pointsize>9</pointsize>
-             <weight>75</weight>
-             <bold>true</bold>
-            </font>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">border: 1px solid black;
-border-radius: 5px;
-background-color:rgb(117, 95, 153)</string>
-           </property>
-           <property name="text">
-            <string>Adquirir</string>
-           </property>
-          </widget>
-          <widget class="QPushButton" name="Btn13">
-           <property name="geometry">
-            <rect>
-             <x>540</x>
-             <y>1230</y>
-             <width>93</width>
-             <height>28</height>
-            </rect>
-           </property>
-           <property name="font">
-            <font>
-             <pointsize>9</pointsize>
-             <weight>75</weight>
-             <bold>true</bold>
-            </font>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">border: 1px solid black;
-border-radius: 5px;
-background-color:rgb(117, 95, 153)</string>
-           </property>
-           <property name="text">
-            <string>Adquirir</string>
-           </property>
-          </widget>
-          <widget class="QPushButton" name="Btn11">
-           <property name="geometry">
-            <rect>
-             <x>200</x>
-             <y>1230</y>
-             <width>93</width>
-             <height>28</height>
-            </rect>
-           </property>
-           <property name="font">
-            <font>
-             <pointsize>9</pointsize>
-             <weight>75</weight>
-             <bold>true</bold>
-            </font>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">border: 1px solid black;
-border-radius: 5px;
-background-color:rgb(117, 95, 153)</string>
-           </property>
-           <property name="text">
-            <string>Adquirir</string>
-           </property>
-          </widget>
-          <widget class="QPushButton" name="Btn12">
-           <property name="geometry">
-            <rect>
-             <x>370</x>
-             <y>1230</y>
-             <width>93</width>
-             <height>28</height>
-            </rect>
-           </property>
-           <property name="font">
-            <font>
-             <pointsize>9</pointsize>
-             <weight>75</weight>
-             <bold>true</bold>
-            </font>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">border: 1px solid black;
-border-radius: 5px;
-background-color:rgb(117, 95, 153)</string>
-           </property>
-           <property name="text">
-            <string>Adquirir</string>
-           </property>
-          </widget>
-          <widget class="QPushButton" name="Btn15">
-           <property name="geometry">
-            <rect>
-             <x>30</x>
-             <y>1530</y>
-             <width>93</width>
-             <height>28</height>
-            </rect>
-           </property>
-           <property name="font">
-            <font>
-             <pointsize>9</pointsize>
-             <weight>75</weight>
-             <bold>true</bold>
-            </font>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">border: 1px solid black;
-border-radius: 5px;
-background-color:rgb(117, 95, 153)</string>
-           </property>
-           <property name="text">
-            <string>Adquirir</string>
-           </property>
-          </widget>
-          <widget class="QPushButton" name="Btn16">
-           <property name="geometry">
-            <rect>
-             <x>200</x>
-             <y>1530</y>
-             <width>93</width>
-             <height>28</height>
-            </rect>
-           </property>
-           <property name="font">
-            <font>
-             <pointsize>9</pointsize>
-             <weight>75</weight>
-             <bold>true</bold>
-            </font>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">border: 1px solid black;
-border-radius: 5px;
-background-color:rgb(117, 95, 153)</string>
-           </property>
-           <property name="text">
-            <string>Adquirir</string>
-           </property>
-          </widget>
-          <widget class="QPushButton" name="Btn14">
-           <property name="geometry">
-            <rect>
-             <x>710</x>
-             <y>1230</y>
-             <width>93</width>
-             <height>28</height>
-            </rect>
-           </property>
-           <property name="font">
-            <font>
-             <pointsize>9</pointsize>
-             <weight>75</weight>
-             <bold>true</bold>
-            </font>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">border: 1px solid black;
-border-radius: 5px;
-background-color:rgb(117, 95, 153)</string>
-           </property>
-           <property name="text">
-            <string>Adquirir</string>
-           </property>
-          </widget>
+          <zorder>Cover16</zorder>
+          <zorder>Cover14</zorder>
+          <zorder>Cover8</zorder>
+          <zorder>Cover1</zorder>
+          <zorder>Cover11</zorder>
+          <zorder>Cover10</zorder>
+          <zorder>Cover3</zorder>
+          <zorder>Cover5</zorder>
+          <zorder>Cover6</zorder>
+          <zorder>Cover9</zorder>
+          <zorder>Cover7</zorder>
+          <zorder>Cover2</zorder>
+          <zorder>Cover12</zorder>
+          <zorder>Cover15</zorder>
+          <zorder>Cover4</zorder>
+          <zorder>Cover13</zorder>
           <zorder>label_14</zorder>
           <zorder>label_6</zorder>
-          <zorder>label_20</zorder>
-          <zorder>label_18</zorder>
-          <zorder>label_12</zorder>
-          <zorder>label_15</zorder>
           <zorder>label_11</zorder>
-          <zorder>label_13</zorder>
-          <zorder>label_10</zorder>
-          <zorder>label_8</zorder>
-          <zorder>label_9</zorder>
-          <zorder>label_7</zorder>
           <zorder>label</zorder>
-          <zorder>label_16</zorder>
-          <zorder>label_19</zorder>
-          <zorder>label_17</zorder>
-          <zorder>label_5</zorder>
-          <zorder>label_2</zorder>
-          <zorder>label_3</zorder>
-          <zorder>label_4</zorder>
-          <zorder>Btn1</zorder>
-          <zorder>Btn4</zorder>
-          <zorder>Btn2</zorder>
-          <zorder>Btn3</zorder>
-          <zorder>Btn5</zorder>
-          <zorder>Btn6</zorder>
-          <zorder>Btn7</zorder>
-          <zorder>Btn8</zorder>
-          <zorder>Btn9</zorder>
-          <zorder>Btn10</zorder>
-          <zorder>Btn13</zorder>
-          <zorder>Btn11</zorder>
-          <zorder>Btn12</zorder>
-          <zorder>Btn15</zorder>
-          <zorder>Btn16</zorder>
-          <zorder>Btn14</zorder>
          </widget>
         </item>
        </layout>
@@ -1041,6 +576,8 @@ background-color:rgb(117, 95, 153)</string>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
- <resources/>
+ <resources>
+  <include location="images/1.qrc"/>
+ </resources>
  <connections/>
 </ui>
