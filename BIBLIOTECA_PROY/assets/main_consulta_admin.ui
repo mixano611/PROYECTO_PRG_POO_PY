@@ -38,9 +38,7 @@
 }
 
 QPushButton:hover {
-  	transform: scale(1.1);
  	background-color: #8E7CC3;
-	transform: translateY(-2px);
 }</string>
     </property>
     <property name="text">
@@ -68,9 +66,7 @@ QPushButton:hover {
 }
 
 QLineEdit:hover {
-  	transform: scale(1.1);
  	background-color: #8E7CC3;
-	transform: translateY(-2px);
 }</string>
     </property>
    </widget>
@@ -113,9 +109,7 @@ QLineEdit:hover {
 }
 
 QLineEdit:hover {
-  	transform: scale(1.1);
  	background-color: #8E7CC3;
-	transform: translateY(-2px);
 }</string>
     </property>
    </widget>
@@ -158,9 +152,7 @@ QLineEdit:hover {
 }
 
 QLineEdit:hover {
-  	transform: scale(1.1);
  	background-color: #8E7CC3;
-	transform: translateY(-2px);
 }</string>
     </property>
    </widget>
@@ -203,9 +195,7 @@ QLineEdit:hover {
 }
 
 QComboBox:hover {
-  	transform: scale(1.1);
  	background-color: #8E7CC3;
-	transform: translateY(-2px);
 }</string>
     </property>
     <item>
@@ -268,9 +258,7 @@ QComboBox:hover {
 }
 
 QPushButton:hover {
-  	transform: scale(1.1);
  	background-color: #8E7CC3;
-	transform: translateY(-2px);
 }</string>
     </property>
     <property name="text">
@@ -280,10 +268,10 @@ QPushButton:hover {
    <widget class="QLabel" name="label_6">
     <property name="geometry">
      <rect>
-      <x>160</x>
-      <y>320</y>
-      <width>381</width>
-      <height>31</height>
+      <x>120</x>
+      <y>310</y>
+      <width>441</width>
+      <height>41</height>
      </rect>
     </property>
     <property name="text">
@@ -293,9 +281,9 @@ QPushButton:hover {
    <widget class="QLabel" name="label_7">
     <property name="geometry">
      <rect>
-      <x>240</x>
-      <y>30</y>
-      <width>201</width>
+      <x>190</x>
+      <y>20</y>
+      <width>301</width>
       <height>51</height>
      </rect>
     </property>
@@ -322,7 +310,7 @@ QPushButton:hover {
      <x>0</x>
      <y>0</y>
      <width>686</width>
-     <height>21</height>
+     <height>26</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuPEDIDOS">

@@ -1,6 +1,7 @@
 import json
 from json import JSONDecodeError
 from pathlib import Path
+from PyQt5.QtWidgets import QMessageBox
 
 
 RUTA_USUARIOS = Path(__file__).resolve().parent.parent / "data" / "usuarios_data.json"
@@ -22,6 +23,11 @@ def cargar_usuarios():
         guardar_usuarios({})
         return {}
 
+    for nombre, dni in datos.items():
+        if not isinstance(nombre, str) or not isinstance(dni, int):
+            guardar_usuarios({})
+            return {}
+
     return datos
 
 
@@ -33,7 +39,11 @@ def guardar_usuarios(usuarios):
 
 def registrar_usuario(nombre, dni):
     nombre = str(nombre or "").strip().lower()
-    dni = str(dni or "").strip()
+    try:
+        dni = int(dni or "")
+    except ValueError:
+        QMessageBox.warning(None, "Errorrrrrrrr", "dni inválido. Debe ser un número entero.")
+        return
 
     if not nombre or not dni:
         return False

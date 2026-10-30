@@ -20,9 +20,9 @@
    <widget class="QLabel" name="LblFoto">
     <property name="geometry">
      <rect>
-      <x>0</x>
+      <x>30</x>
       <y>0</y>
-      <width>321</width>
+      <width>301</width>
       <height>461</height>
      </rect>
     </property>
@@ -63,9 +63,7 @@
 }
 
 QPushButton:hover {
-  	transform: scale(1.1);
  	background-color: #8E7CC3;
-	transform: translateY(-2px);
 }</string>
     </property>
     <property name="text">
@@ -102,9 +100,7 @@ QPushButton:hover {
 }
 
 QPushButton:hover {
-  	transform: scale(1.1);
  	background-color: #8E7CC3;
-	transform: translateY(-2px);
 }</string>
     </property>
     <property name="text">
@@ -114,7 +110,7 @@ QPushButton:hover {
    <widget class="QLabel" name="LblTitulo">
     <property name="geometry">
      <rect>
-      <x>320</x>
+      <x>330</x>
       <y>50</y>
       <width>461</width>
       <height>61</height>
@@ -140,9 +136,9 @@ QPushButton:hover {
    <widget class="QLabel" name="LblAutor">
     <property name="geometry">
      <rect>
-      <x>430</x>
+      <x>460</x>
       <y>180</y>
-      <width>341</width>
+      <width>321</width>
       <height>21</height>
      </rect>
     </property>
@@ -162,9 +158,9 @@ QPushButton:hover {
    <widget class="QLabel" name="label_7">
     <property name="geometry">
      <rect>
-      <x>340</x>
+      <x>350</x>
       <y>170</y>
-      <width>71</width>
+      <width>91</width>
       <height>41</height>
      </rect>
     </property>
@@ -182,7 +178,7 @@ QPushButton:hover {
    <widget class="QLabel" name="LblPrecio">
     <property name="geometry">
      <rect>
-      <x>29</x>
+      <x>39</x>
       <y>475</y>
       <width>291</width>
       <height>30</height>
@@ -209,7 +205,7 @@ QPushButton:hover {
    <widget class="QLabel" name="LblTotal">
     <property name="geometry">
      <rect>
-      <x>19</x>
+      <x>29</x>
       <y>510</y>
       <width>301</width>
       <height>25</height>
@@ -233,7 +229,7 @@ QPushButton:hover {
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>570</y>
+      <y>560</y>
       <width>111</width>
       <height>31</height>
      </rect>
@@ -250,9 +246,7 @@ QPushButton:hover {
 }
 
 QPushButton:hover {
-  	transform: scale(1.1);
  	background-color: #8E7CC3;
-	transform: translateY(-2px);
 }</string>
     </property>
     <property name="text">
@@ -262,9 +256,9 @@ QPushButton:hover {
    <widget class="QLabel" name="label_10">
     <property name="geometry">
      <rect>
-      <x>340</x>
+      <x>350</x>
       <y>360</y>
-      <width>91</width>
+      <width>111</width>
       <height>41</height>
      </rect>
     </property>
@@ -282,9 +276,9 @@ QPushButton:hover {
    <widget class="QSpinBox" name="spinBox">
     <property name="geometry">
      <rect>
-      <x>460</x>
+      <x>470</x>
       <y>370</y>
-      <width>271</width>
+      <width>301</width>
       <height>22</height>
      </rect>
     </property>
@@ -301,15 +295,13 @@ QPushButton:hover {
 	border-radius: 5px;
 	background-color: #BBAFDB;
 	color: black;
-	font-size: 8px;
+	font-size: 15px;
 	cursor: pointer;
   	transition: transform 0.2s ease, background-color 0.2s ease;
 }
 
 QSpinBox:hover {
-  	transform: scale(1.1);
  	background-color: #8E7CC3;
-	transform: translateY(-2px);
 }</string>
     </property>
     <property name="readOnly">
@@ -319,9 +311,9 @@ QSpinBox:hover {
    <widget class="QLabel" name="LblDescripcion">
     <property name="geometry">
      <rect>
-      <x>480</x>
+      <x>530</x>
       <y>230</y>
-      <width>241</width>
+      <width>251</width>
       <height>101</height>
      </rect>
     </property>
@@ -346,9 +338,9 @@ QSpinBox:hover {
    <widget class="QLabel" name="label_8">
     <property name="geometry">
      <rect>
-      <x>340</x>
+      <x>350</x>
       <y>230</y>
-      <width>131</width>
+      <width>171</width>
       <height>21</height>
      </rect>
     </property>
@@ -370,7 +362,7 @@ QSpinBox:hover {
      <x>0</x>
      <y>0</y>
      <width>800</width>
-     <height>21</height>
+     <height>26</height>
     </rect>
    </property>
   </widget>

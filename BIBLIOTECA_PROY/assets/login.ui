@@ -128,6 +128,9 @@
       <pointsize>-1</pointsize>
      </font>
     </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
     <property name="styleSheet">
      <string notr="true">QPushButton{
 	border: 2px solid #000000;
@@ -163,6 +166,9 @@ QPushButton:hover {
       <pointsize>-1</pointsize>
      </font>
     </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
     <property name="styleSheet">
      <string notr="true">QPushButton{
 	border: 2px solid #000000;
@@ -194,20 +200,17 @@ QPushButton:hover {
      </rect>
     </property>
     <property name="cursor">
-     <cursorShape>OpenHandCursor</cursorShape>
+     <cursorShape>PointingHandCursor</cursorShape>
     </property>
     <property name="styleSheet">
      <string notr="true">QLabel{
 	border-radius: 130px;
 	background-color: #BBAFDB;
 	cursor: pointer;
-  	transition: transform 0.2s ease, background-color 0.2s ease;
 }
 
 QLabel:hover {
-  	transform: scale(1.1);
  	background-color: #8E7CC3;
-	transform: translateY(-2px);
 }</string>
     </property>
     <property name="text">
@@ -233,7 +236,7 @@ QLabel:hover {
      <x>0</x>
      <y>0</y>
      <width>800</width>
-     <height>21</height>
+     <height>26</height>
     </rect>
    </property>
   </widget>

@@ -42,22 +42,6 @@
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QScrollBar" name="verticalScrollBar">
-    <property name="geometry">
-     <rect>
-      <x>700</x>
-      <y>10</y>
-      <width>16</width>
-      <height>361</height>
-     </rect>
-    </property>
-    <property name="mouseTracking">
-     <bool>false</bool>
-    </property>
-    <property name="orientation">
-     <enum>Qt::Vertical</enum>
-    </property>
-   </widget>
    <widget class="QTableWidget" name="tableWidget">
     <property name="geometry">
      <rect>
@@ -73,15 +57,9 @@
 	border-radius: 20px;
 	background-color: #BBAFDB;
 	color: black;
-	font-size: 22px;
+	font-size: 13px;
 	cursor: pointer;
   	transition: transform 0.2s ease, background-color 0.2s ease;
-}
-
-QTableWidget:hover {
-  	transform: scale(1.1);
- 	background-color: #8E7CC3;
-	transform: translateY(-2px);
 }</string>
     </property>
     <column>
@@ -172,9 +150,7 @@ QTableWidget:hover {
 }
 
 QPushButton:hover {
-  	transform: scale(1.1);
  	background-color: #8E7CC3;
-	transform: translateY(-2px);
 }</string>
     </property>
     <property name="text">
@@ -209,9 +185,7 @@ QPushButton:hover {
 }
 
 QPushButton:hover {
-  	transform: scale(1.1);
  	background-color: #8E7CC3;
-	transform: translateY(-2px);
 }</string>
     </property>
     <property name="text">
@@ -226,7 +200,7 @@ QPushButton:hover {
      <x>0</x>
      <y>0</y>
      <width>721</width>
-     <height>21</height>
+     <height>26</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuALMACEN">

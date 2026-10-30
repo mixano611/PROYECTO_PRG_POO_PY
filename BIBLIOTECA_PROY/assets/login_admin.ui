@@ -38,7 +38,6 @@
 }
 
 QPushButton:hover {
-  	transform: scale(1.1);
  	background-color: #8E7CC3;
 }</string>
     </property>
@@ -92,9 +91,7 @@ QPushButton:hover {
 }
 
 QLineEdit:hover {
-  	transform: scale(1.1);
  	background-color: #8E7CC3;
-	transform: translateY(-2px);
 }</string>
     </property>
    </widget>
@@ -133,13 +130,10 @@ QLineEdit:hover {
 	color: black;
 	font-size: 10px;
 	cursor: pointer;
-  	transition: transform 0.2s ease, background-color 0.2s ease;
 }
 
 QLineEdit:hover {
-  	transform: scale(1.1);
  	background-color: #8E7CC3;
-	transform: translateY(-2px);
 }</string>
     </property>
     <property name="text">
@@ -185,9 +179,7 @@ QLineEdit:hover {
 }
 
 QPushButton:hover {
-  	transform: scale(1.1);
  	background-color: #8E7CC3;
-	transform: translateY(-2px);
 }</string>
     </property>
     <property name="text">
@@ -197,9 +189,9 @@ QPushButton:hover {
    <widget class="QLabel" name="label_4">
     <property name="geometry">
      <rect>
-      <x>280</x>
+      <x>270</x>
       <y>50</y>
-      <width>151</width>
+      <width>171</width>
       <height>20</height>
      </rect>
     </property>
@@ -227,7 +219,7 @@ QPushButton:hover {
      <x>0</x>
      <y>0</y>
      <width>709</width>
-     <height>21</height>
+     <height>26</height>
     </rect>
    </property>
   </widget>
