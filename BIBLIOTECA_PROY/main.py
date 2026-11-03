@@ -8,10 +8,11 @@ def main():
     app = QApplication(sys.argv)
 
     ventana = login()
-    ventana.show()
+    ventana.showFullScreen()
 
     sys.exit(app.exec_())
 
 
 if __name__ == "__main__":
     main()
+
