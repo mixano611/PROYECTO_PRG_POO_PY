@@ -361,6 +361,7 @@ class catalogo(VentanaBase):
 
         self.pushButton.clicked.connect(lambda: self.registrar_pedido("COMPRA"))
         self.pushButton_2.clicked.connect(lambda: self.registrar_pedido("RESERVA"))
+        self.pushButton_3.clicked.connect(self.venta_carrito)
         self.spinBox.valueChanged.connect(self.actualizar_total)
 
         self.configurar_contenido(self.id_libro)
@@ -510,6 +511,30 @@ class catalogo(VentanaBase):
             f"\"{libro_actual.get('nombre', '')}\".\nTotal: S/ {total:.2f}",
         )
 
+    def venta_carrito(self):
+    # Verificamos si la cantidad seleccionada es 0 o menor
+        if self.spinBox.value() <= 0:
+            QMessageBox.warning(
+                self,
+                "Cantidad inválida",
+                "Ponga al menos una cantidad."
+            )
+            return  # Detiene la ejecución aquí para que no abra la otra ventana
+    
+        self.ir_a(ventana_carrito)
+
+class ventana_carrito(VentanaBase):
+    archivo_ui = "venta-carrito.ui"
+
+    def preparar(self):
+        self.btnFinalizar.clicked.connect(self.abrir_login_usuario)
+        self.btnSeguir.clicked.connect(self.catalogo)
+
+    def abrir_login_usuario(self):
+        self.ir_a(loginUsuario)
+
+    def catalogo(self):
+        self.ir_a(libros)
 
 class loginAdmin(VentanaBase):
     archivo_ui = "login_admin.ui"

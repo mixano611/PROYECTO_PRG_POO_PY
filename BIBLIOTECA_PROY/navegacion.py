@@ -51,7 +51,7 @@ class VentanaBase(QMainWindow):
     def ir_a(self, ventana, **datos):
         """Abre `ventana` recordando esta como anterior y oculta la actual."""
         self.siguiente = ventana(anterior=self, **datos)
-        self.siguiente.showFullScreen()
+        self.siguiente.show()
         self.hide()
         return self.siguiente
 
@@ -60,5 +60,5 @@ class VentanaBase(QMainWindow):
         if self.anterior is None:
             return
 
-        self.anterior.showFullScreen()
+        self.anterior.show()
         self.hide()

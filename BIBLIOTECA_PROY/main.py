@@ -8,7 +8,7 @@ def main():
     app = QApplication(sys.argv)
 
     ventana = login()
-    ventana.showFullScreen()
+    ventana.show()
 
     sys.exit(app.exec_())
 
