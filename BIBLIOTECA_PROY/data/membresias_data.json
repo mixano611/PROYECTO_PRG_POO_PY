@@ -1,0 +1,16 @@
+{
+    "solicitudes": [
+        {
+            "id": 1,
+            "usuario": "miguel",
+            "dni": 61528576,
+            "monto": 20.0,
+            "fecha": "2026-11-08 18:30:44",
+            "estado": "APROBADA",
+            "caja": 3,
+            "codigo": null,
+            "notificado": true
+        }
+    ],
+    "miembros": []
+}

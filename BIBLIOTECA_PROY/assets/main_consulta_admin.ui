@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>686</width>
-    <height>390</height>
+    <height>450</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -301,6 +301,110 @@ QPushButton:hover {
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnNuevoLibro">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>360</y>
+      <width>150</width>
+      <height>35</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+	border: 1px solid #000000;
+	border-radius: 8px;
+	background-color: #BBAFDB;
+	color: black;
+	font-size: 11px;
+	cursor: pointer;
+}
+QPushButton:hover {
+	background-color: #8E7CC3;
+}</string>
+    </property>
+    <property name="text">
+     <string>NUEVO LIBRO</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnMembresias">
+    <property name="geometry">
+     <rect>
+      <x>225</x>
+      <y>360</y>
+      <width>150</width>
+      <height>35</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+	border: 1px solid #000000;
+	border-radius: 8px;
+	background-color: #BBAFDB;
+	color: black;
+	font-size: 11px;
+	cursor: pointer;
+}
+QPushButton:hover {
+	background-color: #8E7CC3;
+}</string>
+    </property>
+    <property name="text">
+     <string>MEMBRESÍAS</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnCajas">
+    <property name="geometry">
+     <rect>
+      <x>390</x>
+      <y>360</y>
+      <width>150</width>
+      <height>35</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+	border: 1px solid #000000;
+	border-radius: 8px;
+	background-color: #BBAFDB;
+	color: black;
+	font-size: 11px;
+	cursor: pointer;
+}
+QPushButton:hover {
+	background-color: #8E7CC3;
+}</string>
+    </property>
+    <property name="text">
+     <string>CAJAS</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnReportes">
+    <property name="geometry">
+     <rect>
+      <x>555</x>
+      <y>360</y>
+      <width>100</width>
+      <height>35</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+	border: 1px solid #000000;
+	border-radius: 8px;
+	background-color: #BBAFDB;
+	color: black;
+	font-size: 11px;
+	cursor: pointer;
+}
+QPushButton:hover {
+	background-color: #8E7CC3;
+}</string>
+    </property>
+    <property name="text">
+     <string>REPORTES</string>
     </property>
    </widget>
   </widget>

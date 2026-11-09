@@ -71,6 +71,91 @@ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QVBoxLayout" name="verticalLayout_3">
+   <item>
+    <layout class="QHBoxLayout" name="barraSuperior">
+     <item>
+      <widget class="QPushButton" name="btnVolver">
+       <property name="minimumSize">
+        <size>
+         <width>110</width>
+         <height>34</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>110</width>
+         <height>34</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton{
+	border: 1px solid #000000;
+	border-radius: 8px;
+	background-color: #BBAFDB;
+	color: black;
+	font-size: 11px;
+	cursor: pointer;
+}
+QPushButton:hover {
+	background-color: #8E7CC3;
+}</string>
+       </property>
+       <property name="text">
+        <string>← VOLVER</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_41">
+       <property name="font">
+        <font>
+         <pointsize>22</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>LETRAS Y MUNDOS</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btnCarrito">
+       <property name="minimumSize">
+        <size>
+         <width>170</width>
+         <height>34</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>170</width>
+         <height>34</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton{
+	border: 1px solid #000000;
+	border-radius: 8px;
+	background-color: #BBAFDB;
+	color: black;
+	font-size: 11px;
+	cursor: pointer;
+}
+QPushButton:hover {
+	background-color: #8E7CC3;
+}</string>
+       </property>
+       <property name="text">
+        <string>VER CARRITO (0)</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
     <item>
      <widget class="QScrollArea" name="scrollArea">
       <property name="styleSheet">
@@ -97,39 +182,6 @@ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
         </rect>
        </property>
        <layout class="QVBoxLayout" name="verticalLayout_2">
-        <item>
-         <widget class="QLabel" name="label_41">
-          <property name="font">
-           <font>
-            <pointsize>22</pointsize>
-            <weight>75</weight>
-            <bold>true</bold>
-           </font>
-          </property>
-          <property name="text">
-           <string>LIBRERIA PAPASITO</string>
-          </property>
-          <property name="alignment">
-           <set>Qt::AlignCenter</set>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QPushButton" name="btnVolver">
-          <property name="layoutDirection">
-           <enum>Qt::LeftToRight</enum>
-          </property>
-          <property name="text">
-           <string>Back</string>
-          </property>
-          <property name="default">
-           <bool>false</bool>
-          </property>
-          <property name="flat">
-           <bool>true</bool>
-          </property>
-         </widget>
-        </item>
         <item>
          <widget class="QFrame" name="frame">
           <property name="minimumSize">

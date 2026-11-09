@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
-    <height>600</height>
+    <width>820</width>
+    <height>620</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,145 +17,269 @@
    <string notr="true">background-color: #BBAFDB</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QPushButton" name="btnBoleta">
-    <property name="geometry">
-     <rect>
-      <x>170</x>
-      <y>0</y>
-      <width>461</width>
-      <height>41</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Cascadia Code</family>
-      <pointsize>-1</pointsize>
-      <weight>75</weight>
-      <italic>true</italic>
-      <bold>true</bold>
-     </font>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">QPushButton{
-	border: 2px solid #000000;
-	border-radius: 20px;
+    <widget class="QPushButton" name="btnVolver">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>10</y>
+              <width>110</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton{
+	border: 1px solid #000000;
+	border-radius: 8px;
 	background-color: #BBAFDB;
 	color: black;
-	font-size: 22px;
+	font-size: 11px;
 	cursor: pointer;
-  	transition: transform 0.2s ease, background-color 0.2s ease;
 }
-
 QPushButton:hover {
- 	background-color: #8E7CC3;
+	background-color: #8E7CC3;
 }</string>
-    </property>
-    <property name="text">
-     <string>GENERAR BOLETA</string>
-    </property>
-   </widget>
-   <widget class="QTextEdit" name="textEdit">
-    <property name="geometry">
-     <rect>
-      <x>90</x>
-      <y>60</y>
-      <width>641</width>
-      <height>421</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">QTextEdit{
+            </property>
+            <property name="text">
+             <string>← VOLVER</string>
+            </property>
+    </widget>
+    <widget class="QLabel" name="LblTitulo">
+            <property name="geometry">
+             <rect>
+              <x>200</x>
+              <y>10</y>
+              <width>420</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>22</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="text">
+             <string>MI CARRITO</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+    </widget>
+    <widget class="QTableWidget" name="tableCarrito">
+            <property name="geometry">
+             <rect>
+              <x>20</x>
+              <y>55</y>
+              <width>780</width>
+              <height>370</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QTableWidget{
 	border: 2px solid #000000;
-	border-radius: 10px;
+	border-radius: 12px;
 	background-color: #BBAFDB;
 	color: black;
-	font-size: 18px;
-	cursor: pointer;
+	font-size: 12px;
+	gridline-color: #8E7CC3;
 }
-</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="btnFinalizar">
-    <property name="geometry">
-     <rect>
-      <x>90</x>
-      <y>500</y>
-      <width>251</width>
-      <height>41</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Cascadia Code</family>
-      <pointsize>-1</pointsize>
-      <weight>75</weight>
-      <italic>true</italic>
-      <bold>true</bold>
-     </font>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">QPushButton{
+QHeaderView::section{
+	background-color: #8E7CC3;
+	color: black;
+	border: 1px solid #000000;
+	padding: 4px;
+	font-weight: bold;
+}</string>
+            </property>
+            <column>
+             <property name="text">
+              <string>LIBRO</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>CANTIDAD</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>PRECIO</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>SUBTOTAL</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>TIPO</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>QUITAR</string>
+             </property>
+            </column>
+    </widget>
+    <widget class="QLabel" name="LblDescuento">
+            <property name="geometry">
+             <rect>
+              <x>20</x>
+              <y>435</y>
+              <width>380</width>
+              <height>25</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>11</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>Descuento miembro: S/ 0.00</string>
+            </property>
+    </widget>
+    <widget class="QLabel" name="LblTotal">
+            <property name="geometry">
+             <rect>
+              <x>420</x>
+              <y>430</y>
+              <width>380</width>
+              <height>30</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>18</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="text">
+             <string>TOTAL: S/ 0.00</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+    </widget>
+    <widget class="QLabel" name="LblAviso">
+            <property name="geometry">
+             <rect>
+              <x>20</x>
+              <y>465</y>
+              <width>780</width>
+              <height>20</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>9</pointsize>
+              <italic>true</italic>
+             </font>
+            </property>
+            <property name="text">
+             <string></string>
+            </property>
+    </widget>
+    <widget class="QPushButton" name="btnPagar">
+            <property name="geometry">
+             <rect>
+              <x>20</x>
+              <y>495</y>
+              <width>240</width>
+              <height>41</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton{
 	border: 2px solid #000000;
-	border-radius: 20px;
+	border-radius: 8px;
 	background-color: #BBAFDB;
 	color: black;
-	font-size: 22px;
+	font-size: 16px;
 	cursor: pointer;
-  	transition: transform 0.2s ease, background-color 0.2s ease;
 }
-
 QPushButton:hover {
- 	background-color: #8E7CC3;
+	background-color: #8E7CC3;
+}
+QPushButton:disabled {
+	color: #6b6b6b;
+	background-color: #a99bc9;
 }</string>
-    </property>
-    <property name="text">
-     <string>FINALIZAR</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="btnSeguir">
-    <property name="geometry">
-     <rect>
-      <x>480</x>
-      <y>500</y>
-      <width>251</width>
-      <height>41</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Cascadia Code</family>
-      <pointsize>-1</pointsize>
-      <weight>75</weight>
-      <italic>true</italic>
-      <bold>true</bold>
-     </font>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">QPushButton{
+            </property>
+            <property name="text">
+             <string>PAGAR</string>
+            </property>
+    </widget>
+    <widget class="QPushButton" name="btnSeguir">
+            <property name="geometry">
+             <rect>
+              <x>280</x>
+              <y>495</y>
+              <width>240</width>
+              <height>41</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton{
 	border: 2px solid #000000;
-	border-radius: 20px;
+	border-radius: 8px;
 	background-color: #BBAFDB;
 	color: black;
-	font-size: 22px;
+	font-size: 14px;
 	cursor: pointer;
-  	transition: transform 0.2s ease, background-color 0.2s ease;
 }
-
 QPushButton:hover {
- 	background-color: #8E7CC3;
+	background-color: #8E7CC3;
+}
+QPushButton:disabled {
+	color: #6b6b6b;
+	background-color: #a99bc9;
 }</string>
-    </property>
-    <property name="text">
-     <string>SEGUIR COMPRANDO</string>
-    </property>
-   </widget>
+            </property>
+            <property name="text">
+             <string>SEGUIR COMPRANDO</string>
+            </property>
+    </widget>
+    <widget class="QPushButton" name="btnVaciar">
+            <property name="geometry">
+             <rect>
+              <x>540</x>
+              <y>495</y>
+              <width>260</width>
+              <height>41</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton{
+	border: 2px solid #000000;
+	border-radius: 8px;
+	background-color: #BBAFDB;
+	color: black;
+	font-size: 14px;
+	cursor: pointer;
+}
+QPushButton:hover {
+	background-color: #8E7CC3;
+}
+QPushButton:disabled {
+	color: #6b6b6b;
+	background-color: #a99bc9;
+}</string>
+            </property>
+            <property name="text">
+             <string>VACIAR CARRITO</string>
+            </property>
+    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>800</width>
+     <width>820</width>
      <height>21</height>
     </rect>
    </property>

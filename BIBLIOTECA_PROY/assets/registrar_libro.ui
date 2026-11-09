@@ -1,0 +1,544 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>760</width>
+    <height>660</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: #BBAFDB</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+    <widget class="QPushButton" name="btnVolver">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>10</y>
+              <width>110</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton{
+	border: 1px solid #000000;
+	border-radius: 8px;
+	background-color: #BBAFDB;
+	color: black;
+	font-size: 11px;
+	cursor: pointer;
+}
+QPushButton:hover {
+	background-color: #8E7CC3;
+}</string>
+            </property>
+            <property name="text">
+             <string>← VOLVER</string>
+            </property>
+    </widget>
+    <widget class="QLabel" name="LblTitulo">
+            <property name="geometry">
+             <rect>
+              <x>200</x>
+              <y>10</y>
+              <width>360</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>22</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="text">
+             <string>REGISTRAR LIBRO</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+    </widget>
+    <widget class="QLabel" name="label_2">
+            <property name="geometry">
+             <rect>
+              <x>50</x>
+              <y>60</y>
+              <width>150</width>
+              <height>25</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>12</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>NOMBRE:</string>
+            </property>
+    </widget>
+    <widget class="QLineEdit" name="txtNombre">
+            <property name="geometry">
+             <rect>
+              <x>220</x>
+              <y>60</y>
+              <width>500</width>
+              <height>25</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QLineEdit{{
+	border: 2px solid #000000;
+	border-radius: 5px;
+	background-color: #BBAFDB;
+	color: black;
+	font-size: 12px;
+	padding-left: 6px;
+}}
+QLineEdit:hover {{
+	background-color: #8E7CC3;
+}}</string>
+            </property>
+    </widget>
+    <widget class="QLabel" name="label_3">
+            <property name="geometry">
+             <rect>
+              <x>50</x>
+              <y>100</y>
+              <width>150</width>
+              <height>25</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>12</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>AUTOR:</string>
+            </property>
+    </widget>
+    <widget class="QLineEdit" name="txtAutor">
+            <property name="geometry">
+             <rect>
+              <x>220</x>
+              <y>100</y>
+              <width>500</width>
+              <height>25</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QLineEdit{{
+	border: 2px solid #000000;
+	border-radius: 5px;
+	background-color: #BBAFDB;
+	color: black;
+	font-size: 12px;
+	padding-left: 6px;
+}}
+QLineEdit:hover {{
+	background-color: #8E7CC3;
+}}</string>
+            </property>
+    </widget>
+    <widget class="QLabel" name="label_4">
+            <property name="geometry">
+             <rect>
+              <x>50</x>
+              <y>140</y>
+              <width>150</width>
+              <height>25</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>12</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>TIPO:</string>
+            </property>
+    </widget>
+    <widget class="QComboBox" name="cmbTipo">
+            <property name="geometry">
+             <rect>
+              <x>220</x>
+              <y>140</y>
+              <width>220</width>
+              <height>25</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QComboBox{
+	border: 2px solid #000000;
+	border-radius: 5px;
+	background-color: #BBAFDB;
+	color: black;
+	font-size: 12px;
+}
+QComboBox:hover {
+	background-color: #8E7CC3;
+}</string>
+            </property>
+            <item>
+             <property name="text">
+              <string>Novela</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Cuento</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Poesía</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Manga</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Ensayo</string>
+             </property>
+            </item>
+    </widget>
+    <widget class="QLabel" name="label_5">
+            <property name="geometry">
+             <rect>
+              <x>50</x>
+              <y>180</y>
+              <width>150</width>
+              <height>25</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>12</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>ESTADO:</string>
+            </property>
+    </widget>
+    <widget class="QComboBox" name="cmbEstado">
+            <property name="geometry">
+             <rect>
+              <x>220</x>
+              <y>180</y>
+              <width>220</width>
+              <height>25</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QComboBox{
+	border: 2px solid #000000;
+	border-radius: 5px;
+	background-color: #BBAFDB;
+	color: black;
+	font-size: 12px;
+}
+QComboBox:hover {
+	background-color: #8E7CC3;
+}</string>
+            </property>
+            <item>
+             <property name="text">
+              <string>ALMACEN</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>VENDIDOS</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>ALQUILADOS</string>
+             </property>
+            </item>
+    </widget>
+    <widget class="QLabel" name="label_6">
+            <property name="geometry">
+             <rect>
+              <x>50</x>
+              <y>220</y>
+              <width>150</width>
+              <height>25</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>12</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>STOCK:</string>
+            </property>
+    </widget>
+    <widget class="QSpinBox" name="spinStock">
+            <property name="geometry">
+             <rect>
+              <x>220</x>
+              <y>220</y>
+              <width>120</width>
+              <height>25</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QLineEdit{{
+	border: 2px solid #000000;
+	border-radius: 5px;
+	background-color: #BBAFDB;
+	color: black;
+	font-size: 12px;
+	padding-left: 6px;
+}}
+QLineEdit:hover {{
+	background-color: #8E7CC3;
+}}</string>
+            </property>
+            <property name="minimum"><number>0</number></property>
+            <property name="maximum"><number>999</number></property>
+            <property name="value"><number>1</number></property>
+    </widget>
+    <widget class="QLabel" name="label_7">
+            <property name="geometry">
+             <rect>
+              <x>50</x>
+              <y>260</y>
+              <width>150</width>
+              <height>25</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>12</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>PRECIO (S/):</string>
+            </property>
+    </widget>
+    <widget class="QDoubleSpinBox" name="spinPrecio">
+            <property name="geometry">
+             <rect>
+              <x>220</x>
+              <y>260</y>
+              <width>120</width>
+              <height>25</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QLineEdit{{
+	border: 2px solid #000000;
+	border-radius: 5px;
+	background-color: #BBAFDB;
+	color: black;
+	font-size: 12px;
+	padding-left: 6px;
+}}
+QLineEdit:hover {{
+	background-color: #8E7CC3;
+}}</string>
+            </property>
+            <property name="minimum"><double>0.0</double></property>
+            <property name="maximum"><double>9999.0</double></property>
+            <property name="value"><double>25.0</double></property>
+            <property name="decimals"><number>2</number></property>
+            <property name="singleStep"><double>1.0</double></property>
+    </widget>
+    <widget class="QLabel" name="label_8">
+            <property name="geometry">
+             <rect>
+              <x>50</x>
+              <y>300</y>
+              <width>150</width>
+              <height>25</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>12</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>DESCRIPCIÓN:</string>
+            </property>
+    </widget>
+    <widget class="QTextEdit" name="txtDescripcion">
+            <property name="geometry">
+             <rect>
+              <x>220</x>
+              <y>300</y>
+              <width>500</width>
+              <height>90</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QTextEdit{
+	border: 2px solid #000000;
+	border-radius: 10px;
+	background-color: #BBAFDB;
+	color: black;
+	font-size: 11px;
+	padding: 8px;
+}</string>
+            </property>
+    </widget>
+    <widget class="QLabel" name="label_9">
+            <property name="geometry">
+             <rect>
+              <x>50</x>
+              <y>405</y>
+              <width>150</width>
+              <height>25</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>12</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>IMAGEN:</string>
+            </property>
+    </widget>
+    <widget class="QLineEdit" name="txtImagen">
+            <property name="geometry">
+             <rect>
+              <x>220</x>
+              <y>405</y>
+              <width>300</width>
+              <height>25</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QLineEdit{{
+	border: 2px solid #000000;
+	border-radius: 5px;
+	background-color: #BBAFDB;
+	color: black;
+	font-size: 12px;
+	padding-left: 6px;
+}}
+QLineEdit:hover {{
+	background-color: #8E7CC3;
+}}</string>
+            </property>
+    </widget>
+    <widget class="QCheckBox" name="chkOferta">
+            <property name="geometry">
+             <rect>
+              <x>220</x>
+              <y>445</y>
+              <width>400</width>
+              <height>25</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>OFERTA EXCLUSIVA PARA MIEMBROS</string>
+            </property>
+    </widget>
+    <widget class="QLabel" name="label_10">
+            <property name="geometry">
+             <rect>
+              <x>50</x>
+              <y>485</y>
+              <width>150</width>
+              <height>25</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>12</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>PRECIO OFERTA:</string>
+            </property>
+    </widget>
+    <widget class="QDoubleSpinBox" name="spinPrecioOferta">
+            <property name="geometry">
+             <rect>
+              <x>220</x>
+              <y>485</y>
+              <width>120</width>
+              <height>25</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QLineEdit{{
+	border: 2px solid #000000;
+	border-radius: 5px;
+	background-color: #BBAFDB;
+	color: black;
+	font-size: 12px;
+	padding-left: 6px;
+}}
+QLineEdit:hover {{
+	background-color: #8E7CC3;
+}}</string>
+            </property>
+            <property name="minimum"><double>0.0</double></property>
+            <property name="maximum"><double>9999.0</double></property>
+            <property name="value"><double>0.0</double></property>
+            <property name="decimals"><number>2</number></property>
+            <property name="singleStep"><double>1.0</double></property>
+    </widget>
+    <widget class="QPushButton" name="btnGuardar">
+            <property name="geometry">
+             <rect>
+              <x>280</x>
+              <y>540</y>
+              <width>200</width>
+              <height>45</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton{
+	border: 2px solid #000000;
+	border-radius: 8px;
+	background-color: #BBAFDB;
+	color: black;
+	font-size: 15px;
+	cursor: pointer;
+}
+QPushButton:hover {
+	background-color: #8E7CC3;
+}
+QPushButton:disabled {
+	color: #6b6b6b;
+	background-color: #a99bc9;
+}</string>
+            </property>
+            <property name="text">
+             <string>GUARDAR</string>
+            </property>
+    </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>760</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

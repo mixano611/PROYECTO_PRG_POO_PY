@@ -33,80 +33,6 @@
      <bool>true</bool>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton">
-    <property name="geometry">
-     <rect>
-      <x>620</x>
-      <y>500</y>
-      <width>141</width>
-      <height>41</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Cascadia Code</family>
-      <pointsize>-1</pointsize>
-      <weight>75</weight>
-      <italic>true</italic>
-      <bold>true</bold>
-     </font>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">QPushButton{
-	border: 2px solid #000000;
-	border-radius: 20px;
-	background-color: #BBAFDB;
-	color: black;
-	font-size: 22px;
-	cursor: pointer;
-  	transition: transform 0.2s ease, background-color 0.2s ease;
-}
-
-QPushButton:hover {
- 	background-color: #8E7CC3;
-}</string>
-    </property>
-    <property name="text">
-     <string>COMPRAR</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pushButton_2">
-    <property name="geometry">
-     <rect>
-      <x>420</x>
-      <y>500</y>
-      <width>141</width>
-      <height>41</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Cascadia Code</family>
-      <pointsize>-1</pointsize>
-      <weight>75</weight>
-      <italic>true</italic>
-      <bold>true</bold>
-     </font>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">QPushButton{
-	border: 2px solid #000000;
-	border-radius: 20px;
-	background-color: #BBAFDB;
-	color: black;
-	font-size: 22px;
-	cursor: pointer;
-  	transition: transform 0.2s ease, background-color 0.2s ease;
-}
-
-QPushButton:hover {
- 	background-color: #8E7CC3;
-}</string>
-    </property>
-    <property name="text">
-     <string>RESERVAR</string>
-    </property>
-   </widget>
    <widget class="QLabel" name="LblTitulo">
     <property name="geometry">
      <rect>
@@ -355,7 +281,7 @@ QSpinBox:hover {
      <string>DESCRIPCION:</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_3">
+   <widget class="QPushButton" name="btnAgregar">
     <property name="geometry">
      <rect>
       <x>420</x>
@@ -364,32 +290,73 @@ QSpinBox:hover {
       <height>41</height>
      </rect>
     </property>
-    <property name="font">
-     <font>
-      <family>Cascadia Code</family>
-      <pointsize>-1</pointsize>
-      <weight>75</weight>
-      <italic>true</italic>
-      <bold>true</bold>
-     </font>
-    </property>
     <property name="styleSheet">
      <string notr="true">QPushButton{
 	border: 2px solid #000000;
 	border-radius: 20px;
 	background-color: #BBAFDB;
 	color: black;
-	font-size: 22px;
+	font-size: 18px;
 	cursor: pointer;
-  	transition: transform 0.2s ease, background-color 0.2s ease;
 }
-
 QPushButton:hover {
- 	background-color: #8E7CC3;
+	background-color: #8E7CC3;
 }</string>
     </property>
     <property name="text">
-     <string>IR AL CARRITO</string>
+     <string>AGREGAR AL CARRITO</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnCarrito">
+    <property name="geometry">
+     <rect>
+      <x>650</x>
+      <y>10</y>
+      <width>140</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+	border: 1px solid #000000;
+	border-radius: 8px;
+	background-color: #BBAFDB;
+	color: black;
+	font-size: 11px;
+	cursor: pointer;
+}
+QPushButton:hover {
+	background-color: #8E7CC3;
+}</string>
+    </property>
+    <property name="text">
+     <string>VER CARRITO (0)</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="LblOferta">
+    <property name="geometry">
+     <rect>
+      <x>330</x>
+      <y>470</y>
+      <width>280</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: #5e2dc2;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
     </property>
    </widget>
   </widget>
