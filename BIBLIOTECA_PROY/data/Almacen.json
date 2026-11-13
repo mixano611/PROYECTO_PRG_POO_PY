@@ -6,11 +6,13 @@
             "autor": "Gabriel García Márquez",
             "tipo": "Novela",
             "estado": "ALMACEN",
-            "stock": 3,
+            "stock": 2,
             "precio": 45.0,
             "descripcion": "La historia de la familia Buendía a lo largo de siete generaciones en el pueblo de Macondo. Obra cumbre del realismo mágico.",
             "imagen": "cien.jpg",
-            "portada": "Cover1"
+            "portada": "Cover1",
+            "oferta": true,
+            "precio_oferta": 36.0
         },
         {
             "id": 2,
@@ -22,7 +24,9 @@
             "precio": 30.0,
             "descripcion": "Un piloto perdido en el desierto conoce a un pequeño príncipe que viene de otro planeta. Un relato poético sobre la amistad y lo esencial.",
             "imagen": "principito.jpg",
-            "portada": "Cover7"
+            "portada": "Cover7",
+            "oferta": false,
+            "precio_oferta": null
         },
         {
             "id": 3,
@@ -34,7 +38,9 @@
             "precio": 50.0,
             "descripcion": "Novela ambientada en el Colegio Militar Leoncio Prado, donde un grupo de cadetes enfrenta la violencia y el honor.",
             "imagen": "perros.jpg",
-            "portada": "Cover2"
+            "portada": "Cover2",
+            "oferta": false,
+            "precio_oferta": null
         },
         {
             "id": 4,
@@ -46,7 +52,9 @@
             "precio": 40.0,
             "descripcion": "Una novela que puede leerse en varios órdenes. La historia de Horacio Oliveira y su búsqueda existencial entre París y Buenos Aires.",
             "imagen": "rayuela.jpg",
-            "portada": "Cover3"
+            "portada": "Cover3",
+            "oferta": true,
+            "precio_oferta": 32.0
         },
         {
             "id": 5,
@@ -58,7 +66,9 @@
             "precio": 35.0,
             "descripcion": "Colección de cuentos de Borges donde lo infinito, los laberintos y la memoria se cruzan en relatos breves.",
             "imagen": "aleph.jpg",
-            "portada": "Cover5"
+            "portada": "Cover5",
+            "oferta": false,
+            "precio_oferta": null
         },
         {
             "id": 6,
@@ -70,7 +80,9 @@
             "precio": 25.0,
             "descripcion": "Relatos ambientados en la selva misionera, con animales que hablan y aventuras llenas de enseñanzas.",
             "imagen": "selva.jpg",
-            "portada": "Cover6"
+            "portada": "Cover6",
+            "oferta": false,
+            "precio_oferta": null
         },
         {
             "id": 7,
@@ -82,7 +94,9 @@
             "precio": 28.0,
             "descripcion": "Poemario de Pablo Neruda dedicado al amor y al deseo, uno de los libros de poesía más leídos en español.",
             "imagen": "veinte.jpg",
-            "portada": "Cover9"
+            "portada": "Cover9",
+            "oferta": false,
+            "precio_oferta": null
         },
         {
             "id": 8,
@@ -94,7 +108,9 @@
             "precio": 22.0,
             "descripcion": "Poema gauchesco que narra la vida de un gaucho en la pampa argentina y su lucha por la libertad.",
             "imagen": "fierro.jpg",
-            "portada": "Cover8"
+            "portada": "Cover8",
+            "oferta": false,
+            "precio_oferta": null
         },
         {
             "id": 9,
@@ -106,7 +122,9 @@
             "precio": 32.0,
             "descripcion": "Un pintor obsesionado con una mujer relata desde la cárcel el crimen que cometió. Novela psicológica de Sabato.",
             "imagen": "tunel.jpg",
-            "portada": "Cover4"
+            "portada": "Cover4",
+            "oferta": false,
+            "precio_oferta": null
         },
         {
             "id": 10,
@@ -118,7 +136,9 @@
             "precio": 27.0,
             "descripcion": "Tratado militar atribuido a Sun Tzu sobre estrategia, liderazgo y conflicto, aplicable más allá de la guerra.",
             "imagen": "guerra.jpg",
-            "portada": null
+            "portada": null,
+            "oferta": false,
+            "precio_oferta": null
         },
         {
             "id": 11,
@@ -130,7 +150,9 @@
             "precio": 18.0,
             "descripcion": "Tira cómica protagonizada por una niña curiosa que cuestiona el mundo de los adultos con humor e ironía.",
             "imagen": "malfalda.jpg",
-            "portada": null
+            "portada": null,
+            "oferta": false,
+            "precio_oferta": null
         },
         {
             "id": 12,
@@ -142,7 +164,9 @@
             "precio": 38.0,
             "descripcion": "Poema épico de Homero que narra el largo y accidentado regreso de Ulises a su hogar en Ítaca.",
             "imagen": "odisea.jpg",
-            "portada": null
+            "portada": null,
+            "oferta": false,
+            "precio_oferta": null
         },
         {
             "id": 13,
@@ -154,7 +178,9 @@
             "precio": 26.0,
             "descripcion": "Tragedia de Shakespeare sobre el príncipe de Dinamarca, la venganza y la duda existencial.",
             "imagen": "hamlet.jpg",
-            "portada": null
+            "portada": null,
+            "oferta": false,
+            "precio_oferta": null
         },
         {
             "id": 14,
@@ -166,7 +192,9 @@
             "precio": 25.0,
             "descripcion": "Las aventuras de Son Goku y sus amigos en busca de las esferas del dragón, con artes marciales y humor.",
             "imagen": "0e20d9a65a7d3933fd23e1c7a9c0c850.jpg",
-            "portada": "Cover10"
+            "portada": "Cover10",
+            "oferta": true,
+            "precio_oferta": 20.0
         },
         {
             "id": 15,
@@ -178,7 +206,9 @@
             "precio": 25.0,
             "descripcion": "Un joven ninja hiperactivo sueña con convertirse en Hokage y ser reconocido por todos.",
             "imagen": "naruto.jpg",
-            "portada": "Cover11"
+            "portada": "Cover11",
+            "oferta": false,
+            "precio_oferta": null
         },
         {
             "id": 16,
@@ -190,7 +220,9 @@
             "precio": 25.0,
             "descripcion": "Luffy y su tripulación recorren los mares en busca del tesoro legendario One Piece.",
             "imagen": "Volumen_1.jpg",
-            "portada": "Cover12"
+            "portada": "Cover12",
+            "oferta": false,
+            "precio_oferta": null
         },
         {
             "id": 17,
@@ -202,7 +234,9 @@
             "precio": 25.0,
             "descripcion": "La saga de la familia Joestar y sus combates contra enemigos sobrenaturales a lo largo de varias generaciones.",
             "imagen": "7593ac66d58c5992b38cf66ad0af1757.jpg",
-            "portada": "Cover13"
+            "portada": "Cover13",
+            "oferta": true,
+            "precio_oferta": 20.0
         },
         {
             "id": 18,
@@ -210,11 +244,13 @@
             "autor": "Tappei Nagatsuki",
             "tipo": "Manga",
             "estado": "ALMACEN",
-            "stock": 14,
+            "stock": 13,
             "precio": 25.0,
             "descripcion": "Subaru Natsuki llega a un mundo fantástico donde muere y revive una y otra vez, obligado a cambiar el destino.",
             "imagen": "77b17c0f8d67b778775f1d5fa76fcfde.jpg",
-            "portada": "Cover14"
+            "portada": "Cover14",
+            "oferta": false,
+            "precio_oferta": null
         },
         {
             "id": 19,
@@ -226,7 +262,9 @@
             "precio": 25.0,
             "descripcion": "En un mundo donde casi todos tienen superpoderes, Izuku Midoriya sueña con ser un héroe profesional.",
             "imagen": "My-Hero-Academia-manga-volumen-37.jpg",
-            "portada": "Cover15"
+            "portada": "Cover15",
+            "oferta": false,
+            "precio_oferta": null
         },
         {
             "id": 20,
@@ -238,8 +276,78 @@
             "precio": 25.0,
             "descripcion": "Un proyecto busca crear al mejor delantero de Japón mediante un entrenamiento extremo y competitivo.",
             "imagen": "JP_Volume_19.jpg",
-            "portada": "Cover16"
+            "portada": "Cover16",
+            "oferta": false,
+            "precio_oferta": null
         }
     ],
-    "pedidos": []
+    "pedidos": [],
+    "cajas": [
+        [
+            0,
+            0,
+            1
+        ],
+        [
+            1,
+            1,
+            0
+        ]
+    ],
+    "movimientos": [
+        {
+            "id": 1,
+            "codigo": "B-0001",
+            "fecha": "2026-11-08 18:27:25",
+            "usuario": "miguel",
+            "dni": 61528576,
+            "tipo": "COMPRA",
+            "items": [
+                {
+                    "id_libro": 1,
+                    "nombre": "Cien años de soledad",
+                    "cantidad": 1,
+                    "tipo": "COMPRA",
+                    "precio": 45.0,
+                    "subtotal": 45.0
+                },
+                {
+                    "id_libro": 18,
+                    "nombre": "Re-Zero",
+                    "cantidad": 1,
+                    "tipo": "COMPRA",
+                    "precio": 25.0,
+                    "subtotal": 25.0
+                }
+            ],
+            "descuento": 0.0,
+            "total": 70.0,
+            "caja": 1,
+            "estado": "PAGADO"
+        },
+        {
+            "id": 2,
+            "codigo": "B-0002",
+            "fecha": "2026-11-08 18:34:23",
+            "usuario": "miguel",
+            "dni": 61528576,
+            "tipo": "PRESTAMO",
+            "items": [
+                {
+                    "id_libro": 18,
+                    "nombre": "Re-Zero",
+                    "cantidad": 3,
+                    "tipo": "PRESTAMO",
+                    "precio": 25.0,
+                    "subtotal": 63.75
+                }
+            ],
+            "descuento": 11.25,
+            "total": 63.75,
+            "caja": 3,
+            "estado": "DEVUELTO",
+            "fecha_devolucion": "2026-11-15",
+            "fecha_devolucion_real": "2026-11-08 18:35:35"
+        }
+    ]
 }

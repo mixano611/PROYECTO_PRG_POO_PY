@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>721</width>
-    <height>531</height>
+    <width>1040</width>
+    <height>560</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -20,7 +20,7 @@
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>260</x>
+      <x>414</x>
       <y>20</y>
       <width>211</width>
       <height>41</height>
@@ -47,8 +47,8 @@
      <rect>
       <x>20</x>
       <y>70</y>
-      <width>671</width>
-      <height>301</height>
+      <width>1000</width>
+      <height>360</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -75,7 +75,7 @@
     </column>
     <column>
      <property name="text">
-      <string>LIBRO</string>
+      <string>TIPO</string>
      </property>
      <property name="font">
       <font>
@@ -109,6 +109,28 @@
     <column>
      <property name="text">
       <string>STOCK</string>
+     </property>
+     <property name="font">
+      <font>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>PRECIO</string>
+     </property>
+     <property name="font">
+      <font>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>DESCRIPCIÓN</string>
      </property>
      <property name="font">
       <font>
@@ -160,8 +182,8 @@ QPushButton:hover {
    <widget class="QPushButton" name="btnGuardar">
     <property name="geometry">
      <rect>
-      <x>306</x>
-      <y>400</y>
+      <x>390</x>
+      <y>450</y>
       <width>110</width>
       <height>32</height>
      </rect>
@@ -192,6 +214,32 @@ QPushButton:hover {
      <string>GUARDAR</string>
     </property>
    </widget>
+   <widget class="QPushButton" name="btnEliminar">
+    <property name="geometry">
+     <rect>
+      <x>530</x>
+      <y>450</y>
+      <width>120</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+	border: 1px solid #000000;
+	border-radius: 8px;
+	background-color: #BBAFDB;
+	color: black;
+	font-size: 11px;
+	cursor: pointer;
+}
+QPushButton:hover {
+	background-color: #8E7CC3;
+}</string>
+     </property>
+    <property name="text">
+     <string>ELIMINAR</string>
+    </property>
+   </widget>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
   <widget class="QMenuBar" name="menubar">
@@ -199,7 +247,7 @@ QPushButton:hover {
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>721</width>
+     <width>1040</width>
      <height>26</height>
     </rect>
    </property>

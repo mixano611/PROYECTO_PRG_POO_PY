@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>640</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: #BBAFDB</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+    <widget class="QPushButton" name="btnVolver">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>10</y>
+              <width>110</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton{
+	border: 1px solid #000000;
+	border-radius: 8px;
+	background-color: #BBAFDB;
+	color: black;
+	font-size: 11px;
+	cursor: pointer;
+}
+QPushButton:hover {
+	background-color: #8E7CC3;
+}</string>
+            </property>
+            <property name="text">
+             <string>← VOLVER</string>
+            </property>
+    </widget>
+    <widget class="QLabel" name="LblTitulo">
+            <property name="geometry">
+             <rect>
+              <x>200</x>
+              <y>10</y>
+              <width>400</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>22</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="text">
+             <string>CAJAS Y MAPA</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+    </widget>
+    <widget class="QLabel" name="LblCajas">
+            <property name="geometry">
+             <rect>
+              <x>20</x>
+              <y>55</y>
+              <width>760</width>
+              <height>22</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>11</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>CAJAS (haz clic para abrir o cerrar): 1 = abierta, 0 = cerrada</string>
+            </property>
+    </widget>
+    <widget class="QPushButton" name="btnCaja1">
+            <property name="geometry">
+             <rect>
+              <x>40</x>
+              <y>85</y>
+              <width>220</width>
+              <height>55</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton{
+	border: 2px solid #000000;
+	border-radius: 8px;
+	background-color: #BBAFDB;
+	color: black;
+	font-size: 13px;
+	cursor: pointer;
+}
+QPushButton:hover {
+	background-color: #8E7CC3;
+}
+QPushButton:disabled {
+	color: #6b6b6b;
+	background-color: #a99bc9;
+}</string>
+            </property>
+            <property name="text">
+             <string>CAJA 1</string>
+            </property>
+    </widget>
+    <widget class="QPushButton" name="btnCaja2">
+            <property name="geometry">
+             <rect>
+              <x>290</x>
+              <y>85</y>
+              <width>220</width>
+              <height>55</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton{
+	border: 2px solid #000000;
+	border-radius: 8px;
+	background-color: #BBAFDB;
+	color: black;
+	font-size: 13px;
+	cursor: pointer;
+}
+QPushButton:hover {
+	background-color: #8E7CC3;
+}
+QPushButton:disabled {
+	color: #6b6b6b;
+	background-color: #a99bc9;
+}</string>
+            </property>
+            <property name="text">
+             <string>CAJA 2</string>
+            </property>
+    </widget>
+    <widget class="QPushButton" name="btnCaja3">
+            <property name="geometry">
+             <rect>
+              <x>540</x>
+              <y>85</y>
+              <width>220</width>
+              <height>55</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton{
+	border: 2px solid #000000;
+	border-radius: 8px;
+	background-color: #BBAFDB;
+	color: black;
+	font-size: 13px;
+	cursor: pointer;
+}
+QPushButton:hover {
+	background-color: #8E7CC3;
+}
+QPushButton:disabled {
+	color: #6b6b6b;
+	background-color: #a99bc9;
+}</string>
+            </property>
+            <property name="text">
+             <string>CAJA 3</string>
+            </property>
+    </widget>
+    <widget class="QPushButton" name="btnCaja4">
+            <property name="geometry">
+             <rect>
+              <x>40</x>
+              <y>155</y>
+              <width>220</width>
+              <height>55</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton{
+	border: 2px solid #000000;
+	border-radius: 8px;
+	background-color: #BBAFDB;
+	color: black;
+	font-size: 13px;
+	cursor: pointer;
+}
+QPushButton:hover {
+	background-color: #8E7CC3;
+}
+QPushButton:disabled {
+	color: #6b6b6b;
+	background-color: #a99bc9;
+}</string>
+            </property>
+            <property name="text">
+             <string>CAJA 4</string>
+            </property>
+    </widget>
+    <widget class="QPushButton" name="btnCaja5">
+            <property name="geometry">
+             <rect>
+              <x>290</x>
+              <y>155</y>
+              <width>220</width>
+              <height>55</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton{
+	border: 2px solid #000000;
+	border-radius: 8px;
+	background-color: #BBAFDB;
+	color: black;
+	font-size: 13px;
+	cursor: pointer;
+}
+QPushButton:hover {
+	background-color: #8E7CC3;
+}
+QPushButton:disabled {
+	color: #6b6b6b;
+	background-color: #a99bc9;
+}</string>
+            </property>
+            <property name="text">
+             <string>CAJA 5</string>
+            </property>
+    </widget>
+    <widget class="QPushButton" name="btnCaja6">
+            <property name="geometry">
+             <rect>
+              <x>540</x>
+              <y>155</y>
+              <width>220</width>
+              <height>55</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton{
+	border: 2px solid #000000;
+	border-radius: 8px;
+	background-color: #BBAFDB;
+	color: black;
+	font-size: 13px;
+	cursor: pointer;
+}
+QPushButton:hover {
+	background-color: #8E7CC3;
+}
+QPushButton:disabled {
+	color: #6b6b6b;
+	background-color: #a99bc9;
+}</string>
+            </property>
+            <property name="text">
+             <string>CAJA 6</string>
+            </property>
+    </widget>
+    <widget class="QLabel" name="LblMapa">
+            <property name="geometry">
+             <rect>
+              <x>20</x>
+              <y>230</y>
+              <width>500</width>
+              <height>22</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>12</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="text">
+             <string>MAPA DE LA BIBLIOTECA (4x4)</string>
+            </property>
+    </widget>
+    <widget class="QTableWidget" name="tableMapa">
+            <property name="geometry">
+             <rect>
+              <x>20</x>
+              <y>255</y>
+              <width>360</width>
+              <height>220</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QTableWidget{
+	border: 2px solid #000000;
+	border-radius: 12px;
+	background-color: #BBAFDB;
+	color: black;
+	font-size: 12px;
+	gridline-color: #8E7CC3;
+}
+QHeaderView::section{
+	background-color: #8E7CC3;
+	color: black;
+	border: 1px solid #000000;
+	padding: 4px;
+	font-weight: bold;
+}</string>
+            </property>
+            <column>
+             <property name="text">
+              <string>1</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>2</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>3</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>4</string>
+             </property>
+            </column>
+    </widget>
+    <widget class="QLabel" name="LblLeyenda">
+            <property name="geometry">
+             <rect>
+              <x>420</x>
+              <y>255</y>
+              <width>340</width>
+              <height>150</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>10</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>1 = libro disponible
+0 = libro agotado o espacio vacío
+
+Cada fila es una sección de la biblioteca y cada columna un estante. La matriz se arma con los libros del almacén.</string>
+            </property>
+            <property name="wordWrap">
+             <bool>true</bool>
+            </property>
+    </widget>
+    <widget class="QPushButton" name="btnGuardar">
+            <property name="geometry">
+             <rect>
+              <x>280</x>
+              <y>500</y>
+              <width>240</width>
+              <height>45</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton{
+	border: 2px solid #000000;
+	border-radius: 8px;
+	background-color: #BBAFDB;
+	color: black;
+	font-size: 15px;
+	cursor: pointer;
+}
+QPushButton:hover {
+	background-color: #8E7CC3;
+}
+QPushButton:disabled {
+	color: #6b6b6b;
+	background-color: #a99bc9;
+}</string>
+            </property>
+            <property name="text">
+             <string>GUARDAR CAJAS</string>
+            </property>
+    </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

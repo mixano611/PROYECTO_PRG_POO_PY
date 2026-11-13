@@ -46,6 +46,32 @@ QPushButton:hover {
      <string>INICIAR</string>
     </property>
    </widget>
+   <widget class="QPushButton" name="btnMembresia">
+    <property name="geometry">
+     <rect>
+      <x>270</x>
+      <y>375</y>
+      <width>221</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+	border: 1px solid #000000;
+	border-radius: 8px;
+	background-color: #BBAFDB;
+	color: black;
+	font-size: 12px;
+	cursor: pointer;
+}
+QPushButton:hover {
+	background-color: #8E7CC3;
+}</string>
+    </property>
+    <property name="text">
+     <string>HACERSE MIEMBRO</string>
+    </property>
+   </widget>
    <widget class="QLineEdit" name="txtNombre">
     <property name="geometry">
      <rect>

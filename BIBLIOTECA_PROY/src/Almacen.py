@@ -26,6 +26,10 @@ def cargar_datos():
         return {"libros": []}
 
     datos.setdefault("libros", [])
+    # Matriz 2x3 de cajas: 1 = abierta, 0 = cerrada.
+    datos.setdefault("cajas", [[1, 1, 1], [1, 1, 1]])
+    # Historial de compras y préstamos.
+    datos.setdefault("movimientos", [])
     return datos
 
 
