@@ -17,7 +17,7 @@
    <string notr="true">/* SCROLL VERTICAL */
 QScrollBar:vertical {
     border: none;
-    background-color: #896cc4;
+    background-color: #EDC798;
     width: 14px;
     margin: 0px 0px 0px 0px; /* Sin margen para que ocupe todo el espacio */
     border-radius: 0px;
@@ -71,95 +71,99 @@ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QVBoxLayout" name="verticalLayout_3">
-   <item>
-    <layout class="QHBoxLayout" name="barraSuperior">
-     <item>
-      <widget class="QPushButton" name="btnVolver">
-       <property name="minimumSize">
-        <size>
-         <width>110</width>
-         <height>34</height>
-        </size>
-       </property>
-       <property name="maximumSize">
-        <size>
-         <width>110</width>
-         <height>34</height>
-        </size>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">QPushButton{
+    <item>
+     <layout class="QHBoxLayout" name="barraSuperior">
+      <item>
+       <widget class="QPushButton" name="btnVolver">
+        <property name="minimumSize">
+         <size>
+          <width>110</width>
+          <height>34</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>110</width>
+          <height>34</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton{
 	border: 1px solid #000000;
 	border-radius: 8px;
-	background-color: #BBAFDB;
+	background-color: #FFEBA8;
 	color: black;
 	font-size: 11px;
 	cursor: pointer;
 }
 QPushButton:hover {
-	background-color: #8E7CC3;
+	background-color: #E3B881;
+	color: #000000;
+	border-color: #000000
 }</string>
-       </property>
-       <property name="text">
-        <string>← VOLVER</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QLabel" name="label_41">
-       <property name="font">
-        <font>
-         <pointsize>22</pointsize>
-         <weight>75</weight>
-         <bold>true</bold>
-        </font>
-       </property>
-       <property name="text">
-        <string>LETRAS Y MUNDOS</string>
-       </property>
-       <property name="alignment">
-        <set>Qt::AlignCenter</set>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QPushButton" name="btnCarrito">
-       <property name="minimumSize">
-        <size>
-         <width>170</width>
-         <height>34</height>
-        </size>
-       </property>
-       <property name="maximumSize">
-        <size>
-         <width>170</width>
-         <height>34</height>
-        </size>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">QPushButton{
+        </property>
+        <property name="text">
+         <string>← VOLVER</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_41">
+        <property name="font">
+         <font>
+          <pointsize>22</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>LETRAS Y MUNDOS</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnCarrito">
+        <property name="minimumSize">
+         <size>
+          <width>170</width>
+          <height>34</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>170</width>
+          <height>34</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton{
 	border: 1px solid #000000;
 	border-radius: 8px;
-	background-color: #BBAFDB;
+	background-color: #FFEBA8;
 	color: black;
 	font-size: 11px;
 	cursor: pointer;
 }
 QPushButton:hover {
-	background-color: #8E7CC3;
+	background-color: #E3B881;
+	color: #000000;
+	border-color: #000000
 }</string>
-       </property>
-       <property name="text">
-        <string>VER CARRITO (0)</string>
-       </property>
-      </widget>
-     </item>
-    </layout>
-   </item>
+        </property>
+        <property name="text">
+         <string>VER CARRITO (0)</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
     <item>
      <widget class="QScrollArea" name="scrollArea">
       <property name="styleSheet">
-       <string notr="true">background-color:#BBAFDB;
+       <string notr="true">background-color: #FFEBA8
 
 </string>
       </property>
@@ -178,7 +182,7 @@ QPushButton:hover {
          <x>0</x>
          <y>0</y>
          <width>883</width>
-         <height>3088</height>
+         <height>3018</height>
         </rect>
        </property>
        <layout class="QVBoxLayout" name="verticalLayout_2">
@@ -194,8 +198,7 @@ QPushButton:hover {
            <bool>false</bool>
           </property>
           <property name="styleSheet">
-           <string notr="true">background-color:#BBAFDB;
-
+           <string notr="true">background-color: #FFEBA8
 </string>
           </property>
           <property name="frameShape">
@@ -622,7 +625,7 @@ QPushButton:hover {
      <x>0</x>
      <y>0</y>
      <width>915</width>
-     <height>21</height>
+     <height>26</height>
     </rect>
    </property>
   </widget>
