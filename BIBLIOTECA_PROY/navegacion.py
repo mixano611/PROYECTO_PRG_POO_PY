@@ -8,12 +8,78 @@ class PantallaPrestamos(VentanaBase):
 archivo_ui = "prestamos.ui"
 
 3. Para avanzar a otra ventana:  self.ir_a(OtraVentana)
+
+Todas las ventanas se abren en pantalla completa. Las que usan layouts se
+adaptan solas al tamaño; las que conservan un diseno de posiciones fijas se
+escalan de forma uniforme para aprovechar toda la pantalla.
 """
 
 from pathlib import Path
+import re
 
 from PyQt5 import uic
-from PyQt5.QtWidgets import QMainWindow, QMessageBox
+from PyQt5.QtCore import Qt
+from PyQt5.QtGui import QPainter
+from PyQt5.QtWidgets import (
+    QFrame,
+    QGraphicsScene,
+    QGraphicsView,
+    QMainWindow,
+    QMenuBar,
+    QMessageBox,
+    QStatusBar,
+    QTableWidget,
+)
+
+from tema_admin import animar_entrada, aplicar_tema_admin
+
+
+class VistaEscalada(QGraphicsView):
+    """Muestra un diseno de tamaño fijo escalado al tamaño de la ventana.
+
+    Asi las ventanas de usuario conservan exactamente su diseño original,
+    pero las letras, imagenes y botones crecen para aprovechar la pantalla.
+    """
+
+    def __init__(self, escena, padre=None):
+        super().__init__(escena, padre)
+        self.setObjectName("vistaEscalada")
+        self.setFrameShape(QFrame.NoFrame)
+        self.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.setRenderHints(
+            QPainter.Antialiasing
+            | QPainter.SmoothPixmapTransform
+            | QPainter.TextAntialiasing
+        )
+        self.setStyleSheet(
+            "QGraphicsView { background: transparent; border: none; }"
+        )
+        self.viewport().setAutoFillBackground(False)
+        self.setAlignment(Qt.AlignmentFlag.AlignCenter)
+
+    def resizeEvent(self, evento):
+        super().resizeEvent(evento)
+        self.ajustar()
+
+    def showEvent(self, evento):
+        super().showEvent(evento)
+        self.ajustar()
+
+    def ajustar(self):
+        escena = self.scene()
+        if escena is None:
+            return
+
+        rect = escena.itemsBoundingRect()
+        if rect.isEmpty():
+            return
+
+        margen = 10
+        self.fitInView(
+            rect.adjusted(-margen, -margen, margen, margen),
+            Qt.AspectRatioMode.KeepAspectRatio,
+        )
 
 
 class VentanaBase(QMainWindow):
@@ -21,6 +87,13 @@ class VentanaBase(QMainWindow):
 
     # Nombre del archivo .ui dentro de assets/. Cada subclase lo define.
     archivo_ui = None
+
+    # Tema visual: "admin" aplica la paleta beige del panel.
+    tema = None
+
+    # Las ventanas con diseno de posiciones fijas se escalan para llenar
+    # la pantalla; las que usan layouts (como el login principal) no.
+    escala_fija = True
 
     def __init__(self, anterior=None):
         super().__init__()
@@ -34,6 +107,14 @@ class VentanaBase(QMainWindow):
         ruta_ui = Path(__file__).resolve().parent / "assets" / self.archivo_ui
         uic.loadUi(str(ruta_ui), self)
 
+        # Se prepara antes de mover el lienzo a la escena de escalado.
+        if self.tema != "admin" and self.escala_fija:
+            self._preparar_tablas_usuario()
+
+        # Las ventanas con diseno de posiciones fijas se escalan para llenar
+        # la pantalla; las que ya usan layouts no se tocan.
+        self._preparar_responsivo()
+
         # Si la ventana tiene un boton llamado btnBack (o btnVolver), se conecta solo.
         if hasattr(self, "btnBack"):
             self.btnBack.clicked.connect(self.volver)
@@ -45,6 +126,90 @@ class VentanaBase(QMainWindow):
             self.btnCarrito.clicked.connect(self.abrir_carrito)
 
         self.preparar()
+
+        if self.tema == "admin":
+            aplicar_tema_admin(self)
+
+    def _preparar_tablas_usuario(self):
+        """Evita que la cabecera de las tablas cambie de color al enfocar."""
+        for tabla in self.findChildren(QTableWidget):
+            cabecera = tabla.horizontalHeader()
+            cabecera.setHighlightSections(False)
+            cabecera.setDefaultAlignment(
+                Qt.AlignmentFlag.AlignLeft | Qt.AlignmentFlag.AlignVCenter
+            )
+
+            # Rellena con el color de la cabecera el espacio sin columnas.
+            estilo = tabla.styleSheet()
+            for patron in (
+                r"QHeaderView::section\s*\{[^}]*background-color:\s*([^;]+);",
+                r"QTableWidget\s*\{[^}]*background-color:\s*([^;]+);",
+            ):
+                encontrado = re.search(patron, estilo, re.DOTALL)
+                if encontrado:
+                    color = encontrado.group(1).strip()
+                    cabecera.setStyleSheet(
+                        f"QHeaderView {{ background-color: {color}; }}"
+                    )
+                    break
+
+    # ------------------------------------------------------------------
+    # Adaptacion a pantalla completa y a distintos tamaños
+    # ------------------------------------------------------------------
+    def _preparar_responsivo(self):
+        central = self.centralWidget()
+        if central is None or not self.escala_fija or self.tema == "admin":
+            return
+
+        menu = self.findChild(QMenuBar)
+        estado = self.findChild(QStatusBar)
+        alto_menu = menu.sizeHint().height() if menu else 0
+        alto_estado = estado.sizeHint().height() if estado else 0
+
+        ancho = max(1, self.width())
+        alto = max(1, self.height() - alto_menu - alto_estado)
+
+        # Se retira sin borrarlo para poder insertarlo en la escena.
+        central = self.takeCentralWidget()
+        central.setFixedSize(ancho, alto)
+        # El fondo lo pinta la ventana; el lienzo debe ser transparente.
+        central.setStyleSheet(
+            (central.styleSheet() or "")
+            + "\nQWidget#centralwidget { background: transparent; }"
+        )
+
+        escena = QGraphicsScene(self)
+        self._proxy = escena.addWidget(central)
+
+        vista = VistaEscalada(escena, self)
+        self.setCentralWidget(vista)
+
+        self._lienzo = central
+        self._vista = vista
+
+    def show(self):
+        """La primera vez que aparece, la ventana ocupa toda la pantalla."""
+        primera_vez = not getattr(self, "_ya_mostrada", False)
+        if primera_vez:
+            self._ya_mostrada = True
+            self.showFullScreen()
+            if self.tema == "admin":
+                animar_entrada(self)
+        else:
+            super().show()
+
+    def keyPressEvent(self, evento):
+        """F11 alterna pantalla completa y ESC sale de ella."""
+        if evento.key() == Qt.Key.Key_F11:
+            if self.isFullScreen():
+                self.showMaximized()
+            else:
+                self.showFullScreen()
+            return
+        if evento.key() == Qt.Key.Key_Escape and self.isFullScreen():
+            self.showMaximized()
+            return
+        super().keyPressEvent(evento)
 
     def preparar(self):
         """Se ejecuta al final del __init__. Aqui van las conexiones propias.

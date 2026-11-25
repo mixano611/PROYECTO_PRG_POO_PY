@@ -13,7 +13,6 @@ from PyQt5.QtWidgets import (
 from navegacion import VentanaBase
 from src.Admin import validar_admin
 from src.Almacen import cargar_datos, guardar_datos
-from src.Busqueda import construir_libros
 from src.Carrito import cargar_carrito, guardar_carrito
 from src.Consulta import buscar_libros
 from src.Excepciones import BibliotecaError, DatosInvalidosError
@@ -36,7 +35,6 @@ from src.Modelos import (
     COMPRA,
     PRESTAMO,
     Libro,
-    MapaBiblioteca,
 )
 from src.Operaciones import (
     cargar_cajas,
@@ -59,12 +57,16 @@ ESTILO_BOTON = (
 )
 
 ESTILO_CAJA_ABIERTA = (
-    "QPushButton{border:2px solid #000000;border-radius:10px;"
-    "background-color:#8FD19E;color:black;font-size:13px;}"
+    "QPushButton{border:1px solid #9DB98F;border-radius:14px;"
+    "background-color:#E9F0E4;color:#3E5A36;font-size:15px;"
+    "font-weight:600;}"
+    "QPushButton:hover{background-color:#DEE9D7;border-color:#8AA97C;}"
 )
 ESTILO_CAJA_CERRADA = (
-    "QPushButton{border:2px solid #000000;border-radius:10px;"
-    "background-color:#E39A9A;color:black;font-size:13px;}"
+    "QPushButton{border:1px solid #C89A92;border-radius:14px;"
+    "background-color:#F6E7E3;color:#7A4A42;font-size:15px;"
+    "font-weight:600;}"
+    "QPushButton:hover{background-color:#EFDAD4;border-color:#B9867D;}"
 )
 
 
@@ -109,6 +111,7 @@ class MainConsulta(VentanaBase):
 
 class MainConsultaAdmin(MainConsulta):
     archivo_ui = "main_consulta_admin.ui"
+    tema = "admin"
 
     def preparar(self):
         self.setWindowTitle("Panel del administrador")
@@ -130,6 +133,22 @@ class MainConsultaAdmin(MainConsulta):
             self.actionRENTADAS.triggered.connect(
                 lambda _checked=False: self.abrir_reportes("PRESTAMO")
             )
+
+        self.actualizar_estadisticas()
+
+    def actualizar_estadisticas(self):
+        """Muestra un resumen rapido del estado de la biblioteca."""
+        if not hasattr(self, "LblStatLibros"):
+            return
+
+        datos = resumen()
+        self.LblStatLibros.setText(str(datos["libros_disponibles"]))
+        self.LblStatPrestamos.setText(str(datos["prestamos_activos"]))
+        self.LblStatMiembros.setText(str(datos["miembros"]))
+
+    def showEvent(self, evento):
+        super().showEvent(evento)
+        self.actualizar_estadisticas()
 
     def buscar(self):
         self.buscar_y_mostrar(
@@ -154,6 +173,7 @@ class MainConsultaAdmin(MainConsulta):
 
 class ListaConsulta(VentanaBase):
     archivo_ui = "list_consulta.ui"
+    tema = "admin"
 
     def __init__(self, anterior=None, libros=None, criterios=""):
         self.libros = libros or []
@@ -928,6 +948,7 @@ class RegistroMembresia(VentanaBase):
 
 class SolicitudesAdmin(VentanaBase):
     archivo_ui = "solicitudes.ui"
+    tema = "admin"
 
     def __init__(self, anterior=None):
         self.ids_solicitudes = []
@@ -1107,9 +1128,10 @@ class SolicitudesAdmin(VentanaBase):
 
 class CajasAdmin(VentanaBase):
     archivo_ui = "cajas.ui"
+    tema = "admin"
 
     def preparar(self):
-        self.setWindowTitle("LETRAS Y MUNDOS - Cajas y mapa")
+        self.setWindowTitle("LETRAS Y MUNDOS - Cajas registradoras")
         self.mapa = cargar_cajas()
         self.botones = [
             self.btnCaja1,
@@ -1129,51 +1151,43 @@ class CajasAdmin(VentanaBase):
         self.actualizar()
 
     def actualizar(self):
+        abiertas = 0
+
         for indice, boton in enumerate(self.botones):
             caja = self.mapa.caja(indice + 1)
             if caja is None:
                 continue
-            estado = "ABIERTA" if caja.abierta else "CERRADA"
+
+            if caja.abierta:
+                abiertas += 1
+
+            estado = "● ABIERTA" if caja.abierta else "● CERRADA"
             boton.setText(f"CAJA {indice + 1}\n{estado}")
             boton.setStyleSheet(
                 ESTILO_CAJA_ABIERTA if caja.abierta else ESTILO_CAJA_CERRADA
             )
 
-        self.llenar_mapa()
+        if hasattr(self, "LblResumenCajas"):
+            self.LblResumenCajas.setText(
+                f"{abiertas} abiertas · {len(self.botones) - abiertas} cerradas"
+            )
 
     def alternar(self, numero):
         self.mapa.alternar(numero)
         self.actualizar()
-
-    def llenar_mapa(self):
-        libros_obj = construir_libros(cargar_datos()["libros"])
-        matriz = MapaBiblioteca(libros_obj).disponibilidad(libros_obj)
-
-        tabla = self.tableMapa
-        tabla.setRowCount(MapaBiblioteca.FILAS)
-        tabla.setColumnCount(MapaBiblioteca.COLUMNAS)
-
-        for fila in range(MapaBiblioteca.FILAS):
-            for columna in range(MapaBiblioteca.COLUMNAS):
-                tabla.setItem(
-                    fila,
-                    columna,
-                    _item_solo_lectura(matriz[fila][columna]),
-                )
-
-        tabla.resizeColumnsToContents()
 
     def guardar(self):
         guardar_cajas(self.mapa)
         QMessageBox.information(
             self,
             "Cajas guardadas",
-            "El mapa de cajas se guardó correctamente.",
+            "La configuración de las cajas se guardó correctamente.",
         )
 
 
 class ReportesAdmin(VentanaBase):
     archivo_ui = "reportes.ui"
+    tema = "admin"
 
     def __init__(self, anterior=None, filtro=None):
         self.filtro = filtro
@@ -1274,6 +1288,7 @@ class ReportesAdmin(VentanaBase):
 
 class RegistrarLibro(VentanaBase):
     archivo_ui = "registrar_libro.ui"
+    tema = "admin"
 
     def preparar(self):
         self.setWindowTitle("LETRAS Y MUNDOS - Registrar libro")
@@ -1350,6 +1365,7 @@ class RegistrarLibro(VentanaBase):
 
 class loginAdmin(VentanaBase):
     archivo_ui = "login_admin.ui"
+    tema = "admin"
 
     def preparar(self):
         self.setWindowTitle("LETRAS Y MUNDOS - Administrador")
@@ -1375,6 +1391,8 @@ class loginAdmin(VentanaBase):
 
 class login(VentanaBase):
     archivo_ui = "login.ui"
+    # Este diseño usa layouts, por lo que se adapta solo sin escalarse.
+    escala_fija = False
 
     def preparar(self):
         # Configurar el título de la ventana.
@@ -1383,6 +1401,52 @@ class login(VentanaBase):
         # Conectar los botones a sus respectivas ventanas
         self.btnUsuario.clicked.connect(self.abrir_login_usuario)
         self.btnAdmin.clicked.connect(self.abrir_login_admin)
+
+        # Cerrar la aplicacion desde pantalla completa.
+        if hasattr(self, "btnCerrar"):
+            self.btnCerrar.clicked.connect(self.close)
+
+        # Guardamos el logo original para escalarlo segun el tamaño de pantalla.
+        self._logo_original = self.label_1.pixmap().copy()
+        self.label_1.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        # Sin esto el logo queda pegado a la izquierda en pantallas anchas.
+        self.verticalLayout.setAlignment(
+            self.label_1, Qt.AlignmentFlag.AlignHCenter
+        )
+
+        # Sombra suave para dar profundidad a los botones principales.
+        for boton in (self.btnUsuario, self.btnAdmin):
+            sombra = QGraphicsDropShadowEffect(boton)
+            sombra.setBlurRadius(26)
+            sombra.setOffset(0, 9)
+            sombra.setColor(QColor(61, 46, 102, 90))
+            boton.setGraphicsEffect(sombra)
+
+    def resizeEvent(self, evento):
+        super().resizeEvent(evento)
+        self._ajustar_logo()
+
+    def showEvent(self, evento):
+        super().showEvent(evento)
+        self._ajustar_logo()
+
+    def _ajustar_logo(self):
+        """Escala el logo sin deformarlo para aprovechar la pantalla."""
+        pixmap = getattr(self, "_logo_original", None)
+        if pixmap is None or pixmap.isNull():
+            return
+
+        ancho = min(max(1, int(self.width() * 0.62)), 900)
+        alto = min(max(1, int(self.height() * 0.62)), 760)
+
+        self.label_1.setPixmap(
+            pixmap.scaled(
+                ancho,
+                alto,
+                Qt.AspectRatioMode.KeepAspectRatio,
+                Qt.TransformationMode.SmoothTransformation,
+            )
+        )
 
     def abrir_login_usuario(self):
         self.ir_a(loginUsuario)

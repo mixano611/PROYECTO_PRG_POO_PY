@@ -6,219 +6,290 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>709</width>
-    <height>521</height>
+    <width>900</width>
+    <height>620</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
-  <property name="styleSheet">
-   <string notr="true">background-color: #BBAFDB</string>
-  </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QPushButton" name="btnIniciar">
-    <property name="geometry">
-     <rect>
-      <x>310</x>
-      <y>320</y>
-      <width>101</width>
-      <height>41</height>
-     </rect>
+   <layout class="QVBoxLayout" name="layoutPrincipal">
+    <property name="leftMargin">
+     <number>32</number>
     </property>
-    <property name="styleSheet">
-     <string notr="true">QPushButton{
-	border: 2px solid #000000;
-	border-radius: 8px;
-	background-color: #BBAFDB;
-	color: black;
-	font-size: 16px;
-	cursor: pointer;
-  	transition: transform 0.2s ease, background-color 0.2s ease;
-}
-
-QPushButton:hover {
- 	background-color: #8E7CC3;
-}</string>
+    <property name="topMargin">
+     <number>24</number>
     </property>
-    <property name="text">
-     <string>INICIAR</string>
+    <property name="rightMargin">
+     <number>32</number>
     </property>
-   </widget>
-   <widget class="QLabel" name="label">
-    <property name="geometry">
-     <rect>
-      <x>40</x>
-      <y>70</y>
-      <width>631</width>
-      <height>72</height>
-     </rect>
+    <property name="bottomMargin">
+     <number>24</number>
     </property>
-    <property name="font">
-     <font>
-      <family>Segoe UI Black</family>
-      <pointsize>36</pointsize>
-      <weight>75</weight>
-      <italic>true</italic>
-      <bold>true</bold>
-     </font>
+    <property name="spacing">
+     <number>16</number>
     </property>
-    <property name="text">
-     <string>LETRAS Y MUNDOS</string>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignCenter</set>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="txtNombre">
-    <property name="geometry">
-     <rect>
-      <x>290</x>
-      <y>210</y>
-      <width>281</width>
-      <height>21</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">QLineEdit{
-	border: 2px solid #000000;
-	border-radius: 5px;
-	background-color: #BBAFDB;
-	color: black;
-	font-size: 10px;
-	cursor: pointer;
-  	transition: transform 0.2s ease, background-color 0.2s ease;
-}
-
-QLineEdit:hover {
- 	background-color: #8E7CC3;
-}</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_2">
-    <property name="geometry">
-     <rect>
-      <x>150</x>
-      <y>210</y>
-      <width>131</width>
-      <height>21</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>12</pointsize>
-     </font>
-    </property>
-    <property name="text">
-     <string>NOMBRE:</string>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="txtContrasena">
-    <property name="geometry">
-     <rect>
-      <x>290</x>
-      <y>250</y>
-      <width>281</width>
-      <height>21</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">QLineEdit{
-	border: 2px solid #000000;
-	border-radius: 5px;
-	background-color: #BBAFDB;
-	color: black;
-	font-size: 10px;
-	cursor: pointer;
-}
-
-QLineEdit:hover {
- 	background-color: #8E7CC3;
-}</string>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_3">
-    <property name="geometry">
-     <rect>
-      <x>150</x>
-      <y>250</y>
-      <width>131</width>
-      <height>21</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>12</pointsize>
-     </font>
-    </property>
-    <property name="text">
-     <string>CONTRASEÑA:</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="btnVolver">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>10</y>
-      <width>75</width>
-      <height>23</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">QPushButton{
-	border: 1px solid #000000;
-	border-radius: 8px;
-	background-color: #BBAFDB;
-	color: black;
-	font-size: 10px;
-	cursor: pointer;
-  	transition: transform 0.2s ease, background-color 0.2s ease;
-}
-
-QPushButton:hover {
- 	background-color: #8E7CC3;
-}</string>
-    </property>
-    <property name="text">
-     <string>BACK</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_4">
-    <property name="geometry">
-     <rect>
-      <x>270</x>
-      <y>50</y>
-      <width>171</width>
-      <height>20</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Segoe UI Black</family>
-      <pointsize>11</pointsize>
-      <weight>75</weight>
-      <italic>true</italic>
-      <bold>true</bold>
-      <underline>true</underline>
-     </font>
-    </property>
-    <property name="text">
-     <string>ADMINISTRADOR</string>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignCenter</set>
-    </property>
-   </widget>
+    <item>
+     <layout class="QHBoxLayout" name="barraSuperior">
+      <item>
+       <widget class="QPushButton" name="btnVolver">
+        <property name="minimumSize">
+         <size>
+          <width>120</width>
+          <height>38</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>120</width>
+          <height>38</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>← VOLVER</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="espacioBarra">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <spacer name="espacioSuperior">
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>20</width>
+        <height>20</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="filaCentro">
+      <item>
+       <spacer name="espacioIzquierdo">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QFrame" name="cardLogin">
+        <property name="minimumSize">
+         <size>
+          <width>420</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>560</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::NoFrame</enum>
+        </property>
+        <property name="sombra" stdset="0">
+         <bool>true</bool>
+        </property>
+        <layout class="QVBoxLayout" name="layoutCard">
+         <property name="leftMargin">
+          <number>42</number>
+         </property>
+         <property name="topMargin">
+          <number>38</number>
+         </property>
+         <property name="rightMargin">
+          <number>42</number>
+         </property>
+         <property name="bottomMargin">
+          <number>38</number>
+         </property>
+         <property name="spacing">
+          <number>14</number>
+         </property>
+         <item>
+          <widget class="QLabel" name="LblRol">
+           <property name="text">
+            <string>BIBLIOTECA · LETRAS Y MUNDOS</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="LblMarca">
+           <property name="text">
+            <string>LETRAS Y MUNDOS</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="LblAyudaLogin">
+           <property name="text">
+            <string>Accede con tu cuenta de administrador para gestionar la biblioteca.</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+           <property name="wordWrap">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QFrame" name="lineaSeparador">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>1</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>1</height>
+            </size>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::NoFrame</enum>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <layout class="QFormLayout" name="formularioLogin">
+           <property name="horizontalSpacing">
+            <number>14</number>
+           </property>
+           <property name="verticalSpacing">
+            <number>12</number>
+           </property>
+           <property name="fieldGrowthPolicy">
+            <enum>QFormLayout::AllNonFixedFieldsGrow</enum>
+           </property>
+           <item row="0" column="0">
+            <widget class="QLabel" name="LblNombre">
+             <property name="text">
+              <string>NOMBRE</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QLineEdit" name="txtNombre">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>38</height>
+              </size>
+             </property>
+             <property name="placeholderText">
+              <string>Ingresa tu nombre</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QLabel" name="LblContrasena">
+             <property name="text">
+              <string>CONTRASEÑA</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QLineEdit" name="txtContrasena">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>38</height>
+              </size>
+             </property>
+             <property name="echoMode">
+              <enum>QLineEdit::Password</enum>
+             </property>
+             <property name="placeholderText">
+              <string>Ingresa tu contraseña</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <widget class="QPushButton" name="btnIniciar">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>46</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>INICIAR SESIÓN</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <spacer name="espacioDerecho">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <spacer name="espacioInferior">
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>20</width>
+        <height>20</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+   </layout>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>709</width>
+     <width>900</width>
      <height>26</height>
     </rect>
    </property>

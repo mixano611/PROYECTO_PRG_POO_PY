@@ -20,7 +20,7 @@
             "autor": "Antoine de Saint-Exupéry",
             "tipo": "Cuento",
             "estado": "ALMACEN",
-            "stock": 10,
+            "stock": 9,
             "precio": 30.0,
             "descripcion": "Un piloto perdido en el desierto conoce a un pequeño príncipe que viene de otro planeta. Un relato poético sobre la amistad y lo esencial.",
             "imagen": "principito.jpg",
@@ -280,19 +280,18 @@
             "oferta": false,
             "precio_oferta": null
         }
-        
     ],
     "pedidos": [],
     "cajas": [
         [
-            0,
-            0,
+            1,
+            1,
             1
         ],
         [
             1,
             1,
-            0
+            1
         ]
     ],
     "movimientos": [
@@ -349,6 +348,28 @@
             "estado": "DEVUELTO",
             "fecha_devolucion": "2026-11-15",
             "fecha_devolucion_real": "2026-11-08 18:35:35"
+        },
+        {
+            "id": 3,
+            "codigo": "B-0003",
+            "fecha": "2026-11-25 07:41:51",
+            "usuario": "miguel",
+            "dni": 61528576,
+            "tipo": "COMPRA",
+            "items": [
+                {
+                    "id_libro": 2,
+                    "nombre": "El principito",
+                    "cantidad": 1,
+                    "tipo": "COMPRA",
+                    "precio": 30.0,
+                    "subtotal": 30.0
+                }
+            ],
+            "descuento": 0.0,
+            "total": 30.0,
+            "caja": 1,
+            "estado": "PAGADO"
         }
     ]
 }

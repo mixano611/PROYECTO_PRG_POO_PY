@@ -6,349 +6,333 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>900</width>
-    <height>680</height>
+    <width>1100</width>
+    <height>760</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
-  <property name="styleSheet">
-   <string notr="true">background-color: #FFEBA8</string>
-  </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QPushButton" name="btnVolver">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>10</y>
-      <width>110</width>
-      <height>31</height>
-     </rect>
+   <layout class="QVBoxLayout" name="layoutPrincipal">
+    <property name="leftMargin">
+     <number>24</number>
     </property>
-    <property name="styleSheet">
-     <string notr="true">QPushButton{
-	border: 1px solid #000000;
-	border-radius: 8px;
-	background-color: #FFEBA8;
-	color: black;
-	font-size: 11px;
-	cursor: pointer;
-}
-QPushButton:hover {
-	background-color: #E3B881;
-	color: #000000;
-	border-color: #000000
-}</string>
+    <property name="topMargin">
+     <number>22</number>
     </property>
-    <property name="text">
-     <string>← VOLVER</string>
+    <property name="rightMargin">
+     <number>24</number>
     </property>
-   </widget>
-   <widget class="QLabel" name="LblTitulo">
-    <property name="geometry">
-     <rect>
-      <x>250</x>
-      <y>10</y>
-      <width>400</width>
-      <height>31</height>
-     </rect>
+    <property name="bottomMargin">
+     <number>22</number>
     </property>
-    <property name="font">
-     <font>
-      <pointsize>22</pointsize>
-      <weight>75</weight>
-      <bold>true</bold>
-     </font>
+    <property name="spacing">
+     <number>16</number>
     </property>
-    <property name="text">
-     <string>MEMBRESÍAS</string>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignCenter</set>
-    </property>
-   </widget>
-   <widget class="QLabel" name="LblSolicitudes">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>55</y>
-      <width>500</width>
-      <height>22</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>12</pointsize>
-      <weight>75</weight>
-      <bold>true</bold>
-     </font>
-    </property>
-    <property name="text">
-     <string>SOLICITUDES PENDIENTES</string>
-    </property>
-   </widget>
-   <widget class="QTableWidget" name="tableSolicitudes">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>80</y>
-      <width>860</width>
-      <height>200</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">QTableWidget{
-	border: 2px solid #000000;
-	border-radius: 12px;
-	background-color: #E3B881;
-	color: black;
-	font-size: 12px;
-	gridline-color: #8E7CC3;
-}
-QHeaderView::section{
-	background-color: #EDC798;
-	color: black;
-	border: 1px solid #000000;
-	padding: 4px;
-	font-weight: bold;
-}</string>
-    </property>
-    <column>
-     <property name="text">
-      <string>N°</string>
-     </property>
-    </column>
-    <column>
-     <property name="text">
-      <string>USUARIO</string>
-     </property>
-    </column>
-    <column>
-     <property name="text">
-      <string>DNI</string>
-     </property>
-    </column>
-    <column>
-     <property name="text">
-      <string>MONTO</string>
-     </property>
-    </column>
-    <column>
-     <property name="text">
-      <string>FECHA</string>
-     </property>
-    </column>
-    <column>
-     <property name="text">
-      <string>ESTADO</string>
-     </property>
-    </column>
-   </widget>
-   <widget class="QPushButton" name="btnAceptar">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>290</y>
-      <width>200</width>
-      <height>35</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">QPushButton{
-	border: 2px solid #000000;
-	border-radius: 8px;
-	background-color: #FFEBA8;
-	color: black;
-	font-size: 13px;
-	cursor: pointer;
-}
-QPushButton:hover {
-	background-color: #E3B881;
-}
-QPushButton:disabled {
-	color: #6b6b6b;
-	background-color: #a99bc9;
-}</string>
-    </property>
-    <property name="text">
-     <string>ACEPTAR</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="btnDenegar">
-    <property name="geometry">
-     <rect>
-      <x>240</x>
-      <y>290</y>
-      <width>200</width>
-      <height>35</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">QPushButton{
-	border: 2px solid #000000;
-	border-radius: 8px;
-	background-color: #FFEBA8;
-	color: black;
-	font-size: 13px;
-	cursor: pointer;
-}
-QPushButton:hover {
-	background-color: #E3B881;
-}
-QPushButton:disabled {
-	color: #6b6b6b;
-	background-color: #a99bc9;
-}</string>
-    </property>
-    <property name="text">
-     <string>DENEGAR</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="LblMiembros">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>340</y>
-      <width>500</width>
-      <height>22</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>12</pointsize>
-      <weight>75</weight>
-      <bold>true</bold>
-     </font>
-    </property>
-    <property name="text">
-     <string>MIEMBROS ACTIVOS</string>
-    </property>
-   </widget>
-   <widget class="QTableWidget" name="tableMiembros">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>365</y>
-      <width>860</width>
-      <height>200</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">QTableWidget{
-	border: 2px solid #000000;
-	border-radius: 12px;
-	background-color: #E3B881;
-	color: black;
-	font-size: 12px;
-	gridline-color: #8E7CC3;
-}
-QHeaderView::section{
-	background-color: #EDC798;
-	color: black;
-	border: 1px solid #000000;
-	padding: 4px;
-	font-weight: bold;
-}</string>
-    </property>
-    <column>
-     <property name="text">
-      <string>USUARIO</string>
-     </property>
-    </column>
-    <column>
-     <property name="text">
-      <string>DNI</string>
-     </property>
-    </column>
-    <column>
-     <property name="text">
-      <string>MONTO</string>
-     </property>
-    </column>
-    <column>
-     <property name="text">
-      <string>DESDE</string>
-     </property>
-    </column>
-    <column>
-     <property name="text">
-      <string>HASTA</string>
-     </property>
-    </column>
-    <column>
-     <property name="text">
-      <string>ESTADO</string>
-     </property>
-    </column>
-   </widget>
-   <widget class="QPushButton" name="btnRenovar">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>575</y>
-      <width>200</width>
-      <height>35</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">QPushButton{
-	border: 2px solid #000000;
-	border-radius: 8px;
-	background-color: #FFEBA8;
-	color: black;
-	font-size: 13px;
-	cursor: pointer;
-}
-QPushButton:hover {
-	background-color: #E3B881;
-}
-QPushButton:disabled {
-	color: #6b6b6b;
-	background-color: #a99bc9;
-}</string>
-    </property>
-    <property name="text">
-     <string>RENOVAR</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="btnQuitar">
-    <property name="geometry">
-     <rect>
-      <x>240</x>
-      <y>575</y>
-      <width>200</width>
-      <height>35</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">QPushButton{
-	border: 2px solid #000000;
-	border-radius: 8px;
-	background-color: #FFEBA8;
-	color: black;
-	font-size: 13px;
-	cursor: pointer;
-}
-QPushButton:hover {
-	background-color: #E3B881;
-}
-QPushButton:disabled {
-	color: #6b6b6b;
-	background-color: #a99bc9;
-}</string>
-    </property>
-    <property name="text">
-     <string>QUITAR MIEMBRO</string>
-    </property>
-   </widget>
+    <item>
+     <layout class="QHBoxLayout" name="barraSuperior">
+      <item>
+       <widget class="QPushButton" name="btnVolver">
+        <property name="minimumSize">
+         <size>
+          <width>120</width>
+          <height>38</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>120</width>
+          <height>38</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>← VOLVER</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="LblTitulo">
+        <property name="text">
+         <string>MEMBRESÍAS</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="espacioBarra">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </item>
+    <item stretch="1">
+     <widget class="QFrame" name="cardSolicitudes">
+      <property name="frameShape">
+       <enum>QFrame::NoFrame</enum>
+      </property>
+      <property name="sombra" stdset="0">
+       <bool>true</bool>
+      </property>
+      <layout class="QVBoxLayout" name="layoutSolicitudes">
+       <property name="leftMargin">
+        <number>22</number>
+       </property>
+       <property name="topMargin">
+        <number>20</number>
+       </property>
+       <property name="rightMargin">
+        <number>22</number>
+       </property>
+       <property name="bottomMargin">
+        <number>20</number>
+       </property>
+       <property name="spacing">
+        <number>12</number>
+       </property>
+       <item>
+        <widget class="QLabel" name="LblSolicitudes">
+         <property name="text">
+          <string>SOLICITUDES PENDIENTES</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QTableWidget" name="tableSolicitudes">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>150</height>
+          </size>
+         </property>
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+           <horstretch>1</horstretch>
+           <verstretch>1</verstretch>
+          </sizepolicy>
+         </property>
+         <column>
+          <property name="text">
+           <string>N°</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>USUARIO</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>DNI</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>MONTO</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>FECHA</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>ESTADO</string>
+          </property>
+         </column>
+        </widget>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="accionesSolicitudes">
+         <property name="spacing">
+          <number>10</number>
+         </property>
+         <item>
+          <widget class="QPushButton" name="btnAceptar">
+           <property name="minimumSize">
+            <size>
+             <width>160</width>
+             <height>40</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>ACEPTAR</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="btnDenegar">
+           <property name="minimumSize">
+            <size>
+             <width>160</width>
+             <height>40</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>DENEGAR</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="espacioAccionesSolicitudes">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item stretch="1">
+     <widget class="QFrame" name="cardMiembros">
+      <property name="frameShape">
+       <enum>QFrame::NoFrame</enum>
+      </property>
+      <property name="sombra" stdset="0">
+       <bool>true</bool>
+      </property>
+      <layout class="QVBoxLayout" name="layoutMiembros">
+       <property name="leftMargin">
+        <number>22</number>
+       </property>
+       <property name="topMargin">
+        <number>20</number>
+       </property>
+       <property name="rightMargin">
+        <number>22</number>
+       </property>
+       <property name="bottomMargin">
+        <number>20</number>
+       </property>
+       <property name="spacing">
+        <number>12</number>
+       </property>
+       <item>
+        <widget class="QLabel" name="LblMiembros">
+         <property name="text">
+          <string>MIEMBROS ACTIVOS</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QTableWidget" name="tableMiembros">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>150</height>
+          </size>
+         </property>
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+           <horstretch>1</horstretch>
+           <verstretch>1</verstretch>
+          </sizepolicy>
+         </property>
+         <column>
+          <property name="text">
+           <string>USUARIO</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>DNI</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>MONTO</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>DESDE</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>HASTA</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>ESTADO</string>
+          </property>
+         </column>
+        </widget>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="accionesMiembros">
+         <property name="spacing">
+          <number>10</number>
+         </property>
+         <item>
+          <widget class="QPushButton" name="btnRenovar">
+           <property name="minimumSize">
+            <size>
+             <width>160</width>
+             <height>40</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>RENOVAR</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="btnQuitar">
+           <property name="minimumSize">
+            <size>
+             <width>170</width>
+             <height>40</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>QUITAR MIEMBRO</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="espacioAccionesMiembros">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>900</width>
+     <width>1100</width>
      <height>26</height>
     </rect>
    </property>

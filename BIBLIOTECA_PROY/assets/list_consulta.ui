@@ -6,240 +6,174 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1040</width>
-    <height>560</height>
+    <width>1080</width>
+    <height>680</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
-  <property name="styleSheet">
-   <string notr="true">background-color: #BBAFDB</string>
-  </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QLabel" name="label">
-    <property name="geometry">
-     <rect>
-      <x>414</x>
-      <y>20</y>
-      <width>211</width>
-      <height>41</height>
-     </rect>
+   <layout class="QVBoxLayout" name="layoutPrincipal">
+    <property name="leftMargin">
+     <number>24</number>
     </property>
-    <property name="font">
-     <font>
-      <family>Cascadia Code</family>
-      <pointsize>25</pointsize>
-      <weight>75</weight>
-      <italic>true</italic>
-      <bold>true</bold>
-     </font>
+    <property name="topMargin">
+     <number>22</number>
     </property>
-    <property name="text">
-     <string>ALMACEN:</string>
+    <property name="rightMargin">
+     <number>24</number>
     </property>
-    <property name="alignment">
-     <set>Qt::AlignCenter</set>
+    <property name="bottomMargin">
+     <number>22</number>
     </property>
-   </widget>
-   <widget class="QTableWidget" name="tableWidget">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>70</y>
-      <width>1000</width>
-      <height>360</height>
-     </rect>
+    <property name="spacing">
+     <number>14</number>
     </property>
-    <property name="styleSheet">
-     <string notr="true">QTableWidget{
-	border: 2px solid #000000;
-	border-radius: 20px;
-	background-color: #BBAFDB;
-	color: black;
-	font-size: 13px;
-	cursor: pointer;
-  	transition: transform 0.2s ease, background-color 0.2s ease;
-}</string>
-    </property>
-    <column>
-     <property name="text">
-      <string>N°</string>
-     </property>
-     <property name="font">
-      <font>
-       <weight>75</weight>
-       <bold>true</bold>
-      </font>
-     </property>
-    </column>
-    <column>
-     <property name="text">
-      <string>TIPO</string>
-     </property>
-     <property name="font">
-      <font>
-       <weight>75</weight>
-       <bold>true</bold>
-      </font>
-     </property>
-    </column>
-    <column>
-     <property name="text">
-      <string>NOMBRE</string>
-     </property>
-     <property name="font">
-      <font>
-       <weight>75</weight>
-       <bold>true</bold>
-      </font>
-     </property>
-    </column>
-    <column>
-     <property name="text">
-      <string>AUTOR</string>
-     </property>
-     <property name="font">
-      <font>
-       <weight>75</weight>
-       <bold>true</bold>
-      </font>
-     </property>
-    </column>
-    <column>
-     <property name="text">
-      <string>STOCK</string>
-     </property>
-     <property name="font">
-      <font>
-       <weight>75</weight>
-       <bold>true</bold>
-      </font>
-     </property>
-    </column>
-    <column>
-     <property name="text">
-      <string>PRECIO</string>
-     </property>
-     <property name="font">
-      <font>
-       <weight>75</weight>
-       <bold>true</bold>
-      </font>
-     </property>
-    </column>
-    <column>
-     <property name="text">
-      <string>DESCRIPCIÓN</string>
-     </property>
-     <property name="font">
-      <font>
-       <weight>75</weight>
-       <bold>true</bold>
-      </font>
-     </property>
-    </column>
-    <column>
-     <property name="text">
-      <string>DISPONIBLE</string>
-     </property>
-     <property name="font">
-      <font>
-       <weight>75</weight>
-       <bold>true</bold>
-      </font>
-     </property>
-    </column>
-   </widget>
-   <widget class="QPushButton" name="pushButton">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>20</y>
-      <width>51</width>
-      <height>23</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">QPushButton{
-	border: 1px solid #000000;
-	border-radius: 8px;
-	background-color: #BBAFDB;
-	color: black;
-	font-size: 10px;
-	cursor: pointer;
-  	transition: transform 0.2s ease, background-color 0.2s ease;
-}
-
-QPushButton:hover {
- 	background-color: #8E7CC3;
-}</string>
-    </property>
-    <property name="text">
-     <string>BACK</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="btnGuardar">
-    <property name="geometry">
-     <rect>
-      <x>390</x>
-      <y>450</y>
-      <width>110</width>
-      <height>32</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>-1</pointsize>
-      <weight>75</weight>
-      <bold>true</bold>
-     </font>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">QPushButton{
-	border: 2px solid #000000;
-	border-radius: 8px;
-	background-color: #BBAFDB;
-	color: black;
-	font-size: 15px;
-	cursor: pointer;
-  	transition: transform 0.2s ease, background-color 0.2s ease;
-}
-
-QPushButton:hover {
- 	background-color: #8E7CC3;
-}</string>
-    </property>
-    <property name="text">
-     <string>GUARDAR</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="btnEliminar">
-    <property name="geometry">
-     <rect>
-      <x>530</x>
-      <y>450</y>
-      <width>120</width>
-      <height>32</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">QPushButton{
-	border: 1px solid #000000;
-	border-radius: 8px;
-	background-color: #BBAFDB;
-	color: black;
-	font-size: 11px;
-	cursor: pointer;
-}
-QPushButton:hover {
-	background-color: #8E7CC3;
-}</string>
-     </property>
-    <property name="text">
-     <string>ELIMINAR</string>
-    </property>
-   </widget>
+    <item>
+     <layout class="QHBoxLayout" name="barraSuperior">
+      <item>
+       <widget class="QPushButton" name="pushButton">
+        <property name="minimumSize">
+         <size>
+          <width>120</width>
+          <height>38</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>120</width>
+          <height>38</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>← VOLVER</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="LblTitulo">
+        <property name="text">
+         <string>ALMACÉN</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="espacioBarra">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="QLabel" name="LblSubtitulo">
+      <property name="text">
+       <string>Edita el stock, el precio o la descripción directamente en la tabla y pulsa Guardar.</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QTableWidget" name="tableWidget">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+        <horstretch>1</horstretch>
+        <verstretch>1</verstretch>
+       </sizepolicy>
+      </property>
+      <column>
+       <property name="text">
+        <string>N°</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>TIPO</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>NOMBRE</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>AUTOR</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>STOCK</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>PRECIO</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>DESCRIPCIÓN</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>DISPONIBLE</string>
+       </property>
+      </column>
+     </widget>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="piePagina">
+      <item>
+       <spacer name="espacioPie">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnGuardar">
+        <property name="minimumSize">
+         <size>
+          <width>150</width>
+          <height>42</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>GUARDAR CAMBIOS</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnEliminar">
+        <property name="minimumSize">
+         <size>
+          <width>140</width>
+          <height>42</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>ELIMINAR LIBRO</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
   <widget class="QMenuBar" name="menubar">
@@ -247,13 +181,13 @@ QPushButton:hover {
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1040</width>
+     <width>1080</width>
      <height>26</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuALMACEN">
     <property name="title">
-     <string>ALMACEN</string>
+     <string>ALMACÉN</string>
     </property>
    </widget>
    <widget class="QMenu" name="menuHISTORIAL">

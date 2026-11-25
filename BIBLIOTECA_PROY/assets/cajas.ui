@@ -6,393 +6,318 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
-    <height>640</height>
+    <width>1000</width>
+    <height>700</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
-  <property name="styleSheet">
-   <string notr="true">background-color: #BBAFDB</string>
-  </property>
   <widget class="QWidget" name="centralwidget">
-    <widget class="QPushButton" name="btnVolver">
-            <property name="geometry">
-             <rect>
-              <x>10</x>
-              <y>10</y>
-              <width>110</width>
-              <height>31</height>
-             </rect>
-            </property>
-            <property name="styleSheet">
-             <string notr="true">QPushButton{
-	border: 1px solid #000000;
-	border-radius: 8px;
-	background-color: #BBAFDB;
-	color: black;
-	font-size: 11px;
-	cursor: pointer;
-}
-QPushButton:hover {
-	background-color: #8E7CC3;
-}</string>
-            </property>
-            <property name="text">
-             <string>← VOLVER</string>
-            </property>
-    </widget>
-    <widget class="QLabel" name="LblTitulo">
-            <property name="geometry">
-             <rect>
-              <x>200</x>
-              <y>10</y>
-              <width>400</width>
-              <height>31</height>
-             </rect>
-            </property>
-            <property name="font">
-             <font>
-              <pointsize>22</pointsize>
-              <weight>75</weight>
-              <bold>true</bold>
-             </font>
-            </property>
-            <property name="text">
-             <string>CAJAS Y MAPA</string>
-            </property>
-            <property name="alignment">
-             <set>Qt::AlignCenter</set>
-            </property>
-    </widget>
-    <widget class="QLabel" name="LblCajas">
-            <property name="geometry">
-             <rect>
-              <x>20</x>
-              <y>55</y>
-              <width>760</width>
-              <height>22</height>
-             </rect>
-            </property>
-            <property name="font">
-             <font>
-              <pointsize>11</pointsize>
-             </font>
-            </property>
-            <property name="text">
-             <string>CAJAS (haz clic para abrir o cerrar): 1 = abierta, 0 = cerrada</string>
-            </property>
-    </widget>
-    <widget class="QPushButton" name="btnCaja1">
-            <property name="geometry">
-             <rect>
-              <x>40</x>
-              <y>85</y>
-              <width>220</width>
-              <height>55</height>
-             </rect>
-            </property>
-            <property name="styleSheet">
-             <string notr="true">QPushButton{
-	border: 2px solid #000000;
-	border-radius: 8px;
-	background-color: #BBAFDB;
-	color: black;
-	font-size: 13px;
-	cursor: pointer;
-}
-QPushButton:hover {
-	background-color: #8E7CC3;
-}
-QPushButton:disabled {
-	color: #6b6b6b;
-	background-color: #a99bc9;
-}</string>
-            </property>
-            <property name="text">
-             <string>CAJA 1</string>
-            </property>
-    </widget>
-    <widget class="QPushButton" name="btnCaja2">
-            <property name="geometry">
-             <rect>
-              <x>290</x>
-              <y>85</y>
-              <width>220</width>
-              <height>55</height>
-             </rect>
-            </property>
-            <property name="styleSheet">
-             <string notr="true">QPushButton{
-	border: 2px solid #000000;
-	border-radius: 8px;
-	background-color: #BBAFDB;
-	color: black;
-	font-size: 13px;
-	cursor: pointer;
-}
-QPushButton:hover {
-	background-color: #8E7CC3;
-}
-QPushButton:disabled {
-	color: #6b6b6b;
-	background-color: #a99bc9;
-}</string>
-            </property>
-            <property name="text">
-             <string>CAJA 2</string>
-            </property>
-    </widget>
-    <widget class="QPushButton" name="btnCaja3">
-            <property name="geometry">
-             <rect>
-              <x>540</x>
-              <y>85</y>
-              <width>220</width>
-              <height>55</height>
-             </rect>
-            </property>
-            <property name="styleSheet">
-             <string notr="true">QPushButton{
-	border: 2px solid #000000;
-	border-radius: 8px;
-	background-color: #BBAFDB;
-	color: black;
-	font-size: 13px;
-	cursor: pointer;
-}
-QPushButton:hover {
-	background-color: #8E7CC3;
-}
-QPushButton:disabled {
-	color: #6b6b6b;
-	background-color: #a99bc9;
-}</string>
-            </property>
-            <property name="text">
-             <string>CAJA 3</string>
-            </property>
-    </widget>
-    <widget class="QPushButton" name="btnCaja4">
-            <property name="geometry">
-             <rect>
-              <x>40</x>
-              <y>155</y>
-              <width>220</width>
-              <height>55</height>
-             </rect>
-            </property>
-            <property name="styleSheet">
-             <string notr="true">QPushButton{
-	border: 2px solid #000000;
-	border-radius: 8px;
-	background-color: #BBAFDB;
-	color: black;
-	font-size: 13px;
-	cursor: pointer;
-}
-QPushButton:hover {
-	background-color: #8E7CC3;
-}
-QPushButton:disabled {
-	color: #6b6b6b;
-	background-color: #a99bc9;
-}</string>
-            </property>
-            <property name="text">
-             <string>CAJA 4</string>
-            </property>
-    </widget>
-    <widget class="QPushButton" name="btnCaja5">
-            <property name="geometry">
-             <rect>
-              <x>290</x>
-              <y>155</y>
-              <width>220</width>
-              <height>55</height>
-             </rect>
-            </property>
-            <property name="styleSheet">
-             <string notr="true">QPushButton{
-	border: 2px solid #000000;
-	border-radius: 8px;
-	background-color: #BBAFDB;
-	color: black;
-	font-size: 13px;
-	cursor: pointer;
-}
-QPushButton:hover {
-	background-color: #8E7CC3;
-}
-QPushButton:disabled {
-	color: #6b6b6b;
-	background-color: #a99bc9;
-}</string>
-            </property>
-            <property name="text">
-             <string>CAJA 5</string>
-            </property>
-    </widget>
-    <widget class="QPushButton" name="btnCaja6">
-            <property name="geometry">
-             <rect>
-              <x>540</x>
-              <y>155</y>
-              <width>220</width>
-              <height>55</height>
-             </rect>
-            </property>
-            <property name="styleSheet">
-             <string notr="true">QPushButton{
-	border: 2px solid #000000;
-	border-radius: 8px;
-	background-color: #BBAFDB;
-	color: black;
-	font-size: 13px;
-	cursor: pointer;
-}
-QPushButton:hover {
-	background-color: #8E7CC3;
-}
-QPushButton:disabled {
-	color: #6b6b6b;
-	background-color: #a99bc9;
-}</string>
-            </property>
-            <property name="text">
-             <string>CAJA 6</string>
-            </property>
-    </widget>
-    <widget class="QLabel" name="LblMapa">
-            <property name="geometry">
-             <rect>
-              <x>20</x>
-              <y>230</y>
-              <width>500</width>
-              <height>22</height>
-             </rect>
-            </property>
-            <property name="font">
-             <font>
-              <pointsize>12</pointsize>
-              <weight>75</weight>
-              <bold>true</bold>
-             </font>
-            </property>
-            <property name="text">
-             <string>MAPA DE LA BIBLIOTECA (4x4)</string>
-            </property>
-    </widget>
-    <widget class="QTableWidget" name="tableMapa">
-            <property name="geometry">
-             <rect>
-              <x>20</x>
-              <y>255</y>
-              <width>360</width>
-              <height>220</height>
-             </rect>
-            </property>
-            <property name="styleSheet">
-             <string notr="true">QTableWidget{
-	border: 2px solid #000000;
-	border-radius: 12px;
-	background-color: #BBAFDB;
-	color: black;
-	font-size: 12px;
-	gridline-color: #8E7CC3;
-}
-QHeaderView::section{
-	background-color: #8E7CC3;
-	color: black;
-	border: 1px solid #000000;
-	padding: 4px;
-	font-weight: bold;
-}</string>
-            </property>
-            <column>
-             <property name="text">
-              <string>1</string>
-             </property>
-            </column>
-            <column>
-             <property name="text">
-              <string>2</string>
-             </property>
-            </column>
-            <column>
-             <property name="text">
-              <string>3</string>
-             </property>
-            </column>
-            <column>
-             <property name="text">
-              <string>4</string>
-             </property>
-            </column>
-    </widget>
-    <widget class="QLabel" name="LblLeyenda">
-            <property name="geometry">
-             <rect>
-              <x>420</x>
-              <y>255</y>
-              <width>340</width>
-              <height>150</height>
-             </rect>
-            </property>
-            <property name="font">
-             <font>
-              <pointsize>10</pointsize>
-             </font>
-            </property>
-            <property name="text">
-             <string>1 = libro disponible
-0 = libro agotado o espacio vacío
-
-Cada fila es una sección de la biblioteca y cada columna un estante. La matriz se arma con los libros del almacén.</string>
-            </property>
-            <property name="wordWrap">
-             <bool>true</bool>
-            </property>
-    </widget>
-    <widget class="QPushButton" name="btnGuardar">
-            <property name="geometry">
-             <rect>
-              <x>280</x>
-              <y>500</y>
-              <width>240</width>
-              <height>45</height>
-             </rect>
-            </property>
-            <property name="styleSheet">
-             <string notr="true">QPushButton{
-	border: 2px solid #000000;
-	border-radius: 8px;
-	background-color: #BBAFDB;
-	color: black;
-	font-size: 15px;
-	cursor: pointer;
-}
-QPushButton:hover {
-	background-color: #8E7CC3;
-}
-QPushButton:disabled {
-	color: #6b6b6b;
-	background-color: #a99bc9;
-}</string>
-            </property>
-            <property name="text">
-             <string>GUARDAR CAJAS</string>
-            </property>
-    </widget>
+   <layout class="QVBoxLayout" name="layoutPrincipal">
+    <property name="leftMargin">
+     <number>28</number>
+    </property>
+    <property name="topMargin">
+     <number>24</number>
+    </property>
+    <property name="rightMargin">
+     <number>28</number>
+    </property>
+    <property name="bottomMargin">
+     <number>24</number>
+    </property>
+    <property name="spacing">
+     <number>18</number>
+    </property>
+    <item>
+     <layout class="QHBoxLayout" name="barraSuperior">
+      <item>
+       <widget class="QPushButton" name="btnVolver">
+        <property name="minimumSize">
+         <size>
+          <width>120</width>
+          <height>38</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>120</width>
+          <height>38</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>← VOLVER</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <layout class="QVBoxLayout" name="bloqueTitulo">
+        <property name="spacing">
+         <number>2</number>
+        </property>
+        <item>
+         <widget class="QLabel" name="LblTitulo">
+          <property name="text">
+           <string>Cajas registradoras</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="LblCajas">
+          <property name="text">
+           <string>Haz clic en una caja para abrirla o cerrarla.</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <spacer name="espacioBarra">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </item>
+    <item stretch="1">
+     <widget class="QFrame" name="cardCajas">
+      <property name="frameShape">
+       <enum>QFrame::NoFrame</enum>
+      </property>
+      <property name="sombra" stdset="0">
+       <bool>true</bool>
+      </property>
+      <layout class="QVBoxLayout" name="layoutCajas">
+       <property name="leftMargin">
+        <number>26</number>
+       </property>
+       <property name="topMargin">
+        <number>24</number>
+       </property>
+       <property name="rightMargin">
+        <number>26</number>
+       </property>
+       <property name="bottomMargin">
+        <number>24</number>
+       </property>
+       <property name="spacing">
+        <number>16</number>
+       </property>
+       <item>
+        <layout class="QHBoxLayout" name="cabeceraCajas">
+         <item>
+          <widget class="QLabel" name="LblSeccion">
+           <property name="text">
+            <string>ESTADO DE CAJAS</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="espacioCabecera">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QLabel" name="LblResumenCajas">
+           <property name="text">
+            <string>6 abiertas · 0 cerradas</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QGridLayout" name="rejillaCajas">
+         <property name="horizontalSpacing">
+          <number>16</number>
+         </property>
+         <property name="verticalSpacing">
+          <number>16</number>
+         </property>
+         <item row="0" column="0">
+          <widget class="QPushButton" name="btnCaja1">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>132</height>
+            </size>
+           </property>
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+             <horstretch>1</horstretch>
+             <verstretch>1</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="text">
+            <string>CAJA 1</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QPushButton" name="btnCaja2">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>132</height>
+            </size>
+           </property>
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+             <horstretch>1</horstretch>
+             <verstretch>1</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="text">
+            <string>CAJA 2</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="2">
+          <widget class="QPushButton" name="btnCaja3">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>132</height>
+            </size>
+           </property>
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+             <horstretch>1</horstretch>
+             <verstretch>1</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="text">
+            <string>CAJA 3</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QPushButton" name="btnCaja4">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>132</height>
+            </size>
+           </property>
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+             <horstretch>1</horstretch>
+             <verstretch>1</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="text">
+            <string>CAJA 4</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="QPushButton" name="btnCaja5">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>132</height>
+            </size>
+           </property>
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+             <horstretch>1</horstretch>
+             <verstretch>1</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="text">
+            <string>CAJA 5</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="2">
+          <widget class="QPushButton" name="btnCaja6">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>132</height>
+            </size>
+           </property>
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+             <horstretch>1</horstretch>
+             <verstretch>1</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="text">
+            <string>CAJA 6</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <widget class="QLabel" name="LblAviso">
+         <property name="text">
+          <string>Las cajas abiertas aparecen en verde y las cerradas en rojo. Los cambios se aplican al guardar.</string>
+         </property>
+         <property name="wordWrap">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="piePagina">
+      <item>
+       <spacer name="espacioPie">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnGuardar">
+        <property name="minimumSize">
+         <size>
+          <width>230</width>
+          <height>46</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>GUARDAR CAJAS</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>800</width>
-     <height>21</height>
+     <width>1000</width>
+     <height>26</height>
     </rect>
    </property>
   </widget>

@@ -6,534 +6,443 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>760</width>
-    <height>660</height>
+    <width>1000</width>
+    <height>760</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
-  <property name="styleSheet">
-   <string notr="true">background-color: #BBAFDB</string>
-  </property>
   <widget class="QWidget" name="centralwidget">
-    <widget class="QPushButton" name="btnVolver">
-            <property name="geometry">
-             <rect>
-              <x>10</x>
-              <y>10</y>
-              <width>110</width>
-              <height>31</height>
-             </rect>
-            </property>
-            <property name="styleSheet">
-             <string notr="true">QPushButton{
-	border: 1px solid #000000;
-	border-radius: 8px;
-	background-color: #BBAFDB;
-	color: black;
-	font-size: 11px;
-	cursor: pointer;
-}
-QPushButton:hover {
-	background-color: #8E7CC3;
-}</string>
-            </property>
-            <property name="text">
-             <string>← VOLVER</string>
-            </property>
-    </widget>
-    <widget class="QLabel" name="LblTitulo">
-            <property name="geometry">
-             <rect>
-              <x>200</x>
-              <y>10</y>
-              <width>360</width>
-              <height>31</height>
-             </rect>
-            </property>
-            <property name="font">
-             <font>
-              <pointsize>22</pointsize>
-              <weight>75</weight>
-              <bold>true</bold>
-             </font>
-            </property>
-            <property name="text">
-             <string>REGISTRAR LIBRO</string>
-            </property>
-            <property name="alignment">
-             <set>Qt::AlignCenter</set>
-            </property>
-    </widget>
-    <widget class="QLabel" name="label_2">
-            <property name="geometry">
-             <rect>
-              <x>50</x>
-              <y>60</y>
-              <width>150</width>
-              <height>25</height>
-             </rect>
-            </property>
-            <property name="font">
-             <font>
-              <pointsize>12</pointsize>
-             </font>
-            </property>
-            <property name="text">
-             <string>NOMBRE:</string>
-            </property>
-    </widget>
-    <widget class="QLineEdit" name="txtNombre">
-            <property name="geometry">
-             <rect>
-              <x>220</x>
-              <y>60</y>
-              <width>500</width>
-              <height>25</height>
-             </rect>
-            </property>
-            <property name="styleSheet">
-             <string notr="true">QLineEdit{{
-	border: 2px solid #000000;
-	border-radius: 5px;
-	background-color: #BBAFDB;
-	color: black;
-	font-size: 12px;
-	padding-left: 6px;
-}}
-QLineEdit:hover {{
-	background-color: #8E7CC3;
-}}</string>
-            </property>
-    </widget>
-    <widget class="QLabel" name="label_3">
-            <property name="geometry">
-             <rect>
-              <x>50</x>
-              <y>100</y>
-              <width>150</width>
-              <height>25</height>
-             </rect>
-            </property>
-            <property name="font">
-             <font>
-              <pointsize>12</pointsize>
-             </font>
-            </property>
-            <property name="text">
-             <string>AUTOR:</string>
-            </property>
-    </widget>
-    <widget class="QLineEdit" name="txtAutor">
-            <property name="geometry">
-             <rect>
-              <x>220</x>
-              <y>100</y>
-              <width>500</width>
-              <height>25</height>
-             </rect>
-            </property>
-            <property name="styleSheet">
-             <string notr="true">QLineEdit{{
-	border: 2px solid #000000;
-	border-radius: 5px;
-	background-color: #BBAFDB;
-	color: black;
-	font-size: 12px;
-	padding-left: 6px;
-}}
-QLineEdit:hover {{
-	background-color: #8E7CC3;
-}}</string>
-            </property>
-    </widget>
-    <widget class="QLabel" name="label_4">
-            <property name="geometry">
-             <rect>
-              <x>50</x>
-              <y>140</y>
-              <width>150</width>
-              <height>25</height>
-             </rect>
-            </property>
-            <property name="font">
-             <font>
-              <pointsize>12</pointsize>
-             </font>
-            </property>
-            <property name="text">
-             <string>TIPO:</string>
-            </property>
-    </widget>
-    <widget class="QComboBox" name="cmbTipo">
-            <property name="geometry">
-             <rect>
-              <x>220</x>
-              <y>140</y>
-              <width>220</width>
-              <height>25</height>
-             </rect>
-            </property>
-            <property name="styleSheet">
-             <string notr="true">QComboBox{
-	border: 2px solid #000000;
-	border-radius: 5px;
-	background-color: #BBAFDB;
-	color: black;
-	font-size: 12px;
-}
-QComboBox:hover {
-	background-color: #8E7CC3;
-}</string>
-            </property>
-            <item>
+   <layout class="QVBoxLayout" name="layoutPrincipal">
+    <property name="leftMargin">
+     <number>28</number>
+    </property>
+    <property name="topMargin">
+     <number>24</number>
+    </property>
+    <property name="rightMargin">
+     <number>28</number>
+    </property>
+    <property name="bottomMargin">
+     <number>24</number>
+    </property>
+    <property name="spacing">
+     <number>18</number>
+    </property>
+    <item>
+     <layout class="QHBoxLayout" name="barraSuperior">
+      <item>
+       <widget class="QPushButton" name="btnVolver">
+        <property name="minimumSize">
+         <size>
+          <width>120</width>
+          <height>38</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>120</width>
+          <height>38</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>← VOLVER</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <layout class="QVBoxLayout" name="bloqueTitulo">
+        <property name="spacing">
+         <number>2</number>
+        </property>
+        <item>
+         <widget class="QLabel" name="LblTitulo">
+          <property name="text">
+           <string>Registrar libro</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="LblSubtitulo">
+          <property name="text">
+           <string>Completa los datos del nuevo ejemplar para agregarlo al almacén.</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <spacer name="espacioBarra">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </item>
+    <item stretch="1">
+     <widget class="QFrame" name="cardFormulario">
+      <property name="frameShape">
+       <enum>QFrame::NoFrame</enum>
+      </property>
+      <property name="sombra" stdset="0">
+       <bool>true</bool>
+      </property>
+      <layout class="QVBoxLayout" name="layoutFormulario">
+       <property name="leftMargin">
+        <number>28</number>
+       </property>
+       <property name="topMargin">
+        <number>24</number>
+       </property>
+       <property name="rightMargin">
+        <number>28</number>
+       </property>
+       <property name="bottomMargin">
+        <number>24</number>
+       </property>
+       <property name="spacing">
+        <number>16</number>
+       </property>
+       <item>
+        <layout class="QHBoxLayout" name="columnasFormulario">
+         <property name="spacing">
+          <number>28</number>
+         </property>
+         <item stretch="1">
+          <layout class="QFormLayout" name="formularioIzquierda">
+           <property name="horizontalSpacing">
+            <number>14</number>
+           </property>
+           <property name="verticalSpacing">
+            <number>12</number>
+           </property>
+           <property name="fieldGrowthPolicy">
+            <enum>QFormLayout::AllNonFixedFieldsGrow</enum>
+           </property>
+           <item row="0" column="0">
+            <widget class="QLabel" name="LblNombre">
              <property name="text">
-              <string>Novela</string>
+              <string>NOMBRE</string>
              </property>
-            </item>
-            <item>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QLineEdit" name="txtNombre">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>38</height>
+              </size>
+             </property>
+             <property name="placeholderText">
+              <string>Título del libro</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QLabel" name="LblAutor">
              <property name="text">
-              <string>Cuento</string>
+              <string>AUTOR</string>
              </property>
-            </item>
-            <item>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QLineEdit" name="txtAutor">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>38</height>
+              </size>
+             </property>
+             <property name="placeholderText">
+              <string>Nombre del autor</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="0">
+            <widget class="QLabel" name="LblTipo">
              <property name="text">
-              <string>Poesía</string>
+              <string>TIPO</string>
              </property>
-            </item>
-            <item>
+            </widget>
+           </item>
+           <item row="2" column="1">
+            <widget class="QComboBox" name="cmbTipo">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>38</height>
+              </size>
+             </property>
+             <item>
+              <property name="text">
+               <string>Novela</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Cuento</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Poesía</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Manga</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Ensayo</string>
+              </property>
+             </item>
+            </widget>
+           </item>
+           <item row="3" column="0">
+            <widget class="QLabel" name="LblEstado">
              <property name="text">
-              <string>Manga</string>
+              <string>ESTADO</string>
              </property>
-            </item>
-            <item>
+            </widget>
+           </item>
+           <item row="3" column="1">
+            <widget class="QComboBox" name="cmbEstado">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>38</height>
+              </size>
+             </property>
+             <item>
+              <property name="text">
+               <string>ALMACEN</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>VENDIDOS</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>ALQUILADOS</string>
+              </property>
+             </item>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item stretch="1">
+          <layout class="QFormLayout" name="formularioDerecha">
+           <property name="horizontalSpacing">
+            <number>14</number>
+           </property>
+           <property name="verticalSpacing">
+            <number>12</number>
+           </property>
+           <property name="fieldGrowthPolicy">
+            <enum>QFormLayout::AllNonFixedFieldsGrow</enum>
+           </property>
+           <item row="0" column="0">
+            <widget class="QLabel" name="LblStock">
              <property name="text">
-              <string>Ensayo</string>
+              <string>STOCK</string>
              </property>
-            </item>
-    </widget>
-    <widget class="QLabel" name="label_5">
-            <property name="geometry">
-             <rect>
-              <x>50</x>
-              <y>180</y>
-              <width>150</width>
-              <height>25</height>
-             </rect>
-            </property>
-            <property name="font">
-             <font>
-              <pointsize>12</pointsize>
-             </font>
-            </property>
-            <property name="text">
-             <string>ESTADO:</string>
-            </property>
-    </widget>
-    <widget class="QComboBox" name="cmbEstado">
-            <property name="geometry">
-             <rect>
-              <x>220</x>
-              <y>180</y>
-              <width>220</width>
-              <height>25</height>
-             </rect>
-            </property>
-            <property name="styleSheet">
-             <string notr="true">QComboBox{
-	border: 2px solid #000000;
-	border-radius: 5px;
-	background-color: #BBAFDB;
-	color: black;
-	font-size: 12px;
-}
-QComboBox:hover {
-	background-color: #8E7CC3;
-}</string>
-            </property>
-            <item>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QSpinBox" name="spinStock">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>38</height>
+              </size>
+             </property>
+             <property name="minimum">
+              <number>0</number>
+             </property>
+             <property name="maximum">
+              <number>999</number>
+             </property>
+             <property name="value">
+              <number>1</number>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QLabel" name="LblPrecio">
              <property name="text">
-              <string>ALMACEN</string>
+              <string>PRECIO (S/)</string>
              </property>
-            </item>
-            <item>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QDoubleSpinBox" name="spinPrecio">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>38</height>
+              </size>
+             </property>
+             <property name="decimals">
+              <number>2</number>
+             </property>
+             <property name="minimum">
+              <double>0.000000000000000</double>
+             </property>
+             <property name="maximum">
+              <double>9999.000000000000000</double>
+             </property>
+             <property name="singleStep">
+              <double>1.000000000000000</double>
+             </property>
+             <property name="value">
+              <double>25.000000000000000</double>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="0">
+            <widget class="QLabel" name="LblImagen">
              <property name="text">
-              <string>VENDIDOS</string>
+              <string>IMAGEN</string>
              </property>
-            </item>
-            <item>
+            </widget>
+           </item>
+           <item row="2" column="1">
+            <widget class="QLineEdit" name="txtImagen">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>38</height>
+              </size>
+             </property>
+             <property name="placeholderText">
+              <string>Nombre del archivo de portada</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="0">
+            <widget class="QLabel" name="LblPrecioOferta">
              <property name="text">
-              <string>ALQUILADOS</string>
+              <string>PRECIO OFERTA</string>
              </property>
-            </item>
-    </widget>
-    <widget class="QLabel" name="label_6">
-            <property name="geometry">
-             <rect>
-              <x>50</x>
-              <y>220</y>
-              <width>150</width>
-              <height>25</height>
-             </rect>
-            </property>
-            <property name="font">
-             <font>
-              <pointsize>12</pointsize>
-             </font>
-            </property>
-            <property name="text">
-             <string>STOCK:</string>
-            </property>
-    </widget>
-    <widget class="QSpinBox" name="spinStock">
-            <property name="geometry">
-             <rect>
-              <x>220</x>
-              <y>220</y>
-              <width>120</width>
-              <height>25</height>
-             </rect>
-            </property>
-            <property name="styleSheet">
-             <string notr="true">QLineEdit{{
-	border: 2px solid #000000;
-	border-radius: 5px;
-	background-color: #BBAFDB;
-	color: black;
-	font-size: 12px;
-	padding-left: 6px;
-}}
-QLineEdit:hover {{
-	background-color: #8E7CC3;
-}}</string>
-            </property>
-            <property name="minimum"><number>0</number></property>
-            <property name="maximum"><number>999</number></property>
-            <property name="value"><number>1</number></property>
-    </widget>
-    <widget class="QLabel" name="label_7">
-            <property name="geometry">
-             <rect>
-              <x>50</x>
-              <y>260</y>
-              <width>150</width>
-              <height>25</height>
-             </rect>
-            </property>
-            <property name="font">
-             <font>
-              <pointsize>12</pointsize>
-             </font>
-            </property>
-            <property name="text">
-             <string>PRECIO (S/):</string>
-            </property>
-    </widget>
-    <widget class="QDoubleSpinBox" name="spinPrecio">
-            <property name="geometry">
-             <rect>
-              <x>220</x>
-              <y>260</y>
-              <width>120</width>
-              <height>25</height>
-             </rect>
-            </property>
-            <property name="styleSheet">
-             <string notr="true">QLineEdit{{
-	border: 2px solid #000000;
-	border-radius: 5px;
-	background-color: #BBAFDB;
-	color: black;
-	font-size: 12px;
-	padding-left: 6px;
-}}
-QLineEdit:hover {{
-	background-color: #8E7CC3;
-}}</string>
-            </property>
-            <property name="minimum"><double>0.0</double></property>
-            <property name="maximum"><double>9999.0</double></property>
-            <property name="value"><double>25.0</double></property>
-            <property name="decimals"><number>2</number></property>
-            <property name="singleStep"><double>1.0</double></property>
-    </widget>
-    <widget class="QLabel" name="label_8">
-            <property name="geometry">
-             <rect>
-              <x>50</x>
-              <y>300</y>
-              <width>150</width>
-              <height>25</height>
-             </rect>
-            </property>
-            <property name="font">
-             <font>
-              <pointsize>12</pointsize>
-             </font>
-            </property>
-            <property name="text">
-             <string>DESCRIPCIÓN:</string>
-            </property>
-    </widget>
-    <widget class="QTextEdit" name="txtDescripcion">
-            <property name="geometry">
-             <rect>
-              <x>220</x>
-              <y>300</y>
-              <width>500</width>
-              <height>90</height>
-             </rect>
-            </property>
-            <property name="styleSheet">
-             <string notr="true">QTextEdit{
-	border: 2px solid #000000;
-	border-radius: 10px;
-	background-color: #BBAFDB;
-	color: black;
-	font-size: 11px;
-	padding: 8px;
-}</string>
-            </property>
-    </widget>
-    <widget class="QLabel" name="label_9">
-            <property name="geometry">
-             <rect>
-              <x>50</x>
-              <y>405</y>
-              <width>150</width>
-              <height>25</height>
-             </rect>
-            </property>
-            <property name="font">
-             <font>
-              <pointsize>12</pointsize>
-             </font>
-            </property>
-            <property name="text">
-             <string>IMAGEN:</string>
-            </property>
-    </widget>
-    <widget class="QLineEdit" name="txtImagen">
-            <property name="geometry">
-             <rect>
-              <x>220</x>
-              <y>405</y>
-              <width>300</width>
-              <height>25</height>
-             </rect>
-            </property>
-            <property name="styleSheet">
-             <string notr="true">QLineEdit{{
-	border: 2px solid #000000;
-	border-radius: 5px;
-	background-color: #BBAFDB;
-	color: black;
-	font-size: 12px;
-	padding-left: 6px;
-}}
-QLineEdit:hover {{
-	background-color: #8E7CC3;
-}}</string>
-            </property>
-    </widget>
-    <widget class="QCheckBox" name="chkOferta">
-            <property name="geometry">
-             <rect>
-              <x>220</x>
-              <y>445</y>
-              <width>400</width>
-              <height>25</height>
-             </rect>
-            </property>
-            <property name="text">
-             <string>OFERTA EXCLUSIVA PARA MIEMBROS</string>
-            </property>
-    </widget>
-    <widget class="QLabel" name="label_10">
-            <property name="geometry">
-             <rect>
-              <x>50</x>
-              <y>485</y>
-              <width>150</width>
-              <height>25</height>
-             </rect>
-            </property>
-            <property name="font">
-             <font>
-              <pointsize>12</pointsize>
-             </font>
-            </property>
-            <property name="text">
-             <string>PRECIO OFERTA:</string>
-            </property>
-    </widget>
-    <widget class="QDoubleSpinBox" name="spinPrecioOferta">
-            <property name="geometry">
-             <rect>
-              <x>220</x>
-              <y>485</y>
-              <width>120</width>
-              <height>25</height>
-             </rect>
-            </property>
-            <property name="styleSheet">
-             <string notr="true">QLineEdit{{
-	border: 2px solid #000000;
-	border-radius: 5px;
-	background-color: #BBAFDB;
-	color: black;
-	font-size: 12px;
-	padding-left: 6px;
-}}
-QLineEdit:hover {{
-	background-color: #8E7CC3;
-}}</string>
-            </property>
-            <property name="minimum"><double>0.0</double></property>
-            <property name="maximum"><double>9999.0</double></property>
-            <property name="value"><double>0.0</double></property>
-            <property name="decimals"><number>2</number></property>
-            <property name="singleStep"><double>1.0</double></property>
-    </widget>
-    <widget class="QPushButton" name="btnGuardar">
-            <property name="geometry">
-             <rect>
-              <x>280</x>
-              <y>540</y>
-              <width>200</width>
-              <height>45</height>
-             </rect>
-            </property>
-            <property name="styleSheet">
-             <string notr="true">QPushButton{
-	border: 2px solid #000000;
-	border-radius: 8px;
-	background-color: #BBAFDB;
-	color: black;
-	font-size: 15px;
-	cursor: pointer;
-}
-QPushButton:hover {
-	background-color: #8E7CC3;
-}
-QPushButton:disabled {
-	color: #6b6b6b;
-	background-color: #a99bc9;
-}</string>
-            </property>
-            <property name="text">
-             <string>GUARDAR</string>
-            </property>
-    </widget>
+            </widget>
+           </item>
+           <item row="3" column="1">
+            <widget class="QDoubleSpinBox" name="spinPrecioOferta">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>38</height>
+              </size>
+             </property>
+             <property name="decimals">
+              <number>2</number>
+             </property>
+             <property name="minimum">
+              <double>0.000000000000000</double>
+             </property>
+             <property name="maximum">
+              <double>9999.000000000000000</double>
+             </property>
+             <property name="singleStep">
+              <double>1.000000000000000</double>
+             </property>
+             <property name="value">
+              <double>0.000000000000000</double>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <widget class="QLabel" name="LblDescripcion">
+         <property name="text">
+          <string>DESCRIPCIÓN</string>
+         </property>
+        </widget>
+       </item>
+       <item stretch="1">
+        <widget class="QTextEdit" name="txtDescripcion">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>120</height>
+          </size>
+         </property>
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+           <horstretch>1</horstretch>
+           <verstretch>1</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="placeholderText">
+          <string>Sinopsis o detalles del libro...</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="chkOferta">
+         <property name="text">
+          <string>OFERTA EXCLUSIVA PARA MIEMBROS</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="piePagina">
+      <item>
+       <spacer name="espacioPie">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnGuardar">
+        <property name="minimumSize">
+         <size>
+          <width>230</width>
+          <height>46</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>GUARDAR LIBRO</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>760</width>
-     <height>21</height>
+     <width>1000</width>
+     <height>26</height>
     </rect>
    </property>
   </widget>

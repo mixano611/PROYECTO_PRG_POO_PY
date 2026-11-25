@@ -6,420 +6,602 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>686</width>
-    <height>450</height>
+    <width>1080</width>
+    <height>700</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
-  <property name="styleSheet">
-   <string notr="true">background-color: #BBAFDB</string>
-  </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QPushButton" name="btnBuscar">
-    <property name="geometry">
-     <rect>
-      <x>240</x>
-      <y>280</y>
-      <width>201</width>
-      <height>23</height>
-     </rect>
+   <layout class="QVBoxLayout" name="layoutPrincipal">
+    <property name="leftMargin">
+     <number>32</number>
     </property>
-    <property name="styleSheet">
-     <string notr="true">QPushButton{
-	border: 2px solid #000000;
-	border-radius: 10px;
-	background-color: #BBAFDB;
-	color: black;
-	font-size: 12px;
-	cursor: pointer;
-  	transition: transform 0.2s ease, background-color 0.2s ease;
-}
-
-QPushButton:hover {
- 	background-color: #8E7CC3;
-}</string>
+    <property name="topMargin">
+     <number>24</number>
     </property>
-    <property name="text">
-     <string>BUSCAR</string>
+    <property name="rightMargin">
+     <number>32</number>
     </property>
-   </widget>
-   <widget class="QLineEdit" name="txtProducto">
-    <property name="geometry">
-     <rect>
-      <x>240</x>
-      <y>120</y>
-      <width>351</width>
-      <height>20</height>
-     </rect>
+    <property name="bottomMargin">
+     <number>24</number>
     </property>
-    <property name="styleSheet">
-     <string notr="true">QLineEdit{
-	border: 2px solid #000000;
-	border-radius: 5px;
-	background-color: #BBAFDB;
-	color: black;
-	font-size: 8px;
-	cursor: pointer;
-  	transition: transform 0.2s ease, background-color 0.2s ease;
-}
-
-QLineEdit:hover {
- 	background-color: #8E7CC3;
-}</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_2">
-    <property name="geometry">
-     <rect>
-      <x>90</x>
-      <y>120</y>
-      <width>131</width>
-      <height>21</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>14</pointsize>
-     </font>
-    </property>
-    <property name="text">
-     <string>PRODUCTO:</string>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="txtNombre">
-    <property name="geometry">
-     <rect>
-      <x>240</x>
-      <y>160</y>
-      <width>351</width>
-      <height>20</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">QLineEdit{
-	border: 2px solid #000000;
-	border-radius: 5px;
-	background-color: #BBAFDB;
-	color: black;
-	font-size: 8px;
-	cursor: pointer;
-  	transition: transform 0.2s ease, background-color 0.2s ease;
-}
-
-QLineEdit:hover {
- 	background-color: #8E7CC3;
-}</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_5">
-    <property name="geometry">
-     <rect>
-      <x>90</x>
-      <y>160</y>
-      <width>131</width>
-      <height>21</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>14</pointsize>
-     </font>
-    </property>
-    <property name="text">
-     <string>NOMBRE:</string>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="txtAutor">
-    <property name="geometry">
-     <rect>
-      <x>240</x>
-      <y>200</y>
-      <width>351</width>
-      <height>20</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">QLineEdit{
-	border: 2px solid #000000;
-	border-radius: 5px;
-	background-color: #BBAFDB;
-	color: black;
-	font-size: 8px;
-	cursor: pointer;
-  	transition: transform 0.2s ease, background-color 0.2s ease;
-}
-
-QLineEdit:hover {
- 	background-color: #8E7CC3;
-}</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_3">
-    <property name="geometry">
-     <rect>
-      <x>90</x>
-      <y>200</y>
-      <width>101</width>
-      <height>21</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>14</pointsize>
-     </font>
-    </property>
-    <property name="text">
-     <string>AUTOR:</string>
-    </property>
-   </widget>
-   <widget class="QComboBox" name="cmbEstado">
-    <property name="geometry">
-     <rect>
-      <x>240</x>
-      <y>240</y>
-      <width>351</width>
-      <height>22</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">QComboBox{
-	border: 2px solid #000000;
-	border-radius: 5px;
-	background-color: #BBAFDB;
-	color: black;
-	font-size: 12px;
-	cursor: pointer;
-  	transition: transform 0.2s ease, background-color 0.2s ease;
-}
-
-QComboBox:hover {
- 	background-color: #8E7CC3;
-}</string>
+    <property name="spacing">
+     <number>18</number>
     </property>
     <item>
-     <property name="text">
-      <string>TODOS</string>
-     </property>
+     <layout class="QHBoxLayout" name="barraSuperior">
+      <item>
+       <widget class="QPushButton" name="btnVolver">
+        <property name="minimumSize">
+         <size>
+          <width>120</width>
+          <height>38</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>120</width>
+          <height>38</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>← VOLVER</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="espacioBarra">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QLabel" name="LblRol">
+        <property name="text">
+         <string>PANEL ADMIN</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
     </item>
     <item>
-     <property name="text">
-      <string>ALMACEN</string>
-     </property>
+     <layout class="QVBoxLayout" name="bloqueTitulo">
+      <property name="spacing">
+       <number>4</number>
+      </property>
+      <item>
+       <widget class="QLabel" name="LblTitulo">
+        <property name="text">
+         <string>Panel de administración</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="LblSubtitulo">
+        <property name="text">
+         <string>Consulta el inventario y gestiona libros, membresías, cajas y reportes.</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
     </item>
     <item>
-     <property name="text">
-      <string>VENDIDOS</string>
-     </property>
+     <layout class="QHBoxLayout" name="contenidoPrincipal">
+      <property name="spacing">
+       <number>18</number>
+      </property>
+      <item stretch="3">
+       <widget class="QFrame" name="cardBusqueda">
+        <property name="frameShape">
+         <enum>QFrame::NoFrame</enum>
+        </property>
+        <property name="sombra" stdset="0">
+         <bool>true</bool>
+        </property>
+        <layout class="QVBoxLayout" name="layoutBusqueda">
+         <property name="leftMargin">
+          <number>26</number>
+         </property>
+         <property name="topMargin">
+          <number>24</number>
+         </property>
+         <property name="rightMargin">
+          <number>26</number>
+         </property>
+         <property name="bottomMargin">
+          <number>24</number>
+         </property>
+         <property name="spacing">
+          <number>14</number>
+         </property>
+         <item>
+          <widget class="QLabel" name="LblSeccion">
+           <property name="text">
+            <string>CONSULTA DE INVENTARIO</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <layout class="QGridLayout" name="formularioBusqueda">
+           <property name="horizontalSpacing">
+            <number>14</number>
+           </property>
+           <property name="verticalSpacing">
+            <number>12</number>
+           </property>
+           <item row="0" column="0">
+            <widget class="QLabel" name="LblProducto">
+             <property name="text">
+              <string>PRODUCTO</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QLineEdit" name="txtProducto">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>38</height>
+              </size>
+             </property>
+             <property name="placeholderText">
+              <string>Ej. Novela, Manga, Ensayo...</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QLabel" name="LblNombre">
+             <property name="text">
+              <string>NOMBRE</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QLineEdit" name="txtNombre">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>38</height>
+              </size>
+             </property>
+             <property name="placeholderText">
+              <string>Título del libro</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="0">
+            <widget class="QLabel" name="LblAutor">
+             <property name="text">
+              <string>AUTOR</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="1">
+            <widget class="QLineEdit" name="txtAutor">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>38</height>
+              </size>
+             </property>
+             <property name="placeholderText">
+              <string>Nombre del autor</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="0">
+            <widget class="QLabel" name="LblEstado">
+             <property name="text">
+              <string>ESTADO</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="1">
+            <widget class="QComboBox" name="cmbEstado">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>38</height>
+              </size>
+             </property>
+             <item>
+              <property name="text">
+               <string>TODOS</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>ALMACEN</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>VENDIDOS</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>ALQUILADOS</string>
+              </property>
+             </item>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <widget class="QPushButton" name="btnBuscar">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>44</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>BUSCAR LIBROS</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="LblAvisoBusqueda">
+           <property name="text">
+            <string>Si buscas sin completar los campos se mostrará el almacén completo.</string>
+           </property>
+           <property name="wordWrap">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="espacioBusqueda">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>10</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="filaEstadisticas">
+           <property name="spacing">
+            <number>12</number>
+           </property>
+           <item>
+            <widget class="QFrame" name="statLibros">
+             <property name="frameShape">
+              <enum>QFrame::NoFrame</enum>
+             </property>
+             <layout class="QVBoxLayout" name="layoutStatLibros">
+              <property name="leftMargin">
+               <number>14</number>
+              </property>
+              <property name="topMargin">
+               <number>12</number>
+              </property>
+              <property name="rightMargin">
+               <number>14</number>
+              </property>
+              <property name="bottomMargin">
+               <number>12</number>
+              </property>
+              <property name="spacing">
+               <number>2</number>
+              </property>
+              <item>
+               <widget class="QLabel" name="LblStatLibros">
+                <property name="text">
+                 <string>0</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="LblStatLibrosCap">
+                <property name="text">
+                 <string>Libros disponibles</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <widget class="QFrame" name="statPrestamos">
+             <property name="frameShape">
+              <enum>QFrame::NoFrame</enum>
+             </property>
+             <layout class="QVBoxLayout" name="layoutStatPrestamos">
+              <property name="leftMargin">
+               <number>14</number>
+              </property>
+              <property name="topMargin">
+               <number>12</number>
+              </property>
+              <property name="rightMargin">
+               <number>14</number>
+              </property>
+              <property name="bottomMargin">
+               <number>12</number>
+              </property>
+              <property name="spacing">
+               <number>2</number>
+              </property>
+              <item>
+               <widget class="QLabel" name="LblStatPrestamos">
+                <property name="text">
+                 <string>0</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="LblStatPrestamosCap">
+                <property name="text">
+                 <string>Préstamos activos</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <widget class="QFrame" name="statMiembros">
+             <property name="frameShape">
+              <enum>QFrame::NoFrame</enum>
+             </property>
+             <layout class="QVBoxLayout" name="layoutStatMiembros">
+              <property name="leftMargin">
+               <number>14</number>
+              </property>
+              <property name="topMargin">
+               <number>12</number>
+              </property>
+              <property name="rightMargin">
+               <number>14</number>
+              </property>
+              <property name="bottomMargin">
+               <number>12</number>
+              </property>
+              <property name="spacing">
+               <number>2</number>
+              </property>
+              <item>
+               <widget class="QLabel" name="LblStatMiembros">
+                <property name="text">
+                 <string>0</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="LblStatMiembrosCap">
+                <property name="text">
+                 <string>Miembros</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item stretch="2">
+       <widget class="QFrame" name="cardAcciones">
+        <property name="frameShape">
+         <enum>QFrame::NoFrame</enum>
+        </property>
+        <property name="sombra" stdset="0">
+         <bool>true</bool>
+        </property>
+        <layout class="QVBoxLayout" name="layoutAcciones">
+         <property name="leftMargin">
+          <number>26</number>
+         </property>
+         <property name="topMargin">
+          <number>24</number>
+         </property>
+         <property name="rightMargin">
+          <number>26</number>
+         </property>
+         <property name="bottomMargin">
+          <number>24</number>
+         </property>
+         <property name="spacing">
+          <number>14</number>
+         </property>
+         <item>
+          <widget class="QLabel" name="LblSeccionAcciones">
+           <property name="text">
+            <string>ACCESOS RÁPIDOS</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <layout class="QVBoxLayout" name="listaAcciones">
+           <property name="spacing">
+            <number>10</number>
+           </property>
+           <item>
+            <widget class="QPushButton" name="btnNuevoLibro">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>66</height>
+              </size>
+             </property>
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="text">
+              <string>＋  NUEVO LIBRO&#10;Registrar un ejemplar</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="btnMembresias">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>66</height>
+              </size>
+             </property>
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="text">
+              <string>★  MEMBRESÍAS&#10;Solicitudes y renovaciones</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="btnCajas">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>66</height>
+              </size>
+             </property>
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="text">
+              <string>▤  CAJAS&#10;Abrir o cerrar cajas</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="btnReportes">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>66</height>
+              </size>
+             </property>
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="text">
+              <string>◷  REPORTES&#10;Compras y préstamos</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <spacer name="espacioAcciones">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>10</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
+            <widget class="QFrame" name="tipAcciones">
+             <property name="frameShape">
+              <enum>QFrame::NoFrame</enum>
+             </property>
+             <layout class="QVBoxLayout" name="layoutTip">
+              <property name="leftMargin">
+               <number>16</number>
+              </property>
+              <property name="topMargin">
+               <number>14</number>
+              </property>
+              <property name="rightMargin">
+               <number>16</number>
+              </property>
+              <property name="bottomMargin">
+               <number>14</number>
+              </property>
+              <property name="spacing">
+               <number>4</number>
+              </property>
+              <item>
+               <widget class="QLabel" name="LblTipTitulo">
+                <property name="text">
+                 <string>CONSEJO</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="LblTip">
+                <property name="text">
+                 <string>Abre una caja antes de aprobar una membresía para que el usuario pueda pagar.</string>
+                </property>
+                <property name="wordWrap">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
     </item>
-    <item>
-     <property name="text">
-      <string>ALQUILADOS</string>
-     </property>
-    </item>
-   </widget>
-   <widget class="QLabel" name="label_4">
-    <property name="geometry">
-     <rect>
-      <x>90</x>
-      <y>240</y>
-      <width>131</width>
-      <height>21</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>14</pointsize>
-     </font>
-    </property>
-    <property name="text">
-     <string>ESTADO:</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="btnVolver">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>10</y>
-      <width>75</width>
-      <height>23</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">QPushButton{
-	border: 1px solid #000000;
-	border-radius: 8px;
-	background-color: #BBAFDB;
-	color: black;
-	font-size: 10px;
-	cursor: pointer;
-  	transition: transform 0.2s ease, background-color 0.2s ease;
-}
-
-QPushButton:hover {
- 	background-color: #8E7CC3;
-}</string>
-    </property>
-    <property name="text">
-     <string>BACK</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_6">
-    <property name="geometry">
-     <rect>
-      <x>120</x>
-      <y>310</y>
-      <width>441</width>
-      <height>41</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>⚠️¡&quot;BUSCAR&quot; sin completar los espacios, mostrara el almacen completo!⚠️</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_7">
-    <property name="geometry">
-     <rect>
-      <x>190</x>
-      <y>20</y>
-      <width>301</width>
-      <height>51</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Segoe UI Black</family>
-      <pointsize>25</pointsize>
-      <weight>75</weight>
-      <italic>true</italic>
-      <bold>true</bold>
-     </font>
-    </property>
-    <property name="text">
-     <string>CONSULTA:</string>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignCenter</set>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="btnNuevoLibro">
-    <property name="geometry">
-     <rect>
-      <x>60</x>
-      <y>360</y>
-      <width>150</width>
-      <height>35</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">QPushButton{
-	border: 1px solid #000000;
-	border-radius: 8px;
-	background-color: #BBAFDB;
-	color: black;
-	font-size: 11px;
-	cursor: pointer;
-}
-QPushButton:hover {
-	background-color: #8E7CC3;
-}</string>
-    </property>
-    <property name="text">
-     <string>NUEVO LIBRO</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="btnMembresias">
-    <property name="geometry">
-     <rect>
-      <x>225</x>
-      <y>360</y>
-      <width>150</width>
-      <height>35</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">QPushButton{
-	border: 1px solid #000000;
-	border-radius: 8px;
-	background-color: #BBAFDB;
-	color: black;
-	font-size: 11px;
-	cursor: pointer;
-}
-QPushButton:hover {
-	background-color: #8E7CC3;
-}</string>
-    </property>
-    <property name="text">
-     <string>MEMBRESÍAS</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="btnCajas">
-    <property name="geometry">
-     <rect>
-      <x>390</x>
-      <y>360</y>
-      <width>150</width>
-      <height>35</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">QPushButton{
-	border: 1px solid #000000;
-	border-radius: 8px;
-	background-color: #BBAFDB;
-	color: black;
-	font-size: 11px;
-	cursor: pointer;
-}
-QPushButton:hover {
-	background-color: #8E7CC3;
-}</string>
-    </property>
-    <property name="text">
-     <string>CAJAS</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="btnReportes">
-    <property name="geometry">
-     <rect>
-      <x>555</x>
-      <y>360</y>
-      <width>100</width>
-      <height>35</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">QPushButton{
-	border: 1px solid #000000;
-	border-radius: 8px;
-	background-color: #BBAFDB;
-	color: black;
-	font-size: 11px;
-	cursor: pointer;
-}
-QPushButton:hover {
-	background-color: #8E7CC3;
-}</string>
-    </property>
-    <property name="text">
-     <string>REPORTES</string>
-    </property>
-   </widget>
+   </layout>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>686</width>
+     <width>1080</width>
      <height>26</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuPEDIDOS">
     <property name="title">
-     <string>ALMACEN</string>
+     <string>ALMACÉN</string>
     </property>
    </widget>
    <widget class="QMenu" name="menuHISTORIAL">

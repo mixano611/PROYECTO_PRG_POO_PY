@@ -14,7 +14,7 @@
    <string>MainWindow</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: #BBAFDB</string>
+   <string notr="true">background-color: #FFEBA8</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QLabel" name="LblFoto">
@@ -48,6 +48,9 @@
       <weight>75</weight>
       <bold>true</bold>
      </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: #E3B881</string>
     </property>
     <property name="text">
      <string>NOMBRE</string>
@@ -162,17 +165,17 @@
     </property>
     <property name="styleSheet">
      <string notr="true">QPushButton{
-	border: 1px solid #000000;
+	border: 2px solid #000000;
 	border-radius: 8px;
-	background-color: #BBAFDB;
+	background-color: #FFEBA8;
 	color: black;
-	font-size: 10px;
+	font-size: 11px;
 	cursor: pointer;
-  	transition: transform 0.2s ease, background-color 0.2s ease;
 }
-
 QPushButton:hover {
- 	background-color: #8E7CC3;
+	background-color: #E3B881;
+	color: #000000;
+	border-color: #000000
 }</string>
     </property>
     <property name="text">
@@ -185,7 +188,7 @@ QPushButton:hover {
       <x>350</x>
       <y>360</y>
       <width>111</width>
-      <height>41</height>
+      <height>31</height>
      </rect>
     </property>
     <property name="font">
@@ -203,9 +206,9 @@ QPushButton:hover {
     <property name="geometry">
      <rect>
       <x>470</x>
-      <y>370</y>
+      <y>360</y>
       <width>301</width>
-      <height>22</height>
+      <height>31</height>
      </rect>
     </property>
     <property name="font">
@@ -217,17 +220,17 @@ QPushButton:hover {
     </property>
     <property name="styleSheet">
      <string notr="true">QSpinBox{
-	border: 1.5px solid #000000;
-	border-radius: 5px;
-	background-color: #BBAFDB;
+	border: 1px solid #000000;
+	border-radius: 2px;
+	background-color: #FFEBA8;
 	color: black;
-	font-size: 15px;
+	font-size: 16px;
 	cursor: pointer;
-  	transition: transform 0.2s ease, background-color 0.2s ease;
 }
-
 QSpinBox:hover {
- 	background-color: #8E7CC3;
+	background-color: #E3B881;
+	color: #000000;
+	border-color: #000000
 }</string>
     </property>
     <property name="readOnly">
@@ -294,13 +297,17 @@ QSpinBox:hover {
      <string notr="true">QPushButton{
 	border: 2px solid #000000;
 	border-radius: 20px;
-	background-color: #BBAFDB;
+	background-color: #FFEBA8;
 	color: black;
 	font-size: 18px;
 	cursor: pointer;
 }
 QPushButton:hover {
-	background-color: #8E7CC3;
+	background-color: #E3B881;
+}
+QPushButton:disabled {
+	color: #6b6b6b;
+	background-color: #a99bc9;
 }</string>
     </property>
     <property name="text">
@@ -311,7 +318,7 @@ QPushButton:hover {
     <property name="geometry">
      <rect>
       <x>650</x>
-      <y>10</y>
+      <y>0</y>
       <width>140</width>
       <height>31</height>
      </rect>
@@ -320,13 +327,15 @@ QPushButton:hover {
      <string notr="true">QPushButton{
 	border: 1px solid #000000;
 	border-radius: 8px;
-	background-color: #BBAFDB;
+	background-color: #FFEBA8;
 	color: black;
-	font-size: 11px;
+	font-size: 12px;
 	cursor: pointer;
 }
 QPushButton:hover {
-	background-color: #8E7CC3;
+	background-color: #E3B881;
+	color: #000000;
+	border-color: #000000
 }</string>
     </property>
     <property name="text">
@@ -359,6 +368,34 @@ QPushButton:hover {
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
+   <widget class="QWidget" name="widget" native="true">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>40</y>
+      <width>801</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: #E3B881</string>
+    </property>
+   </widget>
+   <zorder>widget</zorder>
+   <zorder>LblFoto</zorder>
+   <zorder>LblTitulo</zorder>
+   <zorder>LblAutor</zorder>
+   <zorder>label_7</zorder>
+   <zorder>LblPrecio</zorder>
+   <zorder>LblTotal</zorder>
+   <zorder>btnVolver</zorder>
+   <zorder>label_10</zorder>
+   <zorder>spinBox</zorder>
+   <zorder>LblDescripcion</zorder>
+   <zorder>label_8</zorder>
+   <zorder>btnAgregar</zorder>
+   <zorder>btnCarrito</zorder>
+   <zorder>LblOferta</zorder>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
@@ -366,7 +403,7 @@ QPushButton:hover {
      <x>0</x>
      <y>0</y>
      <width>800</width>
-     <height>21</height>
+     <height>26</height>
     </rect>
    </property>
   </widget>
