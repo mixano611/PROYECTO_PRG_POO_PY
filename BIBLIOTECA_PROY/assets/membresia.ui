@@ -13,9 +13,6 @@
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
-  <property name="styleSheet">
-   <string notr="true">background-color: #BBAFDB</string>
-  </property>
   <widget class="QWidget" name="centralwidget">
     <widget class="QPushButton" name="btnCarrito">
             <property name="geometry">
@@ -72,7 +69,7 @@ QPushButton:hover {
               <x>40</x>
               <y>60</y>
               <width>680</width>
-              <height>110</height>
+              <height>140</height>
              </rect>
             </property>
             <property name="font">
@@ -95,7 +92,7 @@ El pago mensual se realiza en la caja que se te indique.</string>
             <property name="geometry">
              <rect>
               <x>60</x>
-              <y>190</y>
+              <y>210</y>
               <width>150</width>
               <height>25</height>
              </rect>
@@ -113,7 +110,7 @@ El pago mensual se realiza en la caja que se te indique.</string>
             <property name="geometry">
              <rect>
               <x>220</x>
-              <y>190</y>
+              <y>210</y>
               <width>480</width>
               <height>25</height>
              </rect>
@@ -136,7 +133,7 @@ QLineEdit:hover {{
             <property name="geometry">
              <rect>
               <x>60</x>
-              <y>230</y>
+              <y>250</y>
               <width>150</width>
               <height>25</height>
              </rect>
@@ -154,7 +151,7 @@ QLineEdit:hover {{
             <property name="geometry">
              <rect>
               <x>220</x>
-              <y>230</y>
+              <y>250</y>
               <width>480</width>
               <height>25</height>
              </rect>
@@ -177,7 +174,7 @@ QLineEdit:hover {{
             <property name="geometry">
              <rect>
               <x>60</x>
-              <y>270</y>
+              <y>290</y>
               <width>150</width>
               <height>25</height>
              </rect>
@@ -188,14 +185,14 @@ QLineEdit:hover {{
              </font>
             </property>
             <property name="text">
-             <string>CUOTA MENSUAL:</string>
+             <string>CUOTA:</string>
             </property>
     </widget>
     <widget class="QDoubleSpinBox" name="spinMonto">
             <property name="geometry">
              <rect>
               <x>220</x>
-              <y>270</y>
+              <y>290</y>
               <width>160</width>
               <height>25</height>
              </rect>
@@ -223,7 +220,7 @@ QLineEdit:hover {{
             <property name="geometry">
              <rect>
               <x>40</x>
-              <y>315</y>
+              <y>335</y>
               <width>680</width>
               <height>25</height>
              </rect>
@@ -242,7 +239,7 @@ QLineEdit:hover {{
             <property name="geometry">
              <rect>
               <x>240</x>
-              <y>370</y>
+              <y>390</y>
               <width>280</width>
               <height>45</height>
              </rect>

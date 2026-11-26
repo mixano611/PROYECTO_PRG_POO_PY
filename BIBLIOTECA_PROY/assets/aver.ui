@@ -13,62 +13,6 @@
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
-  <property name="styleSheet">
-   <string notr="true">/* SCROLL VERTICAL */
-QScrollBar:vertical {
-    border: none;
-    background-color: #EDC798;
-    width: 14px;
-    margin: 0px 0px 0px 0px; /* Sin margen para que ocupe todo el espacio */
-    border-radius: 0px;
-}
-
-/* MANEJADOR / BARRA */
-QScrollBar::handle:vertical {
-    background-color: #794bbd;
-    min-height: 30px;
-    border-radius: 7px;
-} 
-
-QScrollBar::handle:vertical:hover {
-    background-color:#7738f5;
-}
-
-QScrollBar::handle:vertical:pressed {
-    background-color: #5e2dc2;
-}
-
-/* OCULTAR BOTÓN SUPERIOR (FLECHA ARRIBA) */
-QScrollBar::sub-line:vertical {
-    border: none;
-    background: none;
-    height: 0px;
-    subcontrol-position: top;
-    subcontrol-origin: margin;
-}
-
-/* OCULTAR BOTÓN INFERIOR (FLECHA ABAJO) */
-QScrollBar::add-line:vertical {
-    border: none;
-    background: none;
-    height: 0px;
-    subcontrol-position: bottom;
-    subcontrol-origin: margin;
-}
-
-/* ASEGURAR QUE LAS FLECHAS ESTÉN DESAPARECIDAS */
-QScrollBar::up-arrow:vertical, QScrollBar::down-arrow:vertical {
-    background: none;
-    height: 0px;
-    width: 0px;
-}
-
-/* FONDO DEL CANAL / PÁGINA */
-QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
-    background: none;
-}
-</string>
-  </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QVBoxLayout" name="verticalLayout_3">
     <item>

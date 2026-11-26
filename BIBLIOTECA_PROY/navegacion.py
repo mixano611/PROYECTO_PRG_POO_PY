@@ -15,7 +15,6 @@ escalan de forma uniforme para aprovechar toda la pantalla.
 """
 
 from pathlib import Path
-import re
 
 from PyQt5 import uic
 from PyQt5.QtCore import Qt
@@ -27,11 +26,14 @@ from PyQt5.QtWidgets import (
     QMainWindow,
     QMenuBar,
     QMessageBox,
+    QPushButton,
     QStatusBar,
     QTableWidget,
+    QWidget,
 )
 
 from tema_admin import animar_entrada, aplicar_tema_admin
+from tema_usuario import aplicar_tema_usuario
 
 
 class VistaEscalada(QGraphicsView):
@@ -107,6 +109,15 @@ class VentanaBase(QMainWindow):
         ruta_ui = Path(__file__).resolve().parent / "assets" / self.archivo_ui
         uic.loadUi(str(ruta_ui), self)
 
+        # Los estilos viejos de cada .ui se descartan para que el tema comun
+        # controle botones, campos, tablas y estados de hover.
+        if self.tema == "usuario":
+            self.setStyleSheet("")
+            for hijo in self.findChildren(QWidget):
+                hijo.setStyleSheet("")
+            for boton in self.findChildren(QPushButton):
+                boton.setCursor(Qt.CursorShape.PointingHandCursor)
+
         # Se prepara antes de mover el lienzo a la escena de escalado.
         if self.tema != "admin" and self.escala_fija:
             self._preparar_tablas_usuario()
@@ -129,29 +140,21 @@ class VentanaBase(QMainWindow):
 
         if self.tema == "admin":
             aplicar_tema_admin(self)
+        elif self.tema == "usuario":
+            aplicar_tema_usuario(self)
 
     def _preparar_tablas_usuario(self):
-        """Evita que la cabecera de las tablas cambie de color al enfocar."""
+        """Deja las tablas listas para el tema comun."""
         for tabla in self.findChildren(QTableWidget):
+            tabla.setAlternatingRowColors(True)
+            tabla.setShowGrid(False)
+            tabla.verticalHeader().setVisible(False)
+            tabla.verticalHeader().setDefaultSectionSize(30)
             cabecera = tabla.horizontalHeader()
             cabecera.setHighlightSections(False)
             cabecera.setDefaultAlignment(
                 Qt.AlignmentFlag.AlignLeft | Qt.AlignmentFlag.AlignVCenter
             )
-
-            # Rellena con el color de la cabecera el espacio sin columnas.
-            estilo = tabla.styleSheet()
-            for patron in (
-                r"QHeaderView::section\s*\{[^}]*background-color:\s*([^;]+);",
-                r"QTableWidget\s*\{[^}]*background-color:\s*([^;]+);",
-            ):
-                encontrado = re.search(patron, estilo, re.DOTALL)
-                if encontrado:
-                    color = encontrado.group(1).strip()
-                    cabecera.setStyleSheet(
-                        f"QHeaderView {{ background-color: {color}; }}"
-                    )
-                    break
 
     # ------------------------------------------------------------------
     # Adaptacion a pantalla completa y a distintos tamaños

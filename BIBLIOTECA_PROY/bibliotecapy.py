@@ -1,10 +1,13 @@
 from pathlib import Path
 
-from PyQt5.QtCore import QEasingCurve, QEvent, QPropertyAnimation, Qt
+from PyQt5.QtCore import QEasingCurve, QEvent, QPoint, QPropertyAnimation, Qt
 from PyQt5.QtGui import QColor, QPixmap
 from PyQt5.QtWidgets import (
     QComboBox,
+    QFrame,
     QGraphicsDropShadowEffect,
+    QHeaderView,
+    QLabel,
     QMessageBox,
     QPushButton,
     QTableWidgetItem,
@@ -50,12 +53,6 @@ from src.Usuario import registrar_usuario
 RUTA_IMAGENES = Path(__file__).resolve().parent / "assets" / "images"
 
 # Estilos que se aplican en tiempo de ejecución.
-ESTILO_BOTON = (
-    "QPushButton{border:1px solid #000000;border-radius:8px;"
-    "background-color:#BBAFDB;color:black;font-size:11px;cursor:pointer;}"
-    "QPushButton:hover{background-color:#8E7CC3;}"
-)
-
 ESTILO_CAJA_ABIERTA = (
     "QPushButton{border:1px solid #9DB98F;border-radius:14px;"
     "background-color:#E9F0E4;color:#3E5A36;font-size:15px;"
@@ -385,6 +382,7 @@ class ListaConsulta(VentanaBase):
 
 class loginUsuario(VentanaBase):
     archivo_ui = "login_usuario.ui"
+    tema = "usuario"
 
     def preparar(self):
         self.setWindowTitle("LETRAS Y MUNDOS - Usuario")
@@ -443,6 +441,7 @@ class libros(VentanaBase):
     """Catálogo: cada portada es el botón que abre el detalle del libro."""
 
     archivo_ui = "aver.ui"
+    tema = "usuario"
 
     # Píxeles que crece la portada al pasar el mouse por encima.
     ZOOM_PORTADA = 6
@@ -453,6 +452,9 @@ class libros(VentanaBase):
         self.animaciones = {}
         self.geometrias = {}
         self.libros_por_portada = {}
+        self.halos = {}
+        self.agotadas = set()
+        self._portada_actual = None
         super().__init__(anterior=anterior)
 
     def preparar(self):
@@ -461,19 +463,28 @@ class libros(VentanaBase):
         # Se lee el JSON una sola vez para todas las portadas.
         libros_json = cargar_datos()["libros"]
 
-        # Cada portada abre el detalle del libro que muestra.
+        # Cada portada disponible abre el detalle del libro que muestra.
         for numero in range(1, 17):
             portada = getattr(self, f"Cover{numero}", None)
             if isinstance(portada, QPushButton):
-                self.preparar_portada(portada, libros_json)
-                portada.clicked.connect(self.abrir_detalle)
+                if self.preparar_portada(portada, libros_json):
+                    portada.clicked.connect(self.abrir_detalle)
+
+        # El catalogo se muestra dentro de una vista escalada. El proxy no
+        # reenvia Enter/Leave a las portadas, asi que el hover se sigue desde
+        # el viewport, que si recibe el mouse real.
+        vista = getattr(self, "_vista", None)
+        if vista is not None:
+            vista.viewport().setMouseTracking(True)
+            vista.viewport().installEventFilter(self)
 
     def preparar_portada(self, portada, libros_json):
-        """Pone la imagen del libro y activa la animación al pasar el mouse."""
-        portada.setCursor(Qt.CursorShape.PointingHandCursor)
+        """Pone la imagen, el cursor y el aviso de stock de una portada.
+
+        Devuelve True solo cuando la portada se puede abrir.
+        """
         portada.setFocusPolicy(Qt.FocusPolicy.NoFocus)
         self.geometrias[portada] = portada.geometry()
-        portada.installEventFilter(self)
 
         # El campo "portada" del JSON dice qué portada muestra cada libro.
         libro = next(
@@ -485,9 +496,9 @@ class libros(VentanaBase):
             None,
         )
         if libro is None:
-            return
-
-        self.libros_por_portada[portada] = libro.get("id")
+            portada.setCursor(Qt.CursorShape.ForbiddenCursor)
+            portada.setToolTip("Portada sin libro asignado")
+            return False
 
         if libro.get("imagen"):
             ruta = (RUTA_IMAGENES / str(libro["imagen"])).as_posix()
@@ -495,6 +506,31 @@ class libros(VentanaBase):
                 "QPushButton { border: none; background: transparent;"
                 f' border-image: url("{ruta}") 0 0 0 0 stretch stretch; }}'
             )
+
+        stock = int(libro.get("stock", 0) or 0)
+        if stock <= 0:
+            # Sin stock: el libro se ve, pero no se puede abrir.
+            portada.setCursor(Qt.CursorShape.ForbiddenCursor)
+            portada.setToolTip(
+                f"{libro.get('nombre', 'Libro')} · Agotado (sin stock)"
+            )
+            self.agotadas.add(portada)
+            self.marcar_agotada(portada)
+            return False
+
+        portada.setCursor(Qt.CursorShape.PointingHandCursor)
+        portada.setToolTip(f"Ver {libro.get('nombre', '')}")
+        self.libros_por_portada[portada] = libro.get("id")
+        return True
+
+    def marcar_agotada(self, portada):
+        """Pinta una capa morada con el aviso AGOTADO sobre la portada."""
+        etiqueta = QLabel("AGOTADO", portada)
+        etiqueta.setObjectName("lblAgotado")
+        etiqueta.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        etiqueta.setGeometry(portada.rect())
+        etiqueta.setAttribute(Qt.WidgetAttribute.WA_TransparentForMouseEvents, True)
+        etiqueta.show()
 
     def abrir_detalle(self, checked=False):
         """Abre el detalle del libro de la portada presionada."""
@@ -509,16 +545,47 @@ class libros(VentanaBase):
         self.ir_a(catalogo, id_libro=id_libro, usuario=self.usuario)
 
     def eventFilter(self, objeto, evento):
-        if objeto in self.geometrias:
-            if evento.type() == QEvent.Type.Enter:
-                self.animar_portada(objeto, entrar=True)
-            elif evento.type() == QEvent.Type.Leave:
-                self.animar_portada(objeto, entrar=False)
+        vista = getattr(self, "_vista", None)
+        if vista is not None and objeto is vista.viewport():
+            if evento.type() == QEvent.Type.MouseMove:
+                self.resaltar_bajo_cursor(evento.pos())
+            elif evento.type() in (QEvent.Type.Enter, QEvent.Type.Leave):
+                self.resaltar_portada(None)
+            return super().eventFilter(objeto, evento)
 
         return super().eventFilter(objeto, evento)
 
+    def resaltar_bajo_cursor(self, posicion):
+        """Activa la portada que esta debajo del mouse en la vista."""
+        punto = self._proxy.mapFromScene(
+            self._vista.mapToScene(posicion)
+        ).toPoint()
+        encontrada = None
+        for portada, base in self.geometrias.items():
+            if portada in self.agotadas:
+                continue
+            esquina = portada.mapTo(self._lienzo, QPoint(0, 0))
+            if base.translated(esquina).contains(punto):
+                encontrada = portada
+                break
+
+        self.resaltar_portada(encontrada)
+
+    def resaltar_portada(self, portada):
+        """Cambia la portada resaltada sin reiniciar la misma animacion."""
+        if portada is self._portada_actual:
+            return
+
+        anterior = self._portada_actual
+        self._portada_actual = portada
+
+        if anterior is not None:
+            self.animar_portada(anterior, entrar=False)
+        if portada is not None:
+            self.animar_portada(portada, entrar=True)
+
     def animar_portada(self, portada, entrar):
-        """Crece la portada y le pone un brillo morado, estilo catálogo."""
+        """Crece la portada y muestra un halo morado alrededor."""
         base = self.geometrias[portada]
         zoom = self.ZOOM_PORTADA
 
@@ -532,34 +599,41 @@ class libros(VentanaBase):
             self.animaciones[portada] = animacion
 
         animacion.stop()
+        halo = self.halo_portada(portada)
 
         if entrar:
             destino = base.adjusted(-zoom, -zoom, zoom, zoom)
+            halo.setGeometry(base.adjusted(-zoom - 3, -zoom - 3, zoom + 3, zoom + 3))
+            halo.show()
+            halo.raise_()
             portada.raise_()
-            self.aplicar_brillo(portada)
         else:
             destino = base
-            self.quitar_brillo(portada)
+            halo.hide()
 
         animacion.setStartValue(portada.geometry())
         animacion.setEndValue(destino)
         animacion.start()
 
-    def aplicar_brillo(self, portada):
-        brillo = QGraphicsDropShadowEffect(portada)
-        brillo.setBlurRadius(34)
-        brillo.setOffset(0, 0)
-        brillo.setColor(QColor(124, 77, 255, 235))
-        portada.setGraphicsEffect(brillo)
-
-    def quitar_brillo(self, portada):
-        portada.setGraphicsEffect(None)
+    def halo_portada(self, portada):
+        """Marco morado detras de la portada; no usa efectos graficos."""
+        halo = self.halos.get(portada)
+        if halo is None:
+            halo = QFrame(portada.parentWidget())
+            halo.setObjectName("haloPortada")
+            halo.setAttribute(
+                Qt.WidgetAttribute.WA_TransparentForMouseEvents, True
+            )
+            halo.hide()
+            self.halos[portada] = halo
+        return halo
 
 
 class catalogo(VentanaBase):
     """Detalle de un libro: portada, autor, precio, descripción y cantidad."""
 
     archivo_ui = "menu_com-res.ui"
+    tema = "usuario"
 
     def __init__(self, anterior=None, id_libro=None, usuario=None):
         self.id_libro = id_libro
@@ -605,6 +679,9 @@ class catalogo(VentanaBase):
             self.spinBox.setValue(0)
             self.spinBox.setEnabled(False)
             self.btnAgregar.setEnabled(False)
+            for bloqueado in (self.btnAgregar, self.spinBox):
+                bloqueado.setCursor(Qt.CursorShape.ForbiddenCursor)
+            self.marcar_foto_agotada(True)
             return
 
         self.libro_obj = Libro.desde_dict(self.libro_json)
@@ -625,13 +702,39 @@ class catalogo(VentanaBase):
         self.spinBox.setEnabled(stock > 0)
         self.btnAgregar.setEnabled(stock > 0)
 
+        # Sin stock, el detalle se marca como bloqueado.
+        if stock > 0:
+            self.btnAgregar.setCursor(Qt.CursorShape.PointingHandCursor)
+            self.spinBox.setCursor(Qt.CursorShape.ArrowCursor)
+            self.marcar_foto_agotada(False)
+        else:
+            self.btnAgregar.setCursor(Qt.CursorShape.ForbiddenCursor)
+            self.spinBox.setCursor(Qt.CursorShape.ForbiddenCursor)
+            self.marcar_foto_agotada(True)
+
         self.LblPrecio.setText(f"S/ {self.precio_unitario:.2f}")
         self.mostrar_oferta(stock)
 
         if stock > 0:
             self.actualizar_total()
         else:
-            self.LblTotal.setText("AGOTADO: sin ejemplares disponibles.")
+            self.LblTotal.setText("AGOTADO: sin ejemplares.")
+
+    def marcar_foto_agotada(self, agotado):
+        """Superpone el aviso AGOTADO sobre la portada del detalle."""
+        etiqueta = getattr(self, "_etiqueta_agotado", None)
+        if etiqueta is None:
+            etiqueta = QLabel(self.LblFoto)
+            etiqueta.setObjectName("lblAgotado")
+            etiqueta.setAlignment(Qt.AlignmentFlag.AlignCenter)
+            etiqueta.setAttribute(
+                Qt.WidgetAttribute.WA_TransparentForMouseEvents, True
+            )
+            self._etiqueta_agotado = etiqueta
+
+        etiqueta.setGeometry(self.LblFoto.rect())
+        etiqueta.setText("AGOTADO")
+        etiqueta.setVisible(agotado)
 
     def mostrar_oferta(self, stock):
         """Texto de oferta exclusiva para miembros."""
@@ -707,6 +810,7 @@ class catalogo(VentanaBase):
 
 class ventana_carrito(VentanaBase):
     archivo_ui = "venta-carrito.ui"
+    tema = "usuario"
 
     def __init__(self, anterior=None, usuario=None):
         self.usuario = usuario
@@ -759,7 +863,7 @@ class ventana_carrito(VentanaBase):
             tabla.setCellWidget(fila, 4, combo)
 
             boton = QPushButton("QUITAR")
-            boton.setStyleSheet(ESTILO_BOTON)
+            boton.setObjectName("btnQuitarFila")
             boton.setCursor(Qt.CursorShape.PointingHandCursor)
             boton.clicked.connect(
                 lambda _checked=False, id_libro=item.libro.id: self.quitar_item(
@@ -769,6 +873,17 @@ class ventana_carrito(VentanaBase):
             tabla.setCellWidget(fila, 5, boton)
 
         tabla.resizeColumnsToContents()
+        # La primera columna absorbe el ancho restante para que la cabecera
+        # cubra toda la tabla y no quede una franja de otro color.
+        tabla.horizontalHeader().setSectionResizeMode(0, QHeaderView.Stretch)
+        for columna, ancho in (
+            (1, 90),   # CANTIDAD
+            (2, 95),   # PRECIO
+            (3, 105),  # SUBTOTAL
+            (4, 110),  # TIPO
+            (5, 95),   # QUITAR
+        ):
+            tabla.setColumnWidth(columna, ancho)
         tabla.verticalHeader().setVisible(False)
         self.actualizar_totales()
 
@@ -874,6 +989,7 @@ class ventana_carrito(VentanaBase):
 
 class BoletaVentana(VentanaBase):
     archivo_ui = "boleta.ui"
+    tema = "usuario"
 
     def __init__(self, anterior=None, usuario=None, texto="", movimiento=None):
         self.usuario = usuario
@@ -909,6 +1025,7 @@ class BoletaVentana(VentanaBase):
 
 class RegistroMembresia(VentanaBase):
     archivo_ui = "membresia.ui"
+    tema = "usuario"
 
     def __init__(self, anterior=None, usuario=None):
         self.usuario = usuario

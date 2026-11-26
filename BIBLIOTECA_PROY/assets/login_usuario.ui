@@ -13,16 +13,13 @@
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
-  <property name="styleSheet">
-   <string notr="true">background-color: #BBAFDB</string>
-  </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QPushButton" name="btnIniciar">
     <property name="geometry">
      <rect>
-      <x>330</x>
+      <x>270</x>
       <y>320</y>
-      <width>101</width>
+      <width>221</width>
       <height>41</height>
      </rect>
     </property>
