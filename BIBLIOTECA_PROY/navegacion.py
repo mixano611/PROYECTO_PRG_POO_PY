@@ -16,10 +16,11 @@ escalan de forma uniforme para aprovechar toda la pantalla.
 
 from pathlib import Path
 
-from PyQt5 import uic
-from PyQt5.QtCore import Qt
+from PyQt5 import sip, uic
+from PyQt5.QtCore import QEvent, Qt
 from PyQt5.QtGui import QPainter
 from PyQt5.QtWidgets import (
+    QApplication,
     QFrame,
     QGraphicsScene,
     QGraphicsView,
@@ -43,9 +44,11 @@ class VistaEscalada(QGraphicsView):
     pero las letras, imagenes y botones crecen para aprovechar la pantalla.
     """
 
-    def __init__(self, escena, padre=None):
+    def __init__(self, escena, padre=None, proxy=None):
         super().__init__(escena, padre)
         self.setObjectName("vistaEscalada")
+        self._proxy = proxy
+        self._widget_hover = None
         self.setFrameShape(QFrame.NoFrame)
         self.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
         self.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
@@ -58,7 +61,47 @@ class VistaEscalada(QGraphicsView):
             "QGraphicsView { background: transparent; border: none; }"
         )
         self.viewport().setAutoFillBackground(False)
+        self.viewport().installEventFilter(self)
         self.setAlignment(Qt.AlignmentFlag.AlignCenter)
+
+    # ------------------------------------------------------------------
+    # Hover dentro de la escena
+    # ------------------------------------------------------------------
+    # El QGraphicsProxyWidget no siempre reenvia Enter/Leave a los widgets
+    # internos, y entonces los :hover del QSS no cambian el color. Aqui se
+    # detecta el widget bajo el cursor y se le avisa manualmente.
+    def eventFilter(self, objeto, evento):
+        if objeto is self.viewport():
+            if evento.type() == QEvent.Type.MouseMove:
+                self._actualizar_hover(evento.pos())
+            elif evento.type() in (QEvent.Type.Leave, QEvent.Type.Hide):
+                self._quitar_hover()
+        return super().eventFilter(objeto, evento)
+
+    def _widget_bajo_cursor(self, posicion):
+        proxy = self._proxy
+        if proxy is None or sip.isdeleted(proxy) or proxy.widget() is None:
+            return None
+
+        punto = proxy.mapFromScene(self.mapToScene(posicion)).toPoint()
+        widget = proxy.widget().childAt(punto)
+        return widget if widget is not None else proxy.widget()
+
+    def _actualizar_hover(self, posicion):
+        widget = self._widget_bajo_cursor(posicion)
+        if widget is self._widget_hover:
+            return
+
+        self._quitar_hover()
+        self._widget_hover = widget
+        if widget is not None and not sip.isdeleted(widget):
+            QApplication.sendEvent(widget, QEvent(QEvent.Type.Enter))
+
+    def _quitar_hover(self):
+        widget = self._widget_hover
+        self._widget_hover = None
+        if widget is not None and not sip.isdeleted(widget):
+            QApplication.sendEvent(widget, QEvent(QEvent.Type.Leave))
 
     def resizeEvent(self, evento):
         super().resizeEvent(evento)
@@ -108,6 +151,12 @@ class VentanaBase(QMainWindow):
 
         ruta_ui = Path(__file__).resolve().parent / "assets" / self.archivo_ui
         uic.loadUi(str(ruta_ui), self)
+
+        # En pantalla completa el agarre de la barra de estado no se usa y
+        # aparece como una marca gris en la esquina.
+        barra_estado = self.findChild(QStatusBar)
+        if barra_estado is not None:
+            barra_estado.setSizeGripEnabled(False)
 
         # Los estilos viejos de cada .ui se descartan para que el tema comun
         # controle botones, campos, tablas y estados de hover.
@@ -184,7 +233,7 @@ class VentanaBase(QMainWindow):
         escena = QGraphicsScene(self)
         self._proxy = escena.addWidget(central)
 
-        vista = VistaEscalada(escena, self)
+        vista = VistaEscalada(escena, self, self._proxy)
         self.setCentralWidget(vista)
 
         self._lienzo = central

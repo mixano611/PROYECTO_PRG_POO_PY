@@ -1,8 +1,8 @@
-"""Tema visual beige para las ventanas del administrador.
+"""Tema visual del panel de administracion.
 
-Centralizar los estilos aqui permite que todas las pantallas del panel
-de administracion se vean igual de elegantes sin repetir el mismo bloque
-de QSS en cada archivo .ui.
+Comparte la paleta del area de usuario: fondo crema, tarjetas claras y
+morado como color de accion. Asi el login, las pantallas del usuario y el
+panel del administrador forman un solo lenguaje visual.
 """
 
 from pathlib import Path
@@ -19,153 +19,167 @@ from PyQt5.QtWidgets import (
     QWidget,
 )
 
-# Paleta beige usada en todo el panel de administracion.
-BEIGE_FONDO = "#F4EEE3"
-BEIGE_TARJETA = "#FFFCF6"
-BEIGE_BORDE = "#E6DAC9"
-BEIGE_ACENTO = "#B98A4E"
-BEIGE_TEXTO = "#3F382F"
-BEIGE_TEXTO_SUAVE = "#8A7B69"
+from tema_usuario import (
+    BORDE,
+    BORDE_FUERTE,
+    CREMA,
+    CREMA_BANDA,
+    CREMA_CLARA,
+    CREMA_TARJETA,
+    FLECHA_ABAJO,
+    FLECHA_ARRIBA,
+    LAVANDA,
+    MORADO,
+    MORADO_BORDE,
+    MORADO_CLARO,
+    MORADO_OSCURO,
+    ROJO,
+    TEXTO,
+    TEXTO_SUAVE,
+)
 
-# Iconos pequenos del tema (rutas absolutas para que el QSS los encuentre).
 _ASSETS = Path(__file__).resolve().parent / "assets"
-FLECHA_ABAJO = (_ASSETS / "chevron_down.png").as_posix()
-FLECHA_ARRIBA = (_ASSETS / "chevron_up.png").as_posix()
-ICONO_CHECK = (_ASSETS / "check.png").as_posix()
+ICONO_CHECK = (_ASSETS / "check_blanco.png").as_posix()
 
 QSS_ADMIN = f"""
 QMainWindow, QWidget#centralwidget, QWidget#lienzo {{
-    background-color: {BEIGE_FONDO};
+    background-color: {CREMA};
 }}
 QWidget {{
-    color: {BEIGE_TEXTO};
+    color: {TEXTO};
     font-family: "Segoe UI";
     font-size: 14px;
 }}
 QLabel {{
     background: transparent;
-    color: #4A4036;
+    color: {TEXTO};
 }}
 QLabel#LblTitulo, QLabel#LblMarca {{
-    color: #352E26;
+    color: {TEXTO};
     font-size: 31px;
     font-weight: 700;
 }}
 QLabel#LblSubtitulo, QLabel#LblAyudaLogin, QLabel#LblCajas,
 QLabel#LblAviso, QLabel#LblAvisoBusqueda {{
-    color: {BEIGE_TEXTO_SUAVE};
+    color: {TEXTO_SUAVE};
     font-size: 14px;
 }}
 QLabel#LblRol, QLabel#LblRolAdmin {{
-    color: #A8865B;
+    color: {MORADO_CLARO};
     font-size: 13px;
     font-weight: 700;
 }}
 QLabel#LblSeccion, QLabel#LblSeccionAcciones,
 QLabel#LblSolicitudes, QLabel#LblMiembros {{
-    color: #6B5A45;
+    color: {MORADO_OSCURO};
     font-size: 14px;
     font-weight: 700;
 }}
 QLabel#LblResumen {{
-    color: #5A4A38;
+    color: {TEXTO};
     font-size: 14px;
     font-weight: 600;
 }}
 QFrame#statLibros, QFrame#statPrestamos, QFrame#statMiembros,
 QFrame#tipAcciones {{
-    background-color: #F8F2E7;
-    border: 1px solid #EDE2D2;
+    background-color: {CREMA_TARJETA};
+    border: 1px solid {BORDE};
     border-radius: 12px;
 }}
 QLabel#LblStatLibros, QLabel#LblStatPrestamos, QLabel#LblStatMiembros {{
-    color: {BEIGE_ACENTO};
+    color: {MORADO};
     font-size: 24px;
     font-weight: 700;
 }}
 QLabel#LblStatLibrosCap, QLabel#LblStatPrestamosCap,
 QLabel#LblStatMiembrosCap {{
-    color: {BEIGE_TEXTO_SUAVE};
+    color: {TEXTO_SUAVE};
     font-size: 12px;
 }}
 QLabel#LblTipTitulo {{
-    color: #A8865B;
+    color: {MORADO_CLARO};
     font-size: 12px;
     font-weight: 700;
 }}
 QLabel#LblTip {{
-    color: {BEIGE_TEXTO_SUAVE};
+    color: {TEXTO_SUAVE};
     font-size: 13px;
 }}
 QLabel#LblResumenCajas {{
-    background-color: #EFE6D8;
+    background-color: {LAVANDA};
     border-radius: 10px;
     padding: 6px 14px;
-    color: #6B5A45;
+    color: {MORADO_OSCURO};
     font-size: 14px;
     font-weight: 700;
 }}
 QFrame#cardLogin, QFrame#cardBusqueda, QFrame#cardAcciones,
 QFrame#cardSolicitudes, QFrame#cardMiembros, QFrame#cardCajas,
 QFrame#cardResumen, QFrame#cardFormulario {{
-    background-color: {BEIGE_TARJETA};
-    border: 1px solid {BEIGE_BORDE};
+    background-color: {CREMA_CLARA};
+    border: 1px solid {BORDE};
     border-radius: 18px;
 }}
 QFrame#lineaSeparador {{
-    background-color: {BEIGE_BORDE};
+    background-color: {BORDE};
     border: none;
 }}
 QPushButton {{
-    background-color: {BEIGE_ACENTO};
+    background-color: {MORADO};
     color: #FFFFFF;
-    border: none;
+    border: 2px solid {MORADO_BORDE};
     border-radius: 10px;
     padding: 9px 18px;
     font-size: 14px;
-    font-weight: 600;
+    font-weight: 700;
 }}
 QPushButton:hover {{
-    background-color: #A87A41;
+    background-color: {MORADO_CLARO};
+    border-color: {MORADO_OSCURO};
 }}
 QPushButton:pressed {{
-    background-color: #946A37;
+    background-color: {MORADO_OSCURO};
+    border-color: {MORADO_BORDE};
 }}
 QPushButton:disabled {{
-    background-color: #E6DAC9;
-    color: #A79A88;
+    background-color: #DCD3EE;
+    color: #9A8FB5;
+    border-color: #CDC2E4;
 }}
 QPushButton#btnVolver, QPushButton#pushButton {{
-    background-color: transparent;
-    color: #7C6C58;
-    border: 1px solid #D9CBB6;
+    background-color: {CREMA_CLARA};
+    color: {MORADO_OSCURO};
+    border: 2px solid #C9B6E6;
     border-radius: 9px;
     padding: 8px 16px;
-    font-weight: 600;
+    font-weight: 700;
 }}
 QPushButton#btnVolver:hover, QPushButton#pushButton:hover {{
-    background-color: #EFE6D8;
-    color: {BEIGE_TEXTO};
-    border-color: #C9B69C;
+    background-color: #F1EBFC;
+    color: {TEXTO};
+    border-color: {MORADO};
 }}
 QPushButton#btnAceptar {{
-    background-color: #6F8F63;
+    background-color: {MORADO};
+    border-color: {MORADO_BORDE};
 }}
 QPushButton#btnAceptar:hover {{
-    background-color: #5F7C55;
+    background-color: {MORADO_CLARO};
 }}
 QPushButton#btnDenegar, QPushButton#btnEliminar, QPushButton#btnQuitar {{
-    background-color: #B36B62;
+    background-color: {ROJO};
+    border-color: #8E3532;
 }}
 QPushButton#btnDenegar:hover, QPushButton#btnEliminar:hover,
 QPushButton#btnQuitar:hover {{
-    background-color: #9E5B53;
+    background-color: #8E3532;
+    border-color: #792B29;
 }}
 QPushButton#btnNuevoLibro, QPushButton#btnMembresias,
 QPushButton#btnCajas, QPushButton#btnReportes {{
-    background-color: {BEIGE_TARJETA};
-    color: {BEIGE_TEXTO};
-    border: 1px solid {BEIGE_BORDE};
+    background-color: {CREMA_CLARA};
+    color: {TEXTO};
+    border: 2px solid {BORDE};
     border-radius: 14px;
     padding: 11px 18px;
     font-size: 15px;
@@ -174,26 +188,31 @@ QPushButton#btnCajas, QPushButton#btnReportes {{
 }}
 QPushButton#btnNuevoLibro:hover, QPushButton#btnMembresias:hover,
 QPushButton#btnCajas:hover, QPushButton#btnReportes:hover {{
-    background-color: #F8F0E2;
-    border-color: #C9A87C;
-    color: #352E26;
+    background-color: {LAVANDA};
+    border-color: {MORADO_CLARO};
+    color: {TEXTO};
 }}
 QLineEdit, QComboBox, QSpinBox, QDoubleSpinBox, QTextEdit {{
     background-color: #FFFFFF;
-    border: 1px solid #DDCFBB;
+    border: 2px solid {BORDE_FUERTE};
     border-radius: 8px;
-    padding: 8px 10px;
-    color: {BEIGE_TEXTO};
-    selection-background-color: #C9A87C;
+    padding: 7px 10px;
+    color: {TEXTO};
+    selection-background-color: {MORADO_CLARO};
     selection-color: #FFFFFF;
+}}
+QLineEdit:hover, QComboBox:hover, QSpinBox:hover,
+QDoubleSpinBox:hover, QTextEdit:hover {{
+    border-color: {MORADO_CLARO};
 }}
 QLineEdit:focus, QComboBox:focus, QSpinBox:focus,
 QDoubleSpinBox:focus, QTextEdit:focus {{
-    border: 1px solid #C9A87C;
+    border-color: {MORADO};
 }}
 QLineEdit:disabled, QComboBox:disabled, QSpinBox:disabled,
 QDoubleSpinBox:disabled, QTextEdit:disabled {{
-    background-color: #F1EAE0;
+    background-color: #F2ECD9;
+    border-color: #E4D8B8;
     color: #A79A88;
 }}
 QComboBox::drop-down {{
@@ -210,8 +229,8 @@ QSpinBox::up-button, QDoubleSpinBox::up-button {{
     subcontrol-position: top right;
     width: 20px;
     border: none;
-    border-left: 1px solid #DDCFBB;
-    border-top-right-radius: 8px;
+    border-left: 1px solid {BORDE};
+    border-top-right-radius: 6px;
     background: transparent;
 }}
 QSpinBox::down-button, QDoubleSpinBox::down-button {{
@@ -219,17 +238,17 @@ QSpinBox::down-button, QDoubleSpinBox::down-button {{
     subcontrol-position: bottom right;
     width: 20px;
     border: none;
-    border-left: 1px solid #DDCFBB;
-    border-bottom-right-radius: 8px;
+    border-left: 1px solid {BORDE};
+    border-bottom-right-radius: 6px;
     background: transparent;
 }}
 QSpinBox::up-button:hover, QDoubleSpinBox::up-button:hover,
 QSpinBox::down-button:hover, QDoubleSpinBox::down-button:hover {{
-    background-color: #F1E6D5;
+    background-color: {LAVANDA};
 }}
 QSpinBox::up-button:pressed, QDoubleSpinBox::up-button:pressed,
 QSpinBox::down-button:pressed, QDoubleSpinBox::down-button:pressed {{
-    background-color: #E7D9C4;
+    background-color: #DCD3EE;
 }}
 QSpinBox::up-arrow, QDoubleSpinBox::up-arrow {{
     image: url("{FLECHA_ARRIBA}");
@@ -242,75 +261,80 @@ QSpinBox::down-arrow, QDoubleSpinBox::down-arrow {{
     height: 7px;
 }}
 QComboBox QAbstractItemView {{
-    background-color: {BEIGE_TARJETA};
-    border: 1px solid #DDCFBB;
-    selection-background-color: #EFE6D8;
-    selection-color: {BEIGE_TEXTO};
+    background-color: {CREMA_CLARA};
+    border: 1px solid {BORDE_FUERTE};
+    selection-background-color: {LAVANDA};
+    selection-color: {TEXTO};
     outline: none;
 }}
 QTableWidget {{
-    background-color: {BEIGE_TARJETA};
-    alternate-background-color: #FBF6ED;
-    border: 1px solid {BEIGE_BORDE};
+    background-color: {CREMA_CLARA};
+    alternate-background-color: #FDF3D2;
+    border: 2px solid {BORDE};
     border-radius: 12px;
-    gridline-color: #F1E9DC;
-    selection-background-color: #EFE1CB;
-    selection-color: {BEIGE_TEXTO};
+    gridline-color: #F0E4C6;
+    color: {TEXTO};
+    selection-background-color: {LAVANDA};
+    selection-color: {TEXTO};
 }}
 QTableWidget::item {{
     padding: 7px 8px;
     border: none;
 }}
 QTableWidget::item:selected {{
-    background-color: #EFE1CB;
-    color: {BEIGE_TEXTO};
+    background-color: {LAVANDA};
+    color: {TEXTO};
+}}
+QHeaderView {{
+    background-color: {CREMA_BANDA};
+    border: none;
 }}
 QHeaderView::section {{
-    background-color: #F0E7DA;
-    color: #6B5A45;
+    background-color: {CREMA_BANDA};
+    color: {MORADO_OSCURO};
     border: none;
-    border-right: 1px solid {BEIGE_BORDE};
-    border-bottom: 1px solid {BEIGE_BORDE};
+    border-right: 1px solid {BORDE};
+    border-bottom: 1px solid {BORDE};
     padding: 9px 8px;
     font-size: 13px;
     font-weight: 700;
 }}
-QHeaderView {{
-    background-color: #F0E7DA;
-    border: none;
-}}
 QTableCornerButton::section {{
-    background-color: #F0E7DA;
+    background-color: {CREMA_BANDA};
     border: none;
 }}
 QCheckBox {{
-    color: #4A4036;
+    color: {TEXTO};
     spacing: 8px;
 }}
 QCheckBox::indicator {{
     width: 18px;
     height: 18px;
-    border: 1px solid #C9B69C;
+    border: 2px solid {BORDE_FUERTE};
     border-radius: 4px;
     background-color: #FFFFFF;
 }}
 QCheckBox::indicator:checked {{
-    background-color: {BEIGE_ACENTO};
-    border-color: {BEIGE_ACENTO};
+    background-color: {MORADO};
+    border-color: {MORADO_BORDE};
     image: url("{ICONO_CHECK}");
 }}
 QScrollBar:vertical {{
-    background: transparent;
+    background: {CREMA_BANDA};
     width: 10px;
-    margin: 2px;
+    margin: 0px;
+    border-radius: 5px;
 }}
 QScrollBar::handle:vertical {{
-    background: #D9CBB6;
+    background: #C9B6E6;
     border-radius: 5px;
     min-height: 28px;
 }}
 QScrollBar::handle:vertical:hover {{
-    background: #C9A87C;
+    background: {MORADO_CLARO};
+}}
+QScrollBar::handle:vertical:pressed {{
+    background: {MORADO_OSCURO};
 }}
 QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {{
     height: 0px;
@@ -319,17 +343,21 @@ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {{
     background: transparent;
 }}
 QScrollBar:horizontal {{
-    background: transparent;
+    background: {CREMA_BANDA};
     height: 10px;
-    margin: 2px;
+    margin: 0px;
+    border-radius: 5px;
 }}
 QScrollBar::handle:horizontal {{
-    background: #D9CBB6;
+    background: #C9B6E6;
     border-radius: 5px;
     min-width: 28px;
 }}
 QScrollBar::handle:horizontal:hover {{
-    background: #C9A87C;
+    background: {MORADO_CLARO};
+}}
+QScrollBar::handle:horizontal:pressed {{
+    background: {MORADO_OSCURO};
 }}
 QScrollBar::add-line:horizontal, QScrollBar::sub-line:horizontal {{
     width: 0px;
@@ -338,8 +366,8 @@ QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal {{
     background: transparent;
 }}
 QMenuBar {{
-    background-color: transparent;
-    color: #6B5A45;
+    background-color: {CREMA};
+    color: {MORADO_OSCURO};
 }}
 QMenuBar::item {{
     background: transparent;
@@ -347,11 +375,11 @@ QMenuBar::item {{
     border-radius: 6px;
 }}
 QMenuBar::item:selected {{
-    background-color: #EFE6D8;
+    background-color: {LAVANDA};
 }}
 QMenu {{
-    background-color: {BEIGE_TARJETA};
-    border: 1px solid {BEIGE_BORDE};
+    background-color: {CREMA_CLARA};
+    border: 1px solid {BORDE};
     padding: 6px;
 }}
 QMenu::item {{
@@ -359,15 +387,16 @@ QMenu::item {{
     border-radius: 6px;
 }}
 QMenu::item:selected {{
-    background-color: #EFE6D8;
+    background-color: {LAVANDA};
+    color: {TEXTO};
 }}
 QStatusBar {{
-    background: transparent;
-    color: {BEIGE_TEXTO_SUAVE};
+    background-color: {CREMA};
+    color: {TEXTO_SUAVE};
 }}
 QToolTip {{
-    background-color: {BEIGE_TEXTO};
-    color: {BEIGE_TARJETA};
+    background-color: {TEXTO};
+    color: {CREMA_CLARA};
     border: none;
     padding: 6px;
 }}
@@ -380,9 +409,9 @@ def _aplicar_sombras(ventana):
         if not widget.property("sombra"):
             continue
         efecto = QGraphicsDropShadowEffect(widget)
-        efecto.setBlurRadius(34)
-        efecto.setOffset(0, 9)
-        efecto.setColor(QColor(120, 96, 64, 40))
+        efecto.setBlurRadius(32)
+        efecto.setOffset(0, 8)
+        efecto.setColor(QColor(90, 70, 150, 40))
         widget.setGraphicsEffect(efecto)
 
 
@@ -419,7 +448,7 @@ def _preparar_tablas(ventana):
 
 
 def aplicar_tema_admin(ventana):
-    """Aplica el tema beige, sombras y detalles a una ventana admin."""
+    """Aplica el tema crema/morado, sombras y detalles a una ventana admin."""
     ventana.setStyleSheet(QSS_ADMIN)
 
     for boton in ventana.findChildren(QPushButton):

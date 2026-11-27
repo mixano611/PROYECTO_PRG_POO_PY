@@ -342,9 +342,9 @@ QPushButton:hover {
    <widget class="QLabel" name="LblOferta">
     <property name="geometry">
      <rect>
-      <x>330</x>
+      <x>350</x>
       <y>470</y>
-      <width>280</width>
+      <width>400</width>
       <height>22</height>
      </rect>
     </property>
@@ -362,7 +362,7 @@ QPushButton:hover {
      <string/>
     </property>
     <property name="alignment">
-     <set>Qt::AlignCenter</set>
+     <set>Qt::AlignLeft|Qt::AlignVCenter</set>
     </property>
    </widget>
    <widget class="QWidget" name="widget" native="true">

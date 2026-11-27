@@ -735,6 +735,11 @@ class catalogo(VentanaBase):
         etiqueta.setGeometry(self.LblFoto.rect())
         etiqueta.setText("AGOTADO")
         etiqueta.setVisible(agotado)
+        self.LblFoto.setCursor(
+            Qt.CursorShape.ForbiddenCursor
+            if agotado
+            else Qt.CursorShape.ArrowCursor
+        )
 
     def mostrar_oferta(self, stock):
         """Texto de oferta exclusiva para miembros."""
